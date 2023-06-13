@@ -90,6 +90,10 @@ gzip -d file.gz
 ```
 lusrmgr.msc
 ```
+#### System Configuration utility (for diagnose startup issues)
+```
+MSConfig
+```
 
 ---
 ### Privilege Escalation:
