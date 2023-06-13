@@ -85,6 +85,11 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 gzip -d file.gz
 ```
+---
+#### Local User and Group Management in windows
+```
+lusrmgr.msc
+```
 
 ---
 ### Privilege Escalation:
