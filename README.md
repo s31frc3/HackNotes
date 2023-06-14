@@ -95,17 +95,74 @@ lxc exec ignite /bin/sh
 ---
 
 ### Windows
-#### Local User and Group Management
+<details><summary> Local User and Group Management </summary>
+It is a shell application to manage Windows system administrator applications.
+
 ```
 lusrmgr.msc
 ```
-#### System Configuration utility (for diagnose startup issues)
+</details>
+
+<details> <summary> System Configuration utility </summary>
+
+for diagnose startup issues
+
 ```
 MSConfig
 ```
-#### Task Manager to manage (enable/disable) startup items. 
+</details>
+
+<details> <summary> Task Manager </summary>
+
+to manage (enable/disable) startup items. 
 ```
 taskmgr
 ```
+</details>
+
+<details> <summary> User Account Control </summary>
+helps prevent unauthorized changes (which may be initiated by applications, users, viruses, or other forms of malware) to an operating system
+
+```
+UserAccountControlSettings.exe
+```
+</details>
+
+<details> <summary> Computer Management </summary>
+the process of managing, monitoring and optimizing a computer system for performance, availability, security
+
+```
+compmgmt
+```
+</details>
+
+<details> <summary> System Information </summary> 
+(gathers information about your computer and displays a comprehensive view of your hardware, system components, and software environment, which you can use to diagnose computer issues.)
+
+```
+msinfo32
+```
+</details>
+
+<details> <summary> Resource Monitor </summary>
+displays per-process and aggregate CPU, memory, disk, and network usage information, in addition to providing details about which processes are using individual file handles and modules
+
+```
+resmon
+```
+</details>
+
+<details> <summary> Windows Registry </summary>
+central hierarchical database used to store information necessary to configure the system for one or more users, applications, and hardware devices
+
+```
+regedit
+```
+</details>
+
+---
+
+### links
+* [database with CVE exploits](https://cvexploits.io/)
 ---
 Happy hacking!
