@@ -101,7 +101,16 @@ netstat # -at -l -t -tp -i
 find / -mtime 10 #find files that were modified in the last 10 days
 find . -name flag1.txt
 find / -type d -name config #find the directory named config under “/”
+find / -type f -perm /4000 2>/dev/null
+find / -perm -u=s -type f 2>/dev/null
+find / -type f -perm -04000 -ls 2>/dev/null #compare executables on this list with GTFOBins
 ```
+####  Automated Enumeration Tools
+* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+* [linEnum](https://github.com/rebootuser/LinEnum)
+* [LES](https://github.com/mzet-/linux-exploit-suggester)
+* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
+* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
 ---
 
 ### Windows
@@ -174,5 +183,6 @@ regedit
 
 ### links
 * [database with CVE exploits](https://cvexploits.io/)
+* [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 ---
 Happy hacking!
