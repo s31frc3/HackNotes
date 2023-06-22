@@ -273,7 +273,9 @@ smbclient \\\\10.10.251.241\\nt4wrksv
 ```
 
 </details>
+
 ---
+
 ### links
 * [database with CVE exploits](https://cvexploits.io/)
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
