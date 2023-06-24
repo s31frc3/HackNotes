@@ -176,15 +176,12 @@ cat /etc/exports #file sharing
 nmap --script=vuln <ip>
 cat /proc/1/cgroup #if u in docker
 ```
-####  Automated Enumeration Tools
-* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
-* [linEnum](https://github.com/rebootuser/LinEnum)
-* [LES](https://github.com/mzet-/linux-exploit-suggester)
-* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
-* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
+
 ---
 
 ### Windows
+
+<details><summary> windows system tools </summary>
 <details><summary> Local User and Group Management </summary>
 It is a shell application to manage Windows system administrator applications.
 
@@ -242,7 +239,9 @@ central hierarchical database used to store information necessary to configure t
 regedit
 ```
 </details>
-<details> <summary> SMB discovery </summary>
+</details>
+
+<details><summary> SMB discovery </summary>
 
 enumerate
 
@@ -276,17 +275,35 @@ smbclient \\\\10.10.251.241\\nt4wrksv
 
 </details>
 
+<details><summary>rdp </summary>
+
+```
+rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/apps
+```
+
+</details>
+
 ---
 
 ### links
 * [database with CVE exploits](https://cvexploits.io/)
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+* [g0tmi1k priv esc](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 
 ###  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
 - [md5hashing](https://md5hashing.net/hash)
 - [cyberchef](https://gchq.github.io/CyberChef/)
+- [free pass hash cracker](https://crackstation.net/)
+
+####  Automated Enumeration Tools
+* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+* [linEnum](https://github.com/rebootuser/LinEnum)
+* [LES](https://github.com/mzet-/linux-exploit-suggester)
+* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
+* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
+
 ---
 Happy hacking!
