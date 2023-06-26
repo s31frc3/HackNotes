@@ -295,7 +295,7 @@ rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/ap
 * [database with CVE exploits](https://cvexploits.io/)
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
-* [g0tmi1k priv esc](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
+* [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 * [rapid7](https://www.rapid7.com/)
 * [attackerkb](https://attackerkb.com/)
 * [cve.mitre.org](https://cve.mitre.org/cve/)
@@ -307,6 +307,7 @@ rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/ap
 - [md5hashing](https://md5hashing.net/hash)
 - [cyberchef](https://gchq.github.io/CyberChef/)
 - [free pass hash cracker](https://crackstation.net/)
+- [crack station](https://crackstation.net/)
 
 ####  Automated Enumeration Tools
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
