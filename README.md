@@ -312,6 +312,10 @@ rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/ap
 * [attackerkb](https://attackerkb.com/)
 * [cve.mitre.org](https://cve.mitre.org/cve/)
 * [exploit-db](https://www.exploit-db.com/)
+* [GTFOBins (unix)](https://gtfobins.github.io/)
+* [LOLBAS (windows)](https://lolbas-project.github.io/)
+* [WADComs (AD)](https://wadcoms.github.io/)
+* [WTFBINS](https://wtfbins.wtf/)
 
 ###  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
