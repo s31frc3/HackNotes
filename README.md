@@ -57,6 +57,11 @@ sudo mount -t nfs 10.10.104.64: tmp
 tree tmp
 ```
 
+#### socat if open port
+```python
+./socat tcp-listen:7777,reuseaddr,fork tcp:localhost:6666
+```
+
 </details>
 
 ---
@@ -193,6 +198,7 @@ ifconfig
 ip route
 uname -a
 netstat # -at -l -t -tp -i
+netstat -tupln | grep LISTEN
 find / -writable 2>/dev/null
 find / -mtime 10 #find files that were modified in the last 10 days
 find . -name flag1.txt
@@ -341,6 +347,10 @@ login with pht
 impacket-psexec <username>@<ip> -hashes <hash>
 ```
 
+Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting
+```
+responder -I eth0 -rdwv
+```
 
 </details>
 
@@ -360,6 +370,7 @@ impacket-psexec <username>@<ip> -hashes <hash>
 * [LOLBAS (windows)](https://lolbas-project.github.io/)
 * [WADComs (AD)](https://wadcoms.github.io/)
 * [WTFBINS](https://wtfbins.wtf/)
+* [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
 
 ###  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
