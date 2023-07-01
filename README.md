@@ -214,6 +214,7 @@ find / -type d -name config #find the directory named config under “/”
 find / -type f -perm /4000 2>/dev/null
 find / -perm -u=s -type f 2>/dev/null
 find / -type f -perm -04000 -ls 2>/dev/null #compare executables on this list with GTFOBins
+find / -type f -user cage 2>/dev/null #find files owned by user cage
 getcap -r / 2>/dev/null
 cat /etc/exports #file sharing
 nmap --script=vuln <ip>
@@ -358,6 +359,14 @@ impacket-psexec <username>@<ip> -hashes <hash>
 Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server supporting
 ```
 responder -I eth0 -rdwv
+```
+
+DNSRecon - is a powerful DNS enumeration script
+```
+dnsrecon -d <IP> -t axfr
+
+#with metasploit
+use auxiliary/gather/enum_dns
 ```
 
 </details>
