@@ -163,7 +163,7 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 </details>
 
 ---
-### Privilege Escalation:
+### Linux Privilege Escalation:
 <details><summary> LXD container exploitation </summary> 
 
 ```
@@ -220,6 +220,16 @@ cat /etc/exports #file sharing
 nmap --script=vuln <ip>
 cat /proc/1/cgroup #if u in docker
 ```
+#### links
+* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+* [linEnum](https://github.com/rebootuser/LinEnum)
+* [LES](https://github.com/mzet-/linux-exploit-suggester)
+* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
+* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
+* [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
+* [GTFOBins (unix)](https://gtfobins.github.io/)
+* [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
+
 
 ---
 
@@ -379,9 +389,24 @@ evil-winrm -u <username> -p <password> -i <ip>
 upload <file on your ps directory> #to upload file
 ```
 
+links
+* [WADComs (AD)](https://wadcoms.github.io/)
+
 </details>
 
 <details><summary>Priv esc</summary>
+
+
+```
+whoami /priv #/groups
+net user
+```
+
+- [windows-exploit-suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
+- [winpeas](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)
+- [sushant747 win priv esc](https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_windows.html)(with vpn)
+- [LOLBAS (windows)](https://lolbas-project.github.io/)
+
 
 </details>
 
@@ -390,20 +415,16 @@ upload <file on your ps directory> #to upload file
 ### links
 * [database with CVE exploits](https://cvexploits.io/)
 * [explainshell.com](https://explainshell.com/)
-* [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
-* [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 * [rapid7](https://www.rapid7.com/)
 * [attackerkb](https://attackerkb.com/)
 * [cve.mitre.org](https://cve.mitre.org/cve/)
 * [exploit-db](https://www.exploit-db.com/)
-* [GTFOBins (unix)](https://gtfobins.github.io/)
-* [LOLBAS (windows)](https://lolbas-project.github.io/)
-* [WADComs (AD)](https://wadcoms.github.io/)
-* [WTFBINS](https://wtfbins.wtf/)
+* [WTFBINS (cve)](https://wtfbins.wtf/)
 * [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
+* [hacktricks](https://book.hacktricks.xyz)
 
-###  Encoding techniques:
+####  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
 - [md5hashing](https://md5hashing.net/hash)
@@ -411,12 +432,8 @@ upload <file on your ps directory> #to upload file
 - [free pass hash cracker](https://crackstation.net/)
 - [crack station](https://crackstation.net/)
 
-####  Automated Enumeration Tools
-* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
-* [linEnum](https://github.com/rebootuser/LinEnum)
-* [LES](https://github.com/mzet-/linux-exploit-suggester)
-* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
-* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
+#### Tools
+
 * [Git research](https://github.com/internetwache/GitTools)
 
 ---
