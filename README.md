@@ -424,6 +424,10 @@ links
 
 <details><summary>Priv esc/enum</summary>
 
+run powershell with bypass execution policy
+```
+powershell -ep bypass
+```
 
 ```
 whoami /priv #/groups
