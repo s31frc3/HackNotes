@@ -432,6 +432,8 @@ powershell -ep bypass
 ```
 whoami /priv #/groups
 net user
+get-netuser | select cn #enum domain users
+Get-NetGroup -GroupName *admin* #enum domain groups
 net users
 net localgroups
 net user <user>
@@ -442,8 +444,11 @@ netstat -ano
 findstr /si password *.txt # .xml .ini
 findstr /spin "password" *.*
 dir /s *pass* == *cred* == *vnc* == *config*
+Invoke-ShareFinder
+Windows 10 Enterprise Evaluation
 ```
 
+- [powerview](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
 - [windows-exploit-suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 - [winpeas](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)
 - [sushant747 win priv esc](https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_windows.html)(with vpn)
