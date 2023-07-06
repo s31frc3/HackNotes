@@ -368,6 +368,7 @@ smbclient \\\\$IP\\nt4wrksv
 ```
 rdesktop -u <username> -p <password> $IP -g 70% -r disk:folder=/home/toor/cd/apps
 rdesktop -u Administrator -d CONTROLLER $IP
+remmina 
 ```
 
 </details>
@@ -416,6 +417,11 @@ kerberoasting
 ```
 sudo ntpdate <target ip>
 impacket-GetUserSPNs domain.local/Admin:passwd -dc-ip $IP -request
+```
+
+runas.exe (to inject the credentials into memory)
+```
+runas.exe /netonly /user:<domain>\<username> cmd.exe
 ```
 
 links
@@ -486,6 +492,7 @@ misc::cmd #open cmd with elevated priveleges to all machines
 * [WTFBINS (cve)](https://wtfbins.wtf/)
 * [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
 * [hacktricks](https://book.hacktricks.xyz)
+* [bash cheatsheet](https://devhints.io/bash)
 
 ####  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
