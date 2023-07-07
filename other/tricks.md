@@ -18,6 +18,7 @@ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
 ```python
 xxd -r file.txt 
 base64 /etc/shadow | base64 -d
+ltrace # is a debugging utility in Linux, used to display the calls a userspace application makes to shared libraries.
 ```
 `l\s`: Equivalent to `ls`
 
@@ -73,5 +74,4 @@ fix PATH in old ubuntu
 ```
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
-ltrace -  is a debugging utility in Linux, used to display the calls a userspace application makes to shared libraries.
 

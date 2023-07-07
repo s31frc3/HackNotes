@@ -1,6 +1,6 @@
- HackNotes
+# HackNotes
 
-This repository contains my personal notes and tricks that I've gathered while working on various machines in the TryHackMe platform. These notes serve as a guide for penetration testing and help me document my progress and findings.
+This repository contains my personal notes and tricks that I've gathered while working on various machines in the TryHackMe and HackTheBxo platforms. These notes serve as a guide for penetration testing and help me document my progress and findings.
 
 Please note that these notes are a work in progress, and I'll be continuously adding more content as I progress through the challenges and machines.
 
@@ -396,6 +396,7 @@ load kiwi #download mimikatz
 * [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
 * [hacktricks](https://book.hacktricks.xyz)
 * [bash cheatsheet](https://devhints.io/bash)
+* [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
 
 ####  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
@@ -409,7 +410,8 @@ load kiwi #download mimikatz
 #### Tools
 
 * [Git research](https://github.com/internetwache/GitTools)
-* [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
+* [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
+* [GooFuzz](https://github.com/m3n0sd0n4ld/GooFuzz)(Google Dorks)
 
 ---
 Happy hacking!
