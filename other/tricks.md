@@ -1,4 +1,4 @@
-[back]()
+[back](/README.md)
 ## Tricks
 Here are some handy tricks to enhance your pentesting workflow:
 
