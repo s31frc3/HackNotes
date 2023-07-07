@@ -7,7 +7,8 @@ Please note that these notes are a work in progress, and I'll be continuously ad
 ## Introduction
 In this repository, you will find a compilation of various tricks, commands, and techniques that can be useful during penetration testing activities. These notes are intended to assist in the process of hacking and securing systems.
 
-
+### [tricks](./other/tricks.md)
+### [web](./other/web.md)
 ---
 #### Reverse shells
 ```nc

