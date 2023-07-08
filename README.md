@@ -124,7 +124,7 @@ cat /proc/1/cgroup #if u in docker
 ```
 quik one-line bash script with colorful output to enumerate linux machine
 ```bash
-for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "#!/usr/bin/expect; spawn sudo -l; expect {"assword:" {send "YourPasswordHere\r"} timeout {exit 0}}; interact" "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "cat /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo  "\n\033[1;34mCommand: $cmd\033[0m"; echo "\033[1;32m$(eval $cmd)\033[0m"; echo  "\033[1;33m\n===================================================================================================\n==================================================================================================="; done
+for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "cat /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo  "\n\033[1;34mCommand: $cmd\033[0m"; echo "\033[1;32m$(eval $cmd)\033[0m"; echo  "\033[1;33m\n===================================================================================================\n==================================================================================================="; done
 ```
 
 #### links
@@ -136,6 +136,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "#!/usr/bin/expect; sp
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [GTFOBins (unix)](https://gtfobins.github.io/)
 * [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
+* [linux backdoors](./other/linux_backdoors.md)
 
 
 ---
@@ -412,6 +413,12 @@ load kiwi #download mimikatz
 * [Git research](https://github.com/internetwache/GitTools)
 * [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
 * [GooFuzz](https://github.com/m3n0sd0n4ld/GooFuzz)(Google Dorks)
+* [RustScan](https://github.com/RustScan/RustScan/wiki/Installation-Guide)
+* [subchase](https://github.com/tokiakasu/subchase)(subdomains)
+* [SSRFire](https://github.com/ksharinarayanan/SSRFire)
+* [reconftw](https://github.com/six2dez/reconftw)
+* [google dorks](./other/dorks.md)
+
 
 ---
 Happy hacking!
