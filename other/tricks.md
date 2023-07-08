@@ -75,3 +75,9 @@ fix PATH in old ubuntu
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
+#### grep
+```
+grep -Rwi "text"
+```
+
+#### [steal admin cookie](/other/steal.md) (tryhackme:marketplace)

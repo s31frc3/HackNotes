@@ -97,26 +97,23 @@ export PATH=/tmp:$PATH
 </details>
 
 #### information gathering
-```
+```bash
 cat /proc/version
 cat /etc/issue
 cat /etc/sudoers
-cat /etc/sudoers.d
+ps aux | grep cron
 ps
 env
-sudo -l
-hystory
-ifconfig
 ip route
 uname -a
 netstat # -at -l -t -tp -i
 netstat -tupln | grep LISTEN
 find / -writable 2>/dev/null
 find / -mtime 10 #find files that were modified in the last 10 days
-find . -name flag1.txt
+find . -name flag.txt
 find / -type d -name config #find the directory named config under “/”
-find / -type f -perm /4000 2>/dev/null
 find / -type f -user <user> 2>/dev/null #find files owned by user
+find / -type f -perm /4000 2>/dev/null
 getcap -r / 2>/dev/null
 cat /etc/exports #file sharing
 nmap --script=vuln <ip>
