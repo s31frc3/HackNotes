@@ -80,4 +80,12 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 grep -Rwi "text"
 ```
 
-#### [steal admin cookie](/other/steal.md) (tryhackme:marketplace)
+#### [steal admin cookie/sqli](/other/marketplace.md) (tryhackme:marketplace)
+
+#### sqlmap
+```bash
+sqlmap -r req.txt -p <parametr> --dbs
+sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
+sqlmap -r req.txt -D <database_name> -T <table_name> --columns
+sqlmap -r req.txt-p  -D <database_name> --dump-all
+```
