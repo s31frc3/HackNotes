@@ -6,6 +6,7 @@
 * [SDorker](https://github.com/TheSpeedX/SDorker)
 * [pagodo](https://github.com/opsdisk/pagodo)
 * [dorks-eye](https://github.com/BullsEye0/dorks-eye)
+* [GooFuzz](https://github.com/m3n0sd0n4ld/GooFuzz)(Google Dorks)
 
 Online tools:
 * [Dorksearch](https://dorksearch.com/)

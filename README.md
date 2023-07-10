@@ -409,7 +409,6 @@ load kiwi #download mimikatz
 
 * [Git research](https://github.com/internetwache/GitTools)
 * [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
-* [GooFuzz](https://github.com/m3n0sd0n4ld/GooFuzz)(Google Dorks)
 * [RustScan](https://github.com/RustScan/RustScan/wiki/Installation-Guide)
 * [subchase](https://github.com/tokiakasu/subchase)(subdomains)
 * [SSRFire](https://github.com/ksharinarayanan/SSRFire)
