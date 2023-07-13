@@ -62,6 +62,7 @@ tree tmp
 #### socat if open port
 ```python
 ./socat tcp-listen:7777,reuseaddr,fork tcp:localhost:6666
+./socat tcp-listen:8888,reuseaddr,fork tcp:localhost:22
 ```
 
 #### create new user in /etc/passwd with root
