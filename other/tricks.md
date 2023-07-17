@@ -82,6 +82,7 @@ grep -Rwi "text"
 ```
 
 #### [steal admin cookie/sqli](/other/marketplace.md) (tryhackme:marketplace)
+#### [VulnNet: Roasted](/other/roadted.md)
 
 #### sqlmap
 ```bash
