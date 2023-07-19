@@ -171,7 +171,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [GTFOBins (unix)](https://gtfobins.github.io/)
 * [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-* [linux backdoors](./other/linux_backdoors.md)
+* [linux backdoors](/other/src/linux_backdoors.md)
 
 
 ---
@@ -452,7 +452,7 @@ load kiwi #download mimikatz
 * [subchase](https://github.com/tokiakasu/subchase)(subdomains)
 * [SSRFire](https://github.com/ksharinarayanan/SSRFire)
 * [reconftw](https://github.com/six2dez/reconftw)
-* [google dorks](./other/dorks.md)
+* [google dorks](/other/src/dorks.md)
 
 
 ---

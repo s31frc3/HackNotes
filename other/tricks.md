@@ -81,8 +81,8 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 grep -Rwi "text"
 ```
 
-#### [steal admin cookie/sqli](/other/marketplace.md) (tryhackme:marketplace)
-#### [VulnNet: Roasted](/other/roadted.md)
+#### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
+#### [ohmyweb](/other/src/omyweb.md)
 
 #### sqlmap
 ```bash
