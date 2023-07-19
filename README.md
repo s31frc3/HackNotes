@@ -450,10 +450,15 @@ load kiwi #download mimikatz
 * [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
 * [RustScan](https://github.com/RustScan/RustScan/wiki/Installation-Guide)
 * [subchase](https://github.com/tokiakasu/subchase)(subdomains)
+* [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(subdomains)
 * [SSRFire](https://github.com/ksharinarayanan/SSRFire)
 * [reconftw](https://github.com/six2dez/reconftw)
 * [google dorks](/other/src/dorks.md)
-
+* [aquatone](https://github.com/michenriksen/aquatone/releases/tag/v1.7.0)(screenshots)
+* [httpx](https://github.com/projectdiscovery/httpx)
+* [nuclei](https://github.com/projectdiscovery/nuclei)
+* [meg](https://github.com/tomnomnom/meg)
+* [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
 
 ---
 Happy hacking!

@@ -13,3 +13,6 @@ Online tools:
 * [FilePhish](https://cartographia.github.io/FilePhish/)
 * [Bug Bounty Helper](https://dorks.faisalahmed.me/)
 * [Pentest-tools google-hacking](https://pentest-tools.com/information-gathering/google-hacking)
+
+git dorcks
+site.com filename:wp-config.php
