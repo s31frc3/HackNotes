@@ -456,9 +456,10 @@ load kiwi #download mimikatz
 * [google dorks](/other/src/dorks.md)
 * [aquatone](https://github.com/michenriksen/aquatone/releases/tag/v1.7.0)(screenshots)
 * [httpx](https://github.com/projectdiscovery/httpx)
-* [nuclei](https://github.com/projectdiscovery/nuclei)
-* [meg](https://github.com/tomnomnom/meg)
+* [nuclei](https://github.com/projectdiscovery/nuclei)(scan for vulns)
+* [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
 * [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
+* [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 
 ---
 Happy hacking!
