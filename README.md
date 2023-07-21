@@ -433,6 +433,7 @@ load kiwi #download mimikatz
 * [hacktricks](https://book.hacktricks.xyz)
 * [bash cheatsheet](https://devhints.io/bash)
 * [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
+* [tmpfiles](https://tmpfiles.org/)
 
 ####  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
@@ -460,6 +461,7 @@ load kiwi #download mimikatz
 * [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
 * [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
 * [dalfox](https://github.com/hahwul/dalfox)(find xxs)
+* [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
 
 ---
 Happy hacking!
