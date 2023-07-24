@@ -434,6 +434,7 @@ load kiwi #download mimikatz
 * [bash cheatsheet](https://devhints.io/bash)
 * [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
 * [tmpfiles](https://tmpfiles.org/)
+* [pentest-checklist](https://github.com/Hari-prasaanth/Web-App-Pentest-Checklist)
 
 ####  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
