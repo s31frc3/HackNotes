@@ -435,6 +435,7 @@ load kiwi #download mimikatz
 * [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
 * [tmpfiles](https://tmpfiles.org/)
 * [pentest-checklist](https://github.com/Hari-prasaanth/Web-App-Pentest-Checklist)
+* [awesome ctf](https://github.com/apsdehal/awesome-ctf)
 
 ####  Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
@@ -445,6 +446,7 @@ load kiwi #download mimikatz
 - [crack station](https://crackstation.net/)
 - [md5decrypt.net](https://md5decrypt.net/en/)
 - [vigenere brute force](https://www.guballa.de/vigenere-solver)
+- [html enteties](https://www.webatic.com/html-entities-convertor)
 
 #### Tools
 
