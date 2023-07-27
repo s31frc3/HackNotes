@@ -7,7 +7,7 @@ Please note that these notes are a work in progress, and I'll be continuously ad
 ## Introduction
 In this repository, you will find a compilation of various tricks, commands, and techniques that can be useful during penetration testing activities. These notes are intended to assist in the process of hacking and securing systems.
 
-### [tricks](./other/tricks.md)
+### [notes](./other/notes.md)
 ### [web](./other/web.md)
 ### [osint](./other/osint.md)
 ---
@@ -452,22 +452,19 @@ load kiwi #download mimikatz
 - [html enteties](https://www.webatic.com/html-entities-convertor)
 
 #### Tools
-
-* [Git research](https://github.com/internetwache/GitTools)
-* [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
-* [RustScan](https://github.com/RustScan/RustScan/wiki/Installation-Guide)
-* [subchase](https://github.com/tokiakasu/subchase)(subdomains)
-* [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(subdomains)
-* [SSRFire](https://github.com/ksharinarayanan/SSRFire)
 * [reconftw](https://github.com/six2dez/reconftw)
-* [google dorks](/other/src/dorks.md)
+* [google dorks](/HackNotes/other/src/dorks.md)
 * [aquatone](https://github.com/michenriksen/aquatone/releases/tag/v1.7.0)(screenshots)
-* [httpx](https://github.com/projectdiscovery/httpx)
 * [nuclei](https://github.com/projectdiscovery/nuclei)(scan for vulns)
 * [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
 * [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
 * [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 * [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
+* [xxs-encoder](http://evuln.com/tools/xss-encoder/)
+* [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
+
+
+* [other links](/HackNotes/other/src/tools.md)
 
 ---
 Happy hacking!
