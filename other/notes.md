@@ -83,6 +83,11 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 grep -Rwi "text"
 ```
+
+#### locate
+```bash
+locate seclist | grep <what>
+```
 ---
 
 #### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)

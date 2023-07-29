@@ -31,3 +31,6 @@
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
 - [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)
+- [механизмы закрепления в windows](https://persistence-info.github.io/)
+- [tor search](./src_for_src/tor_search_en.md)
+- [wifi-penetration-testing-cheatsheet](https://github.com/ivan-sincek/wifi-penetration-testing-cheat-sheet)
