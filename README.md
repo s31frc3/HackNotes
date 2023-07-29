@@ -461,7 +461,7 @@ load kiwi #download mimikatz
 * [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 * [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
 * [xxs-encoder](http://evuln.com/tools/xss-encoder/)
-* [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
+* [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 
 
 * [other links](/HackNotes/other/src/tools.md)
