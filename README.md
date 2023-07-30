@@ -450,6 +450,7 @@ load kiwi #download mimikatz
 - [md5decrypt.net](https://md5decrypt.net/en/)
 - [vigenere brute force](https://www.guballa.de/vigenere-solver)
 - [html enteties](https://www.webatic.com/html-entities-convertor)
+- [list of signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 #### Tools
 * [reconftw](https://github.com/six2dez/reconftw)
