@@ -193,7 +193,6 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 * [exploit-db](https://www.exploit-db.com/)
 * [WTFBINS (cve)](https://wtfbins.wtf/)
 * [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
-* [hacktricks](https://book.hacktricks.xyz)
 * [bash cheatsheet](https://devhints.io/bash)
 * [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
 * [tmpfiles](https://tmpfiles.org/)
@@ -211,6 +210,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 - [vigenere brute force](https://www.guballa.de/vigenere-solver)
 - [html enteties](https://www.webatic.com/html-entities-convertor)
 - [list of signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
+- [xxs-encoder](http://evuln.com/tools/xss-encoder/)
 
 #### Tools
 * [reconftw](https://github.com/six2dez/reconftw)
@@ -221,7 +221,6 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 * [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
 * [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 * [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
-* [xxs-encoder](http://evuln.com/tools/xss-encoder/)
 * [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 
 
