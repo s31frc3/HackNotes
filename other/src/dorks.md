@@ -21,6 +21,8 @@ site.com filename:wp-config.php
 
 ---
 
+dork: domain[.]com secret NOT www (subdomains)
+
 site:target.com inurl:admin | administrator | adm | login | l0gin | wp-login
 
 intitle:"login" "admin" site:target.com

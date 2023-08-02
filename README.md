@@ -223,8 +223,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 * [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
 * [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 
-
-* [other links](/HackNotes/other/src/tools.md)
+ [other links](/HackNotes/other/src/links.md)
 
 ---
 Happy hacking!

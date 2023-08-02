@@ -1,4 +1,4 @@
-[back](/README.md)
+[back](../README.md)
 #### Discover hidden directories:
 ```linux
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://$IP/island/2100/FUZZ.ticket
