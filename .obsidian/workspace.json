@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "b2a7cc645478cda0",
+        "id": "afc27b3500f9bc47",
         "type": "tabs",
         "children": [
           {
-            "id": "c1726e961cafb428",
+            "id": "9644a053c6aa7f83",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/unix.md",
+                "file": "notes/hack/src/sobes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d30ea926e9f04103",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "other/src/src_for_src/xss.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/unix.md",
+                "file": "other/src/src_for_src/xss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/unix.md",
+                "file": "other/src/src_for_src/xss.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/unix.md"
+                "file": "other/src/src_for_src/xss.md"
               }
             }
           }
@@ -146,8 +159,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c1726e961cafb428",
+  "active": "61b993ecfca93825",
   "lastOpenFiles": [
+    "notes/hack/src/tg_ip.md",
+    "other/src/src_for_src/sql.md",
+    "other/src/src_for_src/forenzik.md",
+    "notes/hack/src/sobes.md",
+    "notes/hack/notes.md",
+    "notes/work/sobes.md.md",
+    "notes/books/tecnical/the_web_application_hackers.md",
+    "other/src/src_for_src/notes.md.md",
+    "other/notes.md",
+    "notes/unix.md",
     "README.md"
   ]
 }

