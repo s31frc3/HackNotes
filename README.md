@@ -4,6 +4,7 @@ This repository contains my personal notes and tricks that I've gathered while w
 
 Please note that these notes are a work in progress, and I'll be continuously adding more content as I progress through the challenges and machines.
 
+test
 ## Introduction
 
 In this repository, you will find a compilation of various tricks, commands, and techniques that can be useful during penetration testing activities. These notes are intended to assist in the process of hacking and securing systems.
