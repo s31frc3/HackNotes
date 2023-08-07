@@ -1,6 +1,4 @@
 [back](/README.md)
-## Tricks
-Here are some handy tricks to enhance your pentesting workflow:
 
 ---
 #### Spawn a fully interactive shell:
@@ -89,23 +87,35 @@ tree tmp
 echo "user:$1$hacker$TzyKlv0/R/c28R.GAeLw.1:0:0:Hacker:/root:/bin/bash" > /etc/passwd
 ```
 
-fix PATH in old ubuntu
+#### fix PATH in old ubuntu
 ```
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
 #### grep
-```
-grep -Rwi "text"
-```
-
-#### locate
-```bash
+```sh
 locate seclist | grep <what>
+grep -Rwi "text"
+grep -n #numbers
+grep -i #do not care abuot regex
+grep -c #how many times
+grep linux * -r recursive # in all files
+точка - это любой символ, -f чтоб точка не считалась любым символом
+-v '^#' #begins with
+'^$' #пустые строки
+-e '^(#|$)' #начинается или с # или с $(пустая строка)
+grep -e 'colou?r' # ? makes preveous character optional (то есть и может стоять и нет)
+grep -w 'root' # only word root, not asdrootas
+\grep #unalias
+-a5 #five line after the math
+-b5 #before
+-c5 #before and after
+-e '[0-9]{5,6}/tcp' file.txt #от 5 до 6 цифр от 0 до 9
+\s # space or tab 
 ```
----
 
+---
 #### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
-#### [ohmyweb](/other/src/omyweb.md)
+#### [ohmyweb](./src/omyweb.md)
 
 ---
