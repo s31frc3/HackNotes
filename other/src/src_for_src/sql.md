@@ -21,4 +21,6 @@ show dbs
 use <db>
 show collections
 db.<collection>.find()
+
+search[$ne]=string #mongodb
 ```

