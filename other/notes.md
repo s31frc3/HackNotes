@@ -121,6 +121,13 @@ grep -w 'root' # only word root, not asdrootas
 ```
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ```
+#### vim
+```vim
+shift+h #cursor on top of the screen
+shift+m #cursor on middle of the screen
+shift+h #cursor on bottom of the screen
+gj #go to 1 line down if text in 1 line
+```
 #### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
 #### [ohmyweb](./src/omyweb.md)
 
