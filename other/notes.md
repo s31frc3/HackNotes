@@ -107,14 +107,20 @@ grep linux * -r recursive # in all files
 grep -e 'colou?r' # ? makes preveous character optional (то есть и может стоять и нет)
 grep -w 'root' # only word root, not asdrootas
 \grep #unalias
--a5 #five line after the math
--b5 #before
--c5 #before and after
+-A5 #five line after the math
+-B5 #before
+-C5 #before and after
 -e '[0-9]{5,6}/tcp' file.txt #от 5 до 6 цифр от 0 до 9
-\s # space or tab 
+-E '[0-9]$' #number at the end of line
+-E '\s*' # space or tab 
++ # one and more chars
 ```
 
 ---
+#### ssh
+```
+ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
+```
 #### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
 #### [ohmyweb](./src/omyweb.md)
 
