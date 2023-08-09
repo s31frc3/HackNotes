@@ -123,10 +123,21 @@ ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ```
 #### vim
 ```vim
-shift+h #cursor on top of the screen
-shift+m #cursor on middle of the screen
-shift+h #cursor on bottom of the screen
-gj #go to 1 line down if text in 1 line
+Shift+H     # Move cursor to the top of the screen.
+Shift+M     # Move cursor to the middle of the screen.
+Shift+L     # Move cursor to the bottom of the screen.
+gj          # Move one line down if text is within one line.
+g0          # Move cursor to the start of the current line.
+dk          # Delete current line and the line above it.
+gq q        # Format selected text into a single block of multiple lines (VAPGQ).
+J           # Join lines together (opposite of GQ).
+gj          # Join lines without spaces (opposite of J).
+gu u        # Convert to lowercase.
+gU U        # Convert to uppercase.
+~           # Toggle case of current character.
+g~ ~        # Toggle case of all characters in the current line.
+gf          # Open the file whose name is under the cursor, '^' to go back.
+gv          # Return to the previous selection after visual mode.
 ```
 #### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
 #### [ohmyweb](./src/omyweb.md)
