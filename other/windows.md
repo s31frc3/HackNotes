@@ -1,77 +1,65 @@
 ### Windows
 
-<details><summary> windows system tools </summary>
-<details><summary> Local User and Group Management </summary>
+#### windows system tools 
+##### Local User and Group Management 
 It is a shell application to manage Windows system administrator applications.
 
 ```bash
 lusrmgr.msc
 ```
-</details>
-<details> <summary> System Configuration utility </summary>
+##### System Configuration utility 
 
 for diagnose startup issues
 
 ```bash
 MSConfig
 ```
-</details>
-<details> <summary> Task Manager </summary>
+##### Task Manager 
 
 to manage (enable/disable) startup items. 
 ```bash
 taskmgr
 ```
-</details>
-<details> <summary> User Account Control </summary>
+##### User Account Control 
 helps prevent unauthorized changes (which may be initiated by applications, users, viruses, or other forms of malware) to an operating system
 
 ```bash
 UserAccountControlSettings.exe
 ```
-</details>
-<details> <summary> Computer Management </summary>
+##### Computer Management 
 the process of managing, monitoring and optimizing a computer system for performance, availability, security
 
 ```bash
 compmgmt
 ```
-</details>
-<details> <summary> System Information </summary> 
+##### System Information 
 (gathers information about your computer and displays a comprehensive view of your hardware, system components, and software environment, which you can use to diagnose computer issues.)
 
 ```bash
 msinfo32
 ```
-</details>
-<details> <summary> Resource Monitor </summary>
+##### Resource Monitor 
 displays per-process and aggregate CPU, memory, disk, and network usage information, in addition to providing details about which processes are using individual file handles and modules
 
 ```bash
 resmon
 ```
-</details>
-<details> <summary> Windows Registry </summary>
+##### Windows Registry 
 central hierarchical database used to store information necessary to configure the system for one or more users, applications, and hardware devices
 
 ```bash
 regedit
 ```
-</details>
-<details><summary>Group policy objects</summary>
+##### Group policy objects
 a collection of settings that can be applied to OUs
-</details>
 
-<details><summary>PowerShell enumeration</summary>
+#### PowerShell enumeration
 
 view all of the hidden files in the current directory
 ```bash
 Get-ChildItem -File -Hidden -ErrorAction SilentlyContinue
 ```
-</details>
-</details>
-
-<details><summary> SMB enumeration </summary>
+#### SMB enumeration 
 
 enumerate
 
@@ -106,9 +94,7 @@ connect with smbclient
 smbclient \\\\$IP\\nt4wrksv
 ```
 
-</details>
-
-<details><summary>rdp </summary>
+#### rdp 
 
 ```bash
 rdesktop -u <username> -p <password> $IP -g 70% -r disk:folder=/home/toor/cd/apps
@@ -116,9 +102,7 @@ rdesktop -u Administrator -d CONTROLLER $IP
 remmina 
 ```
 
-</details>
-
-<details><summary>AD</summary>
+#### AD
 
 extract credentials and secrets from a systemdump
 ```bash
@@ -181,9 +165,7 @@ misc::cmd #open cmd with elevated priveleges to all machines
 links
 * [WADComs (AD)](https://wadcoms.github.io/)
 
-</details>
-
-<details><summary>enumeration</summary>
+#### enumeration
 
 run powershell with bypass execution policy
 ```bash
@@ -236,6 +218,3 @@ load kiwi #download mimikatz
 - [LOLBAS (windows)](https://lolbas-project.github.io/)
 - [JAWS](https://github.com/411Hall/JAWS)
 - [PowerUp.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1)
-
-
-</details>

