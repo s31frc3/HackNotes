@@ -17,7 +17,7 @@
 
 ## Определение сервисов и технологий, версий ПО
 - [визуализация nmap выхлопа](https://github.com/SabyasachiRana/WebMap)
-- [gowitness](https://github.com/sensepost/gowitness) (делать фотки (`docker run --rm -v $(pwd):/data leonjza/gowitness gowitness file -f urls.txt -P`))
+- [gowitness](https://github.com/sensepost/gowitness) 
 
 ## Source code / configs / git
 - [trufflehog](https://github.com/trufflesecurity/trufflehog)

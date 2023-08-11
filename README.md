@@ -69,46 +69,26 @@ nmap --script=vuln <ip>
 cat /proc/1/cgroup #if u in docker
 ```
 
-quik one-line bash script with colorful output to enumerate linux machine
+#### quik one-line bash script with colorful output to enumerate linux machine
 
 ```bash
 for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "cat /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo  "\n\033[1;34mCommand: $cmd\033[0m"; echo "\033[1;32m$(eval $cmd)\033[0m"; echo  "\033[1;33m\n===================================================================================================\n==================================================================================================="; done
 ```
 
-#### links
-
-* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
-* [linEnum](https://github.com/rebootuser/LinEnum)
-* [LES](https://github.com/mzet-/linux-exploit-suggester)
-* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
-* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
-* [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
-* [GTFOBins (unix)](https://gtfobins.github.io/)
-* [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-* [linux backdoors](/other/src/linux_backdoors.md)
-
-</details>
-
 [other](./other/src/linux_priv_esc.md)
 
 ---
-
-[windows](./other/windows.md)
+#### [windows](./other/windows.md)
 
 ---
 
 ### links
 #### notes
-* [explainshell.com](https://explainshell.com/)
-* [cve.mitre.org](https://cve.mitre.org/cve/)
-* [WTFBINS (cve)](https://wtfbins.wtf/)
-* [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
-* [bash cheatsheet](https://devhints.io/bash)
-* [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
-* [tmpfiles](https://tmpfiles.org/)
-* [pentest-checklist](https://github.com/Hari-prasaanth/Web-App-Pentest-Checklist)
-* [awesome ctf](https://github.com/apsdehal/awesome-ctf)
-
+- [explainshell.com](https://explainshell.com/)
+- [cve.mitre.org](https://cve.mitre.org/cve/)
+- [WTFBINS (cve)](https://wtfbins.wtf/)
+- [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
+- [tmpfiles](https://tmpfiles.org/)
 #### Encoding techniques:
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
@@ -120,18 +100,15 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 - [html enteties](https://www.webatic.com/html-entities-convertor)
 - [list of signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 - [xxs-encoder](http://evuln.com/tools/xss-encoder/)
-
 #### Tools
-* [reconftw](https://github.com/six2dez/reconftw)
-* [google dorks](/HackNotes/other/src/dorks.md)
-* [aquatone](https://github.com/michenriksen/aquatone/releases/tag/v1.7.0)(screenshots)
-* [nuclei](https://github.com/projectdiscovery/nuclei)(scan for vulns)
-* [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
-* [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
+- [reconftw](https://github.com/six2dez/reconftw)
+- [google dorks](/HackNotes/other/src/dorks.md)
+- [gowitness](https://github.com/sensepost/gowitness) (screenshots)
+- [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
+- [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
 - [x8](https://github.com/Sh1Yo/x8)(like arjun)
-* [dalfox](https://github.com/hahwul/dalfox)(find xxs)
-* [cdncheck](https://github.com/projectdiscovery/cdncheck)(identifying the technology associated with dns)
-* [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
+- [dalfox](https://github.com/hahwul/dalfox)(find xxs)
+- [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 
 [other links](./other/src/links.md)
 
