@@ -7,10 +7,11 @@
 - [httpx](https://github.com/projectdiscovery/httpx)
 - [httpx ports](./src_for_src/httpx_ports.md)
 - [naabu](https://github.com/projectdiscovery/naabu)(scan ports)
-- [subchase](https://github.com/tokiakasu/subchase)(subdomains)
-- [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(subdomains)
-- [shuffledns](https://github.com/projectdiscovery/shuffledns)
-- [alterx](https://github.com/projectdiscovery/alterx)
+- [subchase](https://github.com/tokiakasu/subchase)(cli subdomains)
+- [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
+- [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
+- [shuffledns](https://github.com/projectdiscovery/shuffledns)(cli check subds)
+- [dnsx](https://github.com/projectdiscovery/dnsx)(cli)
 - [Garud](https://github.com/R0X4R/Garud)(subds, url, cves)
 - [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(passive urls)
 - [enum subds with repl](./src_for_src/subds.md)(wordlist generator)
@@ -26,6 +27,7 @@
 - [wifi-penetration-testing-cheatsheet](https://github.com/ivan-sincek/wifi-penetration-testing-cheat-sheet)
 - [bug](https://github.com/twseptian/oneliner-bugbounty) | [bounty](https://github.com/KingOfBugbounty/KingOfBugBountyTips) | [commands](https://github.com/dwisiswant0/awesome-oneliner-bugbounty)
 - [osint web all in one](https://web-check.as93.net/)
+- [cdncheck](https://github.com/projectdiscovery/cdncheck)(check for waf)
 
 
 #### tools

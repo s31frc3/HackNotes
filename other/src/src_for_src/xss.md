@@ -24,7 +24,7 @@ eval('alert(9)')
 <svg/onload=alert()>
 <img src onerror=alert(0)>
 ```
-────────────────────────────────────────────
+---
 Основные методы вызова js из html
 ```js
 <script>...</script>

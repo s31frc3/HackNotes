@@ -1,12 +1,4 @@
-[back](/README.md)
-
----
-#### Spawn a fully interactive shell:
-```python
-python3 -c 'import pty;pty.spawn("/bin/bash")'
-export TERM=xterm
-```
-
+[back](../README.md)
 #### scan rpc port
 ```
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
@@ -165,7 +157,18 @@ g~ ~        # Toggle case of all characters in the current line.
 gf          # Open the file whose name is under the cursor, '^' to go back.
 gv          # Return to the previous selection after visual mode.
 ```
-#### [steal admin cookie/sqli](/other/src/marketplace.md) (tryhackme:marketplace)
+#### magic numbers
+png
+```
+89504E470D0A1A0A
+```
+gif
+```
+GIF87a    474946383761
+GIF89a    474946383961
+```
+
+#### [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
 #### [ohmyweb](./src/omyweb.md)
 
 ---
