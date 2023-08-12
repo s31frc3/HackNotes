@@ -57,7 +57,7 @@
 - [enumeration guide](https://github.com/beyondtheoryio/Enumeration-Guide)
 - [bash cheatsheet](https://devhints.io/bash)
 - [bug](https://github.com/twseptian/oneliner-bugbounty) | [bounty](https://github.com/KingOfBugbounty/KingOfBugBountyTips) | [commands](https://github.com/dwisiswant0/awesome-oneliner-bugbounty)
-
+- [explainshell.com](https://explainshell.com/)
 #### linux priv esc
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [linEnum](https://github.com/rebootuser/LinEnum)
@@ -67,4 +67,4 @@
 * [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
 * [GTFOBins (unix)](https://gtfobins.github.io/)
 * [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-* [linux backdoors](/other/src/linux_backdoors.md)
+* [linux backdoors](./linux_backdoors.md)

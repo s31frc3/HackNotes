@@ -1,5 +1,3 @@
-### Windows
-
 #### windows system tools 
 ##### Local User and Group Management 
 It is a shell application to manage Windows system administrator applications.
@@ -53,12 +51,6 @@ regedit
 ##### Group policy objects
 a collection of settings that can be applied to OUs
 
-#### PowerShell enumeration
-
-view all of the hidden files in the current directory
-```bash
-Get-ChildItem -File -Hidden -ErrorAction SilentlyContinue
-```
 #### SMB enumeration 
 
 enumerate
@@ -208,6 +200,11 @@ run post/multi/recon/local_exploit_suggester #in session
 getsystem
 getprivs
 load kiwi #download mimikatz
+```
+
+view all of the hidden files in the current directory
+```bash
+Get-ChildItem -File -Hidden -ErrorAction SilentlyContinue
 ```
 
 

@@ -68,7 +68,6 @@ cat /etc/exports #file sharing
 nmap --script=vuln <ip>
 cat /proc/1/cgroup #if u in docker
 ```
-
 #### quik one-line bash script with colorful output to enumerate linux machine
 
 ```bash
@@ -84,7 +83,6 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 
 ### links
 #### notes
-- [explainshell.com](https://explainshell.com/)
 - [cve.mitre.org](https://cve.mitre.org/cve/)
 - [WTFBINS (cve)](https://wtfbins.wtf/)
 - [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)

