@@ -41,11 +41,15 @@
 - [enum subds with repl](./src_for_src/subds.md)(wordlist generator)
 - [JIRA](./src_for_src/jira.md)(scaner)
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)(displays Interactsh interactions in a well-managed dashboard in your browser)
+- [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
 - authorize (burp extension to scan idor 1 1 | 2)
 #### code scanners
 - [SSTImap](https://github.com/vladko312/SSTImap)(code inj scanner)
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [scanner white box](https://github.com/bearer/bearer)
+
+#### wordlists
+- [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
 #### windows
 - [bloodhound-docker](https://github.com/belane/docker-bloodhound)
 - [механизмы закрепления в windows](https://persistence-info.github.io/)
@@ -58,13 +62,3 @@
 - [bash cheatsheet](https://devhints.io/bash)
 - [bug](https://github.com/twseptian/oneliner-bugbounty) | [bounty](https://github.com/KingOfBugbounty/KingOfBugBountyTips) | [commands](https://github.com/dwisiswant0/awesome-oneliner-bugbounty)
 - [explainshell.com](https://explainshell.com/)
-#### linux priv esc
-* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
-* [linEnum](https://github.com/rebootuser/LinEnum)
-* [LES](https://github.com/mzet-/linux-exploit-suggester)
-* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
-* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
-* [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
-* [GTFOBins (unix)](https://gtfobins.github.io/)
-* [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-* [linux backdoors](./linux_backdoors.md)

@@ -78,3 +78,15 @@ Censys (IPv4 (https://censys.io/ipv4)):
 (services.tls.certificates.leaf_data.issuer.common_name:company.com) AND services.http.response.html_title:admin
 
 (services.tls.certificates.leaf_data.issuer.common_name:company.com) AND services.http.response.body:admin
+
+---
+### search admin-panels
+```
+site:target.com inurl:admin | administrator | adm | login | l0gin | wp-login
+
+intitle:"login" "admin" site:target.com
+
+intitle:"index of /admin" site:target.com
+
+inurl:admin intitle:admin intext:admin
+```

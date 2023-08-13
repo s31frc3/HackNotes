@@ -73,8 +73,18 @@ cat /proc/1/cgroup #if u in docker
 ```bash
 for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "cat /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo  "\n\033[1;34mCommand: $cmd\033[0m"; echo "\033[1;32m$(eval $cmd)\033[0m"; echo  "\033[1;33m\n===================================================================================================\n==================================================================================================="; done
 ```
+#### linux priv esc
+* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+* [linEnum](https://github.com/rebootuser/LinEnum)
+* [LES](https://github.com/mzet-/linux-exploit-suggester)
+* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
+* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
+* [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
+* [GTFOBins (unix)](https://gtfobins.github.io/)
+* [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
+* [linux backdoors](./linux_backdoors.md)
 
-[other](./other/src/linux_priv_esc.md)
+#### [other](./other/src/linux_priv_esc.md)
 
 ---
 #### [windows](./other/windows.md)
