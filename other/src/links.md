@@ -47,7 +47,6 @@
 - [SSTImap](https://github.com/vladko312/SSTImap)(code inj scanner)
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [scanner white box](https://github.com/bearer/bearer)
-
 #### wordlists
 - [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
 #### windows
