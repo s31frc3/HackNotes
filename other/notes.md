@@ -168,7 +168,7 @@ GIF87a    474946383761
 GIF89a    474946383961
 ```
 
-#### [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
-#### [ohmyweb](./src/omyweb.md)
+#### [steal admin cookie/sqli](marketplace.md) (tryhackme:marketplace)
+#### [ohmyweb](omyweb.md)
 
 ---

