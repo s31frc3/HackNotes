@@ -43,6 +43,8 @@
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)(displays Interactsh interactions in a well-managed dashboard in your browser)
 - [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
 - authorize (burp extension to scan idor 1 1 | 2)
+- [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
+- [fast port scanner](https://github.com/dievus/threader3000)
 #### code scanners
 - [SSTImap](https://github.com/vladko312/SSTImap)(code inj scanner)
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
@@ -61,3 +63,4 @@
 - [bash cheatsheet](https://devhints.io/bash)
 - [bug](https://github.com/twseptian/oneliner-bugbounty) | [bounty](https://github.com/KingOfBugbounty/KingOfBugBountyTips) | [commands](https://github.com/dwisiswant0/awesome-oneliner-bugbounty)
 - [explainshell.com](https://explainshell.com/)
+- [AD](https://github.com/dievus/Active-Directory-Exploitation-Cheat-Sheet)
