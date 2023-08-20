@@ -1,9 +1,10 @@
 [back](../../README.md)
-#### OSINT
+# OSINT
 - [telegram osint](https://github.com/drego85/tosint)
 - [email osint](https://epieos.com/)
-#### web OSINT
-##### CLI
+---
+# web OSINT
+## CLI
 - [httpx(pd)](https://github.com/projectdiscovery/httpx)
 - [httpx ports](./src_for_src/httpx_ports.md)
 - [naabu(pd)](https://github.com/projectdiscovery/naabu)(scan ports)
@@ -17,45 +18,51 @@
 - [photon](https://github.com/s0md3v/Photon)(Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds)
 - [cdncheck(pd)](https://github.com/projectdiscovery/cdncheck)(what waf)
 - [uncover](https://github.com/projectdiscovery/uncover)(discover exposed hosts on the internet only with api keys)
-##### online tools
+## online tools
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
 - [osint web all in one](https://web-check.as93.net/)
-#### tools
-- [PhotoGuard](https://github.com/MadryLab/photoguard)(protect photo from ai)
-- [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
-- [ddos-attack](https://github.com/karthik558/ddos-attack)
-- [analize pcap file](https://apackets.com/upload)
-- [leakix.net](https://leakix.net/)
-- [tor search](./src_for_src/tor_search_en.md)
-- [check](https://api-guesser.netlify.app/) [api](https://github.com/streaak/keyhacks)
-- [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)
-- [wordpress nuclei](https://github.com/topscoder/nuclei-wordfence-cve)
-- [netmap](https://github.com/lmsecure/LMS.NetMap)(анализатор трафика)
-- [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
-- [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
-- [GitTools](https://github.com/internetwache/GitTools)
-- [менеджер nuclei](https://github.com/xm1k3/cent)
-- [webapp-wordlists](https://github.com/p0dalirius/webapp-wordlists)
-- [macrome](https://github.com/michaelweber/Macrome)(exel hack)
-- [enum subds with repl](./src_for_src/subds.md)(wordlist generator)
-- [JIRA](./src_for_src/jira.md)(scaner)
-- [interactsh-web](https://github.com/projectdiscovery/interactsh-web)(displays Interactsh interactions in a well-managed dashboard in your browser)
-- [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
+---
+# tools
+
+## cli
+### web
 - authorize (burp extension to scan idor 1 1 | 2)
 - param miner (burp extension to scan hidden params)
-- [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
+- [JIRA](./src_for_src/jira.md)(scaner)
+- [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)
+- [wordpress nuclei](https://github.com/topscoder/nuclei-wordfence-cve)
+- [менеджер nuclei](https://github.com/xm1k3/cent)
+- [check](https://api-guesser.netlify.app/) [api](https://github.com/streaak/keyhacks)
+- [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
+- [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
+### other
 - [fast port scanner](https://github.com/dievus/threader3000)
-#### code scanners
+- [macrome](https://github.com/michaelweber/Macrome)(exel hack)
+- [GitTools](https://github.com/internetwache/GitTools)
+- [PhotoGuard](https://github.com/MadryLab/photoguard)(protect photo from ai)
+- [ddos-attack](https://github.com/karthik558/ddos-attack)
+- [netmap](https://github.com/lmsecure/LMS.NetMap)(анализатор трафика)
+- [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
+## online
+- [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
+- [interactsh-web](https://github.com/projectdiscovery/interactsh-web)(for xss)
+- [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
+- [leakix.net](https://leakix.net/)
+- [tor search](./src_for_src/tor_search_en.md)
+- [analize pcap file](https://apackets.com/upload)
+---
+# code scanners
 - [SSTImap](https://github.com/vladko312/SSTImap)(code inj scanner)
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [scanner white box](https://github.com/bearer/bearer)
-#### wordlists
+---
+# wordlists
 - [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
-#### windows
-- [bloodhound-docker](https://github.com/belane/docker-bloodhound)
-- [механизмы закрепления в windows](https://persistence-info.github.io/)
-#### cheatsheets
+- [enum subds with repl](./src_for_src/subds.md)(wordlist generator)
+- [webapp-wordlists](https://github.com/p0dalirius/webapp-wordlists)
+---
+# cheatsheets
 - [wifi-penetration-testing-cheatsheet](https://github.com/ivan-sincek/wifi-penetration-testing-cheat-sheet)
 - [osint-tools](https://github.com/wddadk/Offensive-OSINT-Tools)
 - [pentest-checklist](https://github.com/Hari-prasaanth/Web-App-Pentest-Checklist)
@@ -65,3 +72,4 @@
 - [bug](https://github.com/twseptian/oneliner-bugbounty) | [bounty](https://github.com/KingOfBugbounty/KingOfBugBountyTips) | [commands](https://github.com/dwisiswant0/awesome-oneliner-bugbounty)
 - [explainshell.com](https://explainshell.com/)
 - [AD](https://github.com/dievus/Active-Directory-Exploitation-Cheat-Sheet)
+- [xss cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)

@@ -234,3 +234,7 @@ set lport lhost
 set PAYLOAD windows/meterpreter/reverse_tcp
 run -j (in background)
 ```
+#### links
+##### windows
+- [bloodhound-docker](https://github.com/belane/docker-bloodhound)
+- [механизмы закрепления в windows](https://persistence-info.github.io/)
