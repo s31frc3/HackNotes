@@ -43,6 +43,7 @@
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)(displays Interactsh interactions in a well-managed dashboard in your browser)
 - [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
 - authorize (burp extension to scan idor 1 1 | 2)
+- param miner (burp extension to scan hidden params)
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
 - [fast port scanner](https://github.com/dievus/threader3000)
 #### code scanners

