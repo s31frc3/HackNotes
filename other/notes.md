@@ -118,25 +118,25 @@ sudo mkdir /mnt/nfs                                                             
 #### grep
 ```sh
 locate seclist | grep <what>
-grep -Rwi "text"
-grep -n #numbers
-grep -i #do not care abuot regex
-grep -c #how many times
-grep linux * -r recursive # in all files
-точка - это любой символ, -f чтоб точка не считалась любым символом
--v '^#' #begins with
-'^$' #пустые строки
--e '^(#|$)' #начинается или с # или с $(пустая строка)
-grep -e 'colou?r' # ? makes preveous character optional (то есть и может стоять и нет)
-grep -w 'root' # only word root, not asdrootas
-\grep #unalias
--A5 #five line after the math
--B5 #before
--C5 #before and after
--e '[0-9]{5,6}/tcp' file.txt #от 5 до 6 цифр от 0 до 9
--E '[0-9]$' #number at the end of line
--E '\s*' # space or tab 
-+ # one and more chars
+grep -Rwi "text"             # Recursively search for lines
+grep -n                      # show numbers of lines
+grep -i                      # do not care abuot regex
+grep -c                      # how many times
+grep linux * -r              # recursive  in all files
+# точка - это любой символ, -f чтоб точка не считалась любым символом
+-v '^#'                      # begins with
+'^$'                         # пустые строки
+-e '^(#|$)'                  # начинается или с # или с $(пустая строка)
+grep -e 'colou?r'            # ? makes preveous character optional (то есть и может стоять и нет)
+grep -w 'root'               # only word root, not asdrootas
+\grep                        # unalias
+-A5                          # five line after the math
+-B5                          # before
+-C5                          # before and after
+-e '[0-9]{5,6}/tcp' file.txt # от 5 до 6 цифр от 0 до 9
+-E '[0-9]$'                  # number at the end of line
+-E '\s*'                     # space or tab 
++                            # one and more chars
 ```
 
 ---
@@ -205,6 +205,16 @@ X-Forwared-Host: 127.0.0.1
 login with '*'
 search with '.*'
 ────────────────────────────────────────────
+поменять post на get и на оборот
+────────────────────────────────────────────
+поменять string на int и на оборот
+────────────────────────────────────────────
+username: ad'||'min
+password: a' IS NOT 'b
+────────────────────────────────────────────
+` ` {}
+────────────────────────────────────────────
+register admin user with admin%00
 ────────────────────────────────────────────
 ────────────────────────────────────────────
 ```
@@ -212,7 +222,5 @@ search with '.*'
 ```
 mv -t DESTINATION file1 file2 file3
 ```
-#### [steal admin cookie/sqli](marketplace.md) (tryhackme:marketplace)
-#### [ohmyweb](omyweb.md)
 
 ---

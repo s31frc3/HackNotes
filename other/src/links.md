@@ -27,7 +27,7 @@
 
 ## cli
 ### web
-- authorize (burp extension to scan idor 1 1 | 2)
+- authorize (burp extension to scan for idor 1 1 | 2)
 - param miner (burp extension to scan hidden params)
 - [JIRA](./src_for_src/jira.md)(scaner)
 - [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)
