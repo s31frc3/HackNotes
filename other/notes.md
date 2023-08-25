@@ -183,3 +183,13 @@ mv -t DESTINATION file1 file2 file3
 ```
 
 ---
+
+#### run shell as other user
+```
+sudo -u user bash
+```
+#### shells
+```
+SHELL=/bin/bash script -q /dev/null
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+```

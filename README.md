@@ -97,6 +97,8 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 - [list of signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 - [xxs-encoder](http://evuln.com/tools/xss-encoder/)
 - [10015.io](https://10015.io/tools/md5-encrypt-decrypt)
+- [de4js](https://lelinhtinh.github.io/de4js/)
+- [Cisco Password Cracker](https://www.ifm.net.nz/cookbooks/passwordcracker.html)
 #### Tools
 - [reconftw](https://github.com/six2dez/reconftw)
 - [google dorks](/HackNotes/other/src/dorks.md)
