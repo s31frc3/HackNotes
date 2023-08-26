@@ -193,3 +193,4 @@ sudo -u user bash
 SHELL=/bin/bash script -q /dev/null
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
+---
