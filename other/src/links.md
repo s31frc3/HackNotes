@@ -2,6 +2,8 @@
 # OSINT
 - [telegram osint](https://github.com/drego85/tosint)
 - [email osint](https://epieos.com/)
+- [apple blee](https://github.com/hexway/apple_bleee)
+- [opendrop](https://github.com/zhovner/opendrop)
 ---
 # web OSINT
 ## CLI
