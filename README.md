@@ -66,6 +66,7 @@ getcap -r / 2>/dev/null
 cat /etc/exports #file sharing
 nmap --script=vuln <ip>
 cat /proc/1/cgroup #if u in docker
+cat /etc/exports
 ```
 #### quik one-line bash script with colorful output to enumerate linux machine
 
