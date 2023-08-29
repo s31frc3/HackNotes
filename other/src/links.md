@@ -1,9 +1,10 @@
 [back](../../README.md)
-# OSINT
+# not web
 - [telegram osint](https://github.com/drego85/tosint)
 - [email osint](https://epieos.com/)
 - [apple blee](https://github.com/hexway/apple_bleee)
 - [opendrop](https://github.com/zhovner/opendrop)
+- [netcut](https://arcai.com/)
 ---
 # web OSINT
 ## CLI
@@ -25,6 +26,7 @@
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
 - [osint web all in one](https://web-check.as93.net/)
+- [web-check](https://web-check.xyz/)
 ---
 # tools
 
@@ -36,6 +38,7 @@
 - [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)
 - [wordpress nuclei](https://github.com/topscoder/nuclei-wordfence-cve)
 - [менеджер nuclei](https://github.com/xm1k3/cent)
+- [nuclei templates generator](https://templates.nuclei.sh/)
 - [check](https://api-guesser.netlify.app/) [api](https://github.com/streaak/keyhacks)
 - [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
 - [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
