@@ -20,6 +20,7 @@
 - [photon](https://github.com/s0md3v/Photon)(Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds)
 - [cdncheck(pd)](https://github.com/projectdiscovery/cdncheck)(what waf)
 - [uncover](https://github.com/projectdiscovery/uncover)(discover exposed hosts on the internet only with api keys)
+- [droopescan](https://github.com/SamJoan/droopescan)(scan for cms versions)
 ## online tools
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
