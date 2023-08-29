@@ -18,6 +18,8 @@
 - [uncover](https://github.com/projectdiscovery/uncover)(discover exposed hosts on the internet only with api keys)
 - [droopescan](https://github.com/SamJoan/droopescan)(scan for cms versions)
 - [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
+- [chameleon](https://github.com/iustin24/chameleon)(provides content discovery by using wappalyzer's set of technology fingerprints alongside custom wordlists tailored to each detected technologies)
+- [changedetection.io](https://github.com/dgtlmoon/changedetection.io)(детектор обнаружения изменений на веб-сайтах с открытым исходным кодом)
 ## online tools
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
@@ -39,6 +41,7 @@
 - [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
 - [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
 - [tree](https://github.com/enjoiz/XXEinjector)| [tools](https://github.com/luisfontes19/xxexploiter)| [for xxe](https://github.com/whitel1st/docem)
+- [headerpwn](https://github.com/devanshbatham/headerpwn)(A fuzzer for analyzing how servers respond to different HTTP headers)
 ### other
 - [fast port scanner](https://github.com/dievus/threader3000)
 - [GitTools](https://github.com/internetwache/GitTools)
