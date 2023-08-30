@@ -25,6 +25,7 @@
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
 - [osint web all in one](https://web-check.as93.net/)
 - [web-check](https://web-check.xyz/)
+- [intelligence X](https://intelx.io/)
 ---
 # tools
 
@@ -66,6 +67,7 @@
 - [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
 - [enum subds with repl](./src_for_src/subds.md)(wordlist generator)
 - [webapp-wordlists](https://github.com/p0dalirius/webapp-wordlists)
+- [directory wordlist](https://github.com/ricew4ng/Blasting-Dictionary/blob/master/LFI-Interesting-Files%EF%BC%88249%EF%BC%89.txt)
 ---
 # cheatsheets
 - [wifi-penetration-testing-cheatsheet](https://github.com/ivan-sincek/wifi-penetration-testing-cheat-sheet)
@@ -87,3 +89,4 @@
 - [PhotoGuard](https://github.com/MadryLab/photoguard)(protect photo from ai)
 - [netmap](https://github.com/lmsecure/LMS.NetMap)(анализатор трафика)
 - [ddos-attack](https://github.com/karthik558/ddos-attack)
+- [reverse shell usiog macros](https://www.offsec.com/offsec/macro-weaponization/)
