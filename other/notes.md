@@ -188,6 +188,7 @@ mv -t DESTINATION file1 file2 file3
 ```
 sudo -u user bash
 ```
+---
 #### shells
 ```
 SHELL=/bin/bash script -q /dev/null
