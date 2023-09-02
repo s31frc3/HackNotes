@@ -148,6 +148,10 @@ grep -w 'root'               # only word root, not asdrootas
 ```
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ```
+#### connect as annon with ftp
+```
+ftp -A $IP
+```
 #### vim
 ```vim
 Shift+H     # Move cursor to the top of the screen.

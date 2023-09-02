@@ -14,6 +14,7 @@
 - [Garud](https://github.com/R0X4R/Garud)(scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more)
 - [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
 - [katana(pd)](https://github.com/projectdiscovery/katana)(urls)
+- [jsluice](https://github.com/BishopFox/jsluice)(for extracting URLs, paths, secrets, and other interesting data from JavaScript source code) [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
 - [photon](https://github.com/s0md3v/Photon)(Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds)
 - [cdncheck(pd)](https://github.com/projectdiscovery/cdncheck)(what waf)
 - [uncover](https://github.com/projectdiscovery/uncover)(discover exposed hosts on the internet only with api keys)
@@ -50,6 +51,7 @@
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
 - [telegram osint](https://github.com/drego85/tosint)
 - [email osint](https://epieos.com/)
+- [XSSTRON](https://github.com/RenwaX23/XSSTRON)(Electron JS Browser To Find XSS)
 
 ## online
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
@@ -91,5 +93,6 @@
 - [netmap](https://github.com/lmsecure/LMS.NetMap)(анализатор трафика)
 - [ddos-attack](https://github.com/karthik558/ddos-attack)
 - [reverse shell usiog macros](https://www.offsec.com/offsec/macro-weaponization/)
+- [file transfer](https://github.com/LeastAuthority/destiny)
 
 ---
