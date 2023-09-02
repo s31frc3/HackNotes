@@ -7,6 +7,7 @@
 - [httpx ports](./src_for_src/httpx_ports.md)
 - [naabu(pd)](https://github.com/projectdiscovery/naabu)(scan ports)
 - [subchase](https://github.com/tokiakasu/subchase)(subdomains by analyzing search results from google and yandex)
+- [subdominator](https://github.com/Edd13Mora/Subdominator)(One-Stop Solution for Subdomain Enumeration)
 - [shuffledns(pd)](https://github.com/projectdiscovery/shuffledns)(enumerate valid subdomains using active bruteforce)
 - [subfinder(pd)](https://github.com/projectdiscovery/dnsx) (using passive online sources)
 - [dnsx(pd)](https://github.com/projectdiscovery/dnsx)(DNS toolkit)
