@@ -21,7 +21,7 @@ site.com filename:wp-config.php
 
 ---
 
-# second
+# 2
 dork: domain[.]com secret NOT www (subdomains)
 
 site:target.com inurl:admin | administrator | adm | login | l0gin | wp-login
@@ -84,7 +84,7 @@ Censys (IPv4 (https://censys.io/ipv4)):
 
 ---
 
-# third
+# 3
 ### search admin-panels
 ```
 site:target.com inurl:admin | administrator | adm | login | l0gin | wp-login
@@ -98,7 +98,7 @@ inurl:admin intitle:admin intext:admin
 
 ---
 
-# fifth
+# 4
  Некоторые способы поиска админ-панелей компании | Привет, друг. На связи Эллиот.
 
 1. Используя Google дорки:
@@ -158,3 +158,64 @@ Censys (IPv4 (https://censys.io/ipv4)):
 (services.tls.certificates.leaf_data.issuer.common_name:company.com) AND services.http.response.html_title:admin
 
 (services.tls.certificates.leaf_data.issuer.common_name:company.com) AND services.http.response.body:admin
+# 5
+— Вот вам небольшая коллекция утилит и ссылок на списки дорков (https://github.com/cipher387/Dorks-collections-list/) для различных инструментов поиска.
+
+Google, Bing, Ecosia, Yahoo или Yandex
+https://github.com/Zarcolio/sitedorks
+
+Google Dorks:
+https://github.com/BullsEye0/google_dork_list
+https://github.com/sushiwushi/bug-bounty-dorks
+https://github.com/rootac355/SQL-injection-dorks-list
+https://github.com/unexpectedBy/SQLi-Dork-Repository
+https://github.com/thomasdesr/Google-dorks
+https://github.com/arimogi/Google-Dorks
+https://github.com/aleedhillon/7000-Google-Dork-List
+
+DuckDuckGo dorks
+https://github.com/d34dfr4m3/goDuck
+
+Github Dorks:
+https://github.com/techgaun/github-dorks
+https://github.com/jcesarstef/ghhdb-Github-Hacking-Database
+https://github.com/H4CK3RT3CH/github-dorks
+
+Shodan Dorks:
+https://github.com/humblelad/Shodan-Dorks
+https://github.com/AustrianEnergyCERT/ICS_IoT_Shodan_Dorks
+https://github.com/lothos612/shodan
+https://github.com/jakejarvis/awesome-shodan-queries
+https://github.com/IFLinfosec/shodan-dorks
+
+Virus Total Dorks:
+https://github.com/Neo23x0/vti-dorks
+
+Binary Edge + Shodan + Google:
+https://github.com/iGotRootSRC/Dorkers
+# 6
+Поиск открытых веб-камер
+
+Ниже представлена небольшая подборка Google дорков для поиска открытых веб-камер:
+
+```
+allintitle: "Network Camera NetworkCamera" 
+
+intitle:"EvoCam" inurl:"webcam.html" 
+
+intitle:"Live View / - AXIS"
+
+intitle:"LiveView / - AXIS" | inurl:view/view.shtml
+
+intitle:"Live View / - AXIS" | inurl:/mjpg/video.mjpg?timestamp
+
+inurl:axis-cgi/jpg
+
+inurl:"MultiCameraFrame?Mode=Motion" 
+
+inurl:/view.shtml 
+
+inurl:/view/index.shtml 
+
+"my webcamXP server!"
+```
