@@ -57,6 +57,7 @@
 - [SSTImap](https://github.com/vladko312/SSTImap)(code inj scanner)
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [scanner white box](https://github.com/bearer/bearer)
+- [GraphQLl](https://github.com/nikitastupin/clairvoyance)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
@@ -64,6 +65,7 @@
 - [check](https://api-guesser.netlify.app/) [api](https://github.com/streaak/keyhacks)
 - [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
 - [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
+- [js deobfuscator](https://github.com/jehna/humanify/)
 ### online
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)[http](https://webhook.site) [отстукивание](https://requestcatcher.com)
@@ -71,6 +73,7 @@
 - [leakix.net](https://leakix.net/)
 - [tor search](./src_for_src/tor_search_en.md)
 - [analize pcap file](https://apackets.com/upload)
+- [Детектор обнаружения изменений на веб-сайтах с открытым исходным кодом](https://changedetection.io)
 ---
 # wordlists
 - [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
@@ -108,6 +111,8 @@
 - [iplogger](https://iplogger.org/)(Сервис для отслеживания местоположения человека)
 - [SharpDXWebcam](https://github.com/snovvcrash/SharpDXWebcam)(record video from the host's webcam)
 - [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breaker)(инструмент социальной инженерии (Доступ к веб-камере, микрофону и поиску местоположения) с Python) [download](https://t.me/arhiv_it/34)
+- [chrom extension to view chatgpt html prompt](https://github.com/matthewdowney/rendergpt)
+- [All Malware Source Code](https://github.com/vxunderground/MalwareSourceCode)
 ## other
 ### Web Hack Tool Links
 
