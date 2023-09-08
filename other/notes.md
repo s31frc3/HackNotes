@@ -3,6 +3,7 @@
 ```
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
 ```
+---
 #### scan from 1 to 100 ports with nc
 ```sh
 for i in {1..100};do nc $IP $i;echo "";done
