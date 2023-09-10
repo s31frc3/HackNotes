@@ -68,6 +68,7 @@
 - [js deobfuscator](https://github.com/jehna/humanify/)
 ### online
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
+- [xss](https://requestcatcher.com/)| [tools](https://webhook.site)| [request](https://fjksdfds.requestcatcher.com/)| [inspector](https://requestinspector.com/)
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)[http](https://webhook.site) [отстукивание](https://requestcatcher.com)
 - [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
 - [leakix.net](https://leakix.net/)

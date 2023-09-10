@@ -39,6 +39,8 @@ cat ./-
 file */{.,}* #every type of file in folder
 du -b -a | grep 1033 #size of file
 sort data.txt | uniq -u #uniq lines
+
+cat .download.dat | xxd -r -p #like strings
 ```
 
 #### if command to long
