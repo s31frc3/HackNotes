@@ -114,6 +114,7 @@
 - [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breaker)(инструмент социальной инженерии (Доступ к веб-камере, микрофону и поиску местоположения) с Python) [download](https://t.me/arhiv_it/34)
 - [chrom extension to view chatgpt html prompt](https://github.com/matthewdowney/rendergpt)
 - [All Malware Source Code](https://github.com/vxunderground/MalwareSourceCode)
+- [sniffer](https://sniffnet.net/)
 ## other
 ### Web Hack Tool Links
 

