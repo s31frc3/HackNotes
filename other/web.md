@@ -105,6 +105,10 @@ hydra -l admin -P /usr/share/seclists/rockyou.txt $IP http-get /inferno
     </form>
 <script>document.getElementById("csrf-form").submit()</script>
 ```
+
+```
+как можно байпаснуть csrf: change method of request
+```
 ---
 #### lfi bypass
 ```
