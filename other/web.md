@@ -107,7 +107,10 @@ hydra -l admin -P /usr/share/seclists/rockyou.txt $IP http-get /inferno
 ```
 
 ```
-как можно байпаснуть csrf: change method of request
+как можно байпаснуть csrf: 
+change method of request
+intersept request, get scrf toket, drop request, paste it in csrf poc
+delete scrf token
 ```
 ---
 #### lfi bypass
