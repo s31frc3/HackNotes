@@ -9,6 +9,7 @@
 - [dnscan](https://github.com/rbsec/dnscan)(DNS subdomain scanner)
 - [bbot](https://github.com/blacklanternsecurity/bbot)(python subds scanner)
 - [Garud](https://github.com/R0X4R/Garud)(scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more)
+- [puncia](https://github.com/ARPSyndicate/puncia)(Subdomain & Exploit Hunter powered by AI)
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 ### urls

