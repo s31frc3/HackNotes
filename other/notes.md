@@ -61,7 +61,7 @@ cat > file << EOF
 ....
 EOF
 ```
-
+---
 #### php extensions to run revsell
 ```
 .php
