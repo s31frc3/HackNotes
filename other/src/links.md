@@ -12,6 +12,7 @@
 - [puncia](https://github.com/ARPSyndicate/puncia)(Subdomain & Exploit Hunter powered by AI)
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
+- [columbus.elmasy](https://columbus.elmasy.com/)(online Advanced subdomain enumeration service)
 ### urls
 - [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
 - [katana(pd)](https://github.com/projectdiscovery/katana)
@@ -20,6 +21,8 @@
 - [jsluice](https://github.com/BishopFox/jsluice)(for extracting URLs, paths, secrets, and other interesting data from JavaScript source code) [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
 - [photon](https://github.com/s0md3v/Photon)(Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds)
 - [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
+- [dirsearch](https://github.com/maurosoria/dirsearch)
+- [OpenDoor OWASP](https://github.com/stanislav-web/OpenDoor)
 ### ips
 - [fast port scanner](https://github.com/dievus/threader3000)
 - [httpx(pd)](https://github.com/projectdiscovery/httpx)
@@ -60,6 +63,7 @@
 - [scanner white box](https://github.com/bearer/bearer)
 - [GraphQLl](https://github.com/nikitastupin/clairvoyance)
 - [bypass url parser](https://github.com/laluka/bypass-url-parser)
+- [HTMLSmuggler](https://github.com/D00Movenok/HTMLSmuggler)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
@@ -68,6 +72,11 @@
 - [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
 - [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
 - [js deobfuscator](https://github.com/jehna/humanify/)
+#### jwt
+1. jwtXploiter (https://github.com/DontPanicO/jwtXploiter) — это Python-инструмент, предназначенный для автоматизации взлома JWT. Он позволяет проверить соответствие всех известных CVE для JWT и поддерживает различные виды атак на JWT, начиная от простого взлома и до выполнения атак с использованием самозаверяющих токенов!
+2. JSON Web Tokens (https://portswigger.net/bappstore/f923cbf91698420890354c1d8958fee6) - это дополнение для Burpsuite, которое автоматизирует распространенные атаки на JWT. Кроме того, оно позволяет быстро выполнять кодирование / декодирование и проверку токенов.
+3. JWT Tool  (https://github.com/ticarpi/jwt_tool)- это широко используемый инструмент на языке Python, который позволяет производить проверку всех возможных атак, которые могут уязвимо существовать в веб-приложении.
+4. JWT Editor (https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd) - это дополнение для Burpsuite, которое обеспечивает возможность удобно изменять JWT-токены и быстро проверять различные методы обхода.
 ### online
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
 - [xss](https://requestcatcher.com/)| [tools](https://webhook.site)| [request](https://fjksdfds.requestcatcher.com/)| [inspector](https://requestinspector.com/)
@@ -96,27 +105,34 @@
 - [AD](https://github.com/dievus/Active-Directory-Exploitation-Cheat-Sheet)
 - [xss cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
 - [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools)
+- [Ethical Hacking Labs](https://github.com/Samsar4/Ethical-Hacking-Labs#ethical-hacking-labs)
 ---
 # other
 - [walk](https://github.com/antonmedv/walk)
 - [big no-no](https://cyberarsenal.org/resources/categories/red-team.1/)
 - [apple blee](https://github.com/hexway/apple_bleee)
+- [apple Juice](https://github.com/ECTO-1A/AppleJuice)
 - [opendrop](https://github.com/zhovner/opendrop)
 - [netcut](https://arcai.com/)
-- [macrome](https://github.com/michaelweber/Macrome)(exel hack)
-- [PhotoGuard](https://github.com/MadryLab/photoguard)(protect photo from ai)
-- [netmap](https://github.com/lmsecure/LMS.NetMap)(анализатор трафика)
+- [macrome](https://github.com/michaelweber/Macrome)exel hack
+- [macro_reverse_shell](https://github.com/glowbase/macro_reverse_shell)
+- [PhotoGuard](https://github.com/MadryLab/photoguard)protect photo from ai
+- [netmap](https://github.com/lmsecure/LMS.NetMap)анализатор трафика
 - [ddos-attack](https://github.com/karthik558/ddos-attack)
 - [reverse shell usiog macros](https://www.offsec.com/offsec/macro-weaponization/)
 - [file transfer](https://github.com/LeastAuthority/destiny)
 - [bluetooth](https://ru.wikipedia.org/wiki/BlueBorne)[hacking](https://de.wikipedia.org/wiki/Bluesnarfing)[is](https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D1%8E%D0%B4%D0%B6%D0%B5%D0%BA%D0%B8%D0%BD%D0%B3)[fun](https://www.linux-magazin.de/blogs/bluetooth-bias-bluetooth-impersonation-attacks/)[!!!](https://en.wikipedia.org/wiki/Bluebugging)
 - [ShellGhost](https://github.com/lem0nSec/ShellGhost)
-- [iplogger](https://iplogger.org/)(Сервис для отслеживания местоположения человека)
+- [iplogger](https://iplogger.org/)Сервис для отслеживания местоположения человека
 - [SharpDXWebcam](https://github.com/snovvcrash/SharpDXWebcam)(record video from the host's webcam)
-- [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breaker)(инструмент социальной инженерии (Доступ к веб-камере, микрофону и поиску местоположения) с Python) [download](https://t.me/arhiv_it/34)
+- [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breaker)инструмент социальной инженерии (Доступ к веб-камере, микрофону и поиску местоположения) с Python [download](https://t.me/arhiv_it/34)
 - [chrom extension to view chatgpt html prompt](https://github.com/matthewdowney/rendergpt)
 - [All Malware Source Code](https://github.com/vxunderground/MalwareSourceCode)
 - [sniffer](https://sniffnet.net/)
+- [commenter](https://github.com/viorelsfetea/commenter)берет URL-адрес, который вы посещаете, и ищет его материалы или упоминания на HackerNews и Reddit
+- [net-creds](https://github.com/DanMcInerney/net-creds)sniff passwords and hashes from an interface or pcap file
+- [telegram-get-remote-ip](https://github.com/n0a/telegram-get-remote-ip)
+- [phishing](https://github.com/JoelGMSec/EvilnoVNC)
 ## other
 ### Web Hack Tool Links
 
@@ -129,15 +145,6 @@
 ❇️ Heart Bleed scanner 
 🔗 Link : https://github.com/TechnicalMujeeb/HeartBleed
 
-❇️ weevely php web shell
-🔗 Link : https://github.com/sunge/Weevely
-
-❇️ Webponized web shell
-🔗 Link : https://github.com/epinna/weevely3
-
-❇️ Nikto web scanner tool
-🔗 Link : https://github.com/sullo/nikto
-
 ❇️ Auto Ip or domain Attacking Tool 
 🔗 Link : https://github.com/Bhai4You/Ip-Attack
 
@@ -147,20 +154,11 @@
 ❇️ All in 1 information gathering and web penetration tool DTect
 🔗 Link : https://github.com/Audi0x01/D-TECT-1
 
-❇️ Detect phishing URL 
-🔗 Link : https://github.com/UndeadSec/checkURL
-
 ❇️ Dos attack tool - Golden eye
 🔗 Link : https://github.com/jseidl/GoldenEye
 
 ❇️ Dos attack with hulk
 🔗 Link : https://github.com/grafov/hulk
-
-❇️ Sql vulnerability scanner 
-🔗 Link : https://github.com/Pure-L0G1C/SQL-scanner
-
-❇️ hack website with sqlmap
-🔗 Link : https://github.com/sqlmapproject/sqlmap
 
 ❇️ information and vulnerability scanner with striker 
 🔗 Link : https://github.com/s0md3v/Striker
@@ -234,3 +232,28 @@ http://receivesmsonline.me
 https://www.proovl.com/numbers
 http://www.esendex.com.au/send-sms-online
 https://sms-online.co
+
+### osint
+- [YaSeeker](https://github.com/HowToFind-bot/YaSeeker)(получить информа­цию о любой учет­ной записи Yandex)
+- [elona](https://github.com/TheYahya/enola)(аналог sherlock)
+- [telegram-bot-dumper](clone https://github.com/soxoj/telegram-bot-dumper)
+1. Epieos (https://epieos.com/) - найдет Google ID, даст ссылки на профиль в Google карты, альбомы и календарь, найдет к каким сайтам привязана почта, профиль LinkedIn.
+2. theHarvester (https://kali.tools/?p=2286) - инструмент для сбора e-mail адресов, имён поддоменов, виртуальных хостов, открытых портов.
+3. GHunt (https://github.com/mxrch/GHunt) - OSINT-инструмент, который с годами развивается и включает в себя множество методов исследования учетных записей или объектов Google.
+4. H8mail (https://github.com/khast3x/h8mail) - инструмент для поиска взломанных адресов электронной почты и используемых на различных сайтах паролей в утекших базах данных.
+5. Proofy (https://proofy.io/) - инструмент, который проверяет существование электронной почты.
+### AI
+1. DrLambda (https://drlambda.ai/) — может превратить любой документ, сайт или видео в презентацию;
+2. Suno (https://www.suno.ai/) — создаст для вас песню по вашему тексту;
+3. Heygen (https://app.heygen.com/guest/home) — cервис, который умеет переводить видео, сохраняя при этом голос говорящего и синхронизируя движение губ;
+4. FaceFusion (https://github.com/facefusion/facefusion) — нейронка для создания качественных дипфейков:
+5. Launchaco (https://www.launchaco.com/logo) — для быстрого создания логотипов;
+6. Vectorizer (https://vectorizer.ai/) — улучшит качество любых jpg файлов;
+7. MathGPTPro (https://mathgptpro.com/) — решает математические задачи, ChatGPT + Wolfram Alpha;
+8. Stable Audio (https://www.stableaudio.com/) — новая нейросеть для создания саундтреков;
+### GEOSINT
+1. EarthCam (https://www.earthcam.com/) — агрегатор рабочих веб-камер по всему миру;
+2. Geoestimation (https://labs.tib.eu/geoestimation/) — оценивает местоположение фотографии с помощью ИИ; 
+3. Airportwebcams (https://airportwebcams.net/) — агрегатор веб-камер в различных аэропортах мира;
+4. Peakvisor (http://peakvisor.com/) — cодержит данные о более 1 000 000 гор по всему миру, часто используется в расследованиях для опознавания локации по очертанию рельефа на заднем плане;
+5. F4Map (https://demo.f4map.com/#lat=52.5177982&lon=13.4070592&zoom=17&camera.phi=-60.734) — карта мира с 3D-зданиями и тенями от них в различное время суток.
