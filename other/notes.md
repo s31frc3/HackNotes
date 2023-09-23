@@ -70,7 +70,7 @@ EOF
 .php5
 .phtml
 ```
-
+---
 #### broken png image
 ```
 xxd thm.jpg | head
