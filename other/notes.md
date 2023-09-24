@@ -76,6 +76,7 @@ EOF
 xxd thm.jpg | head
 printf '\xff\xd8\xff\xe0\x00\x10\x4a\x46\x49\x46\x00\x01' | dd conv=notrunc of=thm.jpg bs=1
 ```
+---
 #### NFS share
 ```
 mkdir tmp/
