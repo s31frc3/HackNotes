@@ -156,9 +156,12 @@ grep -w 'root'               # only word root, not asdrootas
 ```
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ```
-#### connect as annon with ftp
+#### ftp
 ```
-ftp -A $IP
+ftp -A $IP #connect anon
+
+prompt off
+mget * #download all files
 ```
 #### vim
 ```vim
