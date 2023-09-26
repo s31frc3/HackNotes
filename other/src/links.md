@@ -106,6 +106,7 @@
 - [xss cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
 - [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools)
 - [Ethical Hacking Labs](https://github.com/Samsar4/Ethical-Hacking-Labs#ethical-hacking-labs)
+- [wifi pentest](https://habr.com/ru/articles/762232/)
 ---
 # other
 - [walk](https://github.com/antonmedv/walk)
