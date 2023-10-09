@@ -51,6 +51,7 @@
 - [wordpress nuclei](https://github.com/topscoder/nuclei-wordfence-cve)
 - [менеджер nuclei](https://github.com/xm1k3/cent)
 - [nuclei templates generator](https://templates.nuclei.sh/)
+- [nuclei templates](https://github.com/emadshanab/Nuclei-Templates-Collection)
 - [ssrf scanner](https://github.com/Th0h0/autossrf)
 - [three](https://github.com/enjoiz/XXEinjector)| [tools](https://github.com/luisfontes19/xxexploiter)| [for xxe](https://github.com/whitel1st/docem)
 - [headerpwn](https://github.com/devanshbatham/headerpwn)(A fuzzer for analyzing how servers respond to different HTTP headers)
