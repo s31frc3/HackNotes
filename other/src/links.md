@@ -64,7 +64,8 @@
 - [scanner white box](https://github.com/bearer/bearer)
 - [GraphQLl](https://github.com/nikitastupin/clairvoyance)
 - [bypass url parser](https://github.com/laluka/bypass-url-parser)
-- [HTMLSmuggler](https://github.com/D00Movenok/HTMLSmuggler)
+- [subdomain takeover](https://github.com/haccer/subjack)
+- [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
