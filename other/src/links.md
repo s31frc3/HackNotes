@@ -64,8 +64,13 @@
 - [scanner white box](https://github.com/bearer/bearer)
 - [GraphQLl](https://github.com/nikitastupin/clairvoyance)
 - [bypass url parser](https://github.com/laluka/bypass-url-parser)
-- [subdomain takeover](https://github.com/haccer/subjack)
+- [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
 - [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
+- [secretFinder](https://github.com/m4ll0k/SecretFinder)(find api keys)
+- [path traversal tool](https://github.com/jcesarstef/dotdotslash)
+- [web cache poisoning](https://github.com/Th0h0/autopoisoner)
+- [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
+- [Host-Header-Injection-Vulnerability-Scanner](https://github.com/hemantsolo/Host-Header-Injection-Vulnerability-Scanner)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
@@ -109,6 +114,7 @@
 - [RedTeam-Tools](https://github.com/A-poc/RedTeam-Tools)
 - [Ethical Hacking Labs](https://github.com/Samsar4/Ethical-Hacking-Labs#ethical-hacking-labs)
 - [wifi pentest](https://habr.com/ru/articles/762232/)
+- [Awesome-Bugbounty-Writeups](https://github.com/m4ll0k/Awesome-Bugbounty-Writeups)
 ---
 # other
 - [walk](https://github.com/antonmedv/walk)
