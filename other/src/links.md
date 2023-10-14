@@ -40,6 +40,7 @@
 - [changedetection.io](https://github.com/dgtlmoon/changedetection.io)(детектор обнаружения изменений на веб-сайтах с открытым исходным кодом)
 - [telegram osint](https://github.com/drego85/tosint)
 - [email osint](https://epieos.com/)
+- [aquatone](https://github.com/michenriksen/aquatone)(visual inspection of websites)
 ---
 # tools
 ### burp
@@ -115,6 +116,7 @@
 - [Ethical Hacking Labs](https://github.com/Samsar4/Ethical-Hacking-Labs#ethical-hacking-labs)
 - [wifi pentest](https://habr.com/ru/articles/762232/)
 - [Awesome-Bugbounty-Writeups](https://github.com/m4ll0k/Awesome-Bugbounty-Writeups)
+- [xss pocs](https://xss-payloads.paracyberbellum.io/payloads-list.html?a#category=all)
 ---
 # other
 - [walk](https://github.com/antonmedv/walk)
