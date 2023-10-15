@@ -72,6 +72,7 @@
 - [web cache poisoning](https://github.com/Th0h0/autopoisoner)
 - [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
 - [Host-Header-Injection-Vulnerability-Scanner](https://github.com/hemantsolo/Host-Header-Injection-Vulnerability-Scanner)
+- [scan4shell](https://github.com/hktalent/scan4all)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
