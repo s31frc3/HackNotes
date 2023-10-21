@@ -181,6 +181,17 @@ g~ ~        # Toggle case of all characters in the current line.
 gf          # Open the file whose name is under the cursor, '^' to go back.
 gv          # Return to the previous selection after visual mode.
 ```
+#### tmux
+```
+ctrl b d # сохранить сессию и выйти из нее
+cb p     # previous window
+cb n     # next window
+cb ,     # rename window
+cb c     # create window
+cb w     # list windows
+tmux new -s [name_of_new_window]
+cb :set -g mouse on
+```
 #### magic numbers
 png
 ```
