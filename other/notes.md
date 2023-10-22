@@ -83,7 +83,11 @@ mkdir tmp/
 sudo mount -t nfs 10.10.104.64: tmp
 tree tmp
 ```
-
+#### if 2049 port is open (mount)
+```
+showmount -e $IP
+mount -t nfs $IP:/mnt/backups /mnt/loot
+```
 #### socat if open port
 ```python
 ./socat tcp-listen:8888,reuseaddr,fork tcp:localhost:22
@@ -215,6 +219,7 @@ mv -t DESTINATION file1 file2 file3
 sudo -u user bash
 ```
 ---
+
 #### shells
 ```
 SHELL=/bin/bash script -q /dev/null

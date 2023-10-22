@@ -1,5 +1,6 @@
 [back](/other/tricks.md)
 # steal coockie
+https://github.com/R0B1NL1N/WebHacking101/blob/master/xss-reflected-steal-cookie.md
 1. find xss
 2. create malicious php code
 ```bash
