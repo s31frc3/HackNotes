@@ -73,6 +73,7 @@
 - [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
 - [Host-Header-Injection-Vulnerability-Scanner](https://github.com/hemantsolo/Host-Header-Injection-Vulnerability-Scanner)
 - [scan4shell](https://github.com/hktalent/scan4all)
+- [ghauri](https://github.com/r0oth3x49/ghauri)sql
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
