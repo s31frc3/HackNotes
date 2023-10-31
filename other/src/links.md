@@ -68,6 +68,7 @@
 - [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
 - [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
 - [secretFinder](https://github.com/m4ll0k/SecretFinder)(find api keys)
+- [mantra](https://github.com/MrEmpy/mantra)(find api keys)
 - [path traversal tool](https://github.com/jcesarstef/dotdotslash)
 - [web cache poisoning](https://github.com/Th0h0/autopoisoner)
 - [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
@@ -147,6 +148,7 @@
 - [telegram-get-remote-ip](https://github.com/n0a/telegram-get-remote-ip)
 - [phishing](https://github.com/JoelGMSec/EvilnoVNC)
 - [catch every reverse shell](https://github.com/t3l3machus/villain)
+- [ddoser.go](https://github.com/Quitten/doser.go)
 ## other
 ### Web Hack Tool Links
 
