@@ -69,6 +69,7 @@
 - [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
 - [secretFinder](https://github.com/m4ll0k/SecretFinder)(find api keys)
 - [mantra](https://github.com/MrEmpy/mantra)(find api keys)
+- [jsleak](https://github.com/channyein1337/jsleak)(js finder, secretfinder)
 - [path traversal tool](https://github.com/jcesarstef/dotdotslash)
 - [web cache poisoning](https://github.com/Th0h0/autopoisoner)
 - [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
