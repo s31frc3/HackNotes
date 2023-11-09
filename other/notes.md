@@ -79,6 +79,7 @@ printf '\xff\xd8\xff\xe0\x00\x10\x4a\x46\x49\x46\x00\x01' | dd conv=notrunc of=t
 ---
 #### NFS share
 ```
+showmount -e $IP
 mkdir tmp/
 sudo mount -t nfs 10.10.104.64: tmp
 tree tmp

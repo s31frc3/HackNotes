@@ -64,7 +64,7 @@
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [scanner white box](https://github.com/bearer/bearer)
 - [GraphQLl](https://github.com/nikitastupin/clairvoyance)
-- [bypass url parser](https://github.com/laluka/bypass-url-parser)
+- [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx)
 - [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
 - [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
 - [secretFinder](https://github.com/m4ll0k/SecretFinder)(find api keys)
@@ -76,6 +76,7 @@
 - [Host-Header-Injection-Vulnerability-Scanner](https://github.com/hemantsolo/Host-Header-Injection-Vulnerability-Scanner)
 - [scan4shell](https://github.com/hktalent/scan4all)
 - [ghauri](https://github.com/r0oth3x49/ghauri)sql
+- [graphql](https://github.com/nikitastupin/clairvoyance) [scanner](https://github.com/graphql/graphql-playground)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
@@ -104,6 +105,10 @@
 - [enum subds with repl](./src_for_src/subds.md)(wordlist generator)
 - [webapp-wordlists](https://github.com/p0dalirius/webapp-wordlists)
 - [directory wordlist](https://github.com/ricew4ng/Blasting-Dictionary/blob/master/LFI-Interesting-Files%EF%BC%88249%EF%BC%89.txt)
+- [All-in-One](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one.7z.torrent)
+- [All-in-One-P](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one_p.7z.torrent)
+- [All-in-One-Wi-Fi](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one_w.7z.torrent)
+
 ---
 # cheatsheets
 - [wifi-penetration-testing-cheatsheet](https://github.com/ivan-sincek/wifi-penetration-testing-cheat-sheet)
@@ -150,6 +155,9 @@
 - [phishing](https://github.com/JoelGMSec/EvilnoVNC)
 - [catch every reverse shell](https://github.com/t3l3machus/villain)
 - [ddoser.go](https://github.com/Quitten/doser.go)
+- [анализ сетевого трафика](https://github.com/odedshimon/BruteShark)
+- [android app to spam bluetooth](https://xakep.ru/2023/11/01/bluetooth-le-spam/)
+- [wifi hacking](https://github.com/s0lst1c3/eaphammer)
 ## other
 ### Web Hack Tool Links
 
