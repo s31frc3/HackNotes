@@ -158,6 +158,7 @@
 - [анализ сетевого трафика](https://github.com/odedshimon/BruteShark)
 - [android app to spam bluetooth](https://xakep.ru/2023/11/01/bluetooth-le-spam/)
 - [wifi hacking](https://github.com/s0lst1c3/eaphammer)
+- [windows useful tool](https://winaerotweaker.com/)
 ## other
 ### Web Hack Tool Links
 
@@ -262,6 +263,9 @@ https://sms-online.co
 - [YaSeeker](https://github.com/HowToFind-bot/YaSeeker)(получить информа­цию о любой учет­ной записи Yandex)
 - [elona](https://github.com/TheYahya/enola)(аналог sherlock)
 - [telegram-bot-dumper](clone https://github.com/soxoj/telegram-bot-dumper)
+- [email2phonenumber](https://github.com/martinvigo/email2phonenumber)
+- [для поиска учетных записей по электронной почте](https://epieos.com/)
+- [EarlyBird](https://github.com/americanexpress/earlybird) - инструмент обнаружения конфиденциальных данных репозитория github
 1. Epieos (https://epieos.com/) - найдет Google ID, даст ссылки на профиль в Google карты, альбомы и календарь, найдет к каким сайтам привязана почта, профиль LinkedIn.
 2. theHarvester (https://kali.tools/?p=2286) - инструмент для сбора e-mail адресов, имён поддоменов, виртуальных хостов, открытых портов.
 3. GHunt (https://github.com/mxrch/GHunt) - OSINT-инструмент, который с годами развивается и включает в себя множество методов исследования учетных записей или объектов Google.
