@@ -92,6 +92,7 @@
 4. JWT Editor (https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd) - это дополнение для Burpsuite, которое обеспечивает возможность удобно изменять JWT-токены и быстро проверять различные методы обхода.
 ### online
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
+- [ez.pe](https://ez.pe)for xss(!!!)
 - [xss](https://requestcatcher.com/)| [tools](https://webhook.site)| [request](https://fjksdfds.requestcatcher.com/)| [inspector](https://requestinspector.com/)
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)[http](https://webhook.site) [отстукивание](https://requestcatcher.com)
 - [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
@@ -271,6 +272,7 @@ https://sms-online.co
 3. GHunt (https://github.com/mxrch/GHunt) - OSINT-инструмент, который с годами развивается и включает в себя множество методов исследования учетных записей или объектов Google.
 4. H8mail (https://github.com/khast3x/h8mail) - инструмент для поиска взломанных адресов электронной почты и используемых на различных сайтах паролей в утекших базах данных.
 5. Proofy (https://proofy.io/) - инструмент, который проверяет существование электронной почты.
+- [vk osint](https://github.com/OSINT-mindset/vk-osint-ru)
 ### AI
 1. DrLambda (https://drlambda.ai/) — может превратить любой документ, сайт или видео в презентацию;
 2. Suno (https://www.suno.ai/) — создаст для вас песню по вашему тексту;

