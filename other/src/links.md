@@ -78,6 +78,7 @@
 - [scan4shell](https://github.com/hktalent/scan4all)
 - [ghauri](https://github.com/r0oth3x49/ghauri)sql
 - [graphql](https://github.com/nikitastupin/clairvoyance) [scanner](https://github.com/graphql/graphql-playground)
+- [crlfsuite](https://github.com/Raghavd3v/CRLFsuite)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
@@ -162,7 +163,12 @@
 - [wifi hacking](https://github.com/s0lst1c3/eaphammer)
 - [windows useful tool](https://winaerotweaker.com/)
 ## other
+
+[SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
 ### Web Hack Tool Links
+
+https://github.com/microsoft/restler-fuzzer
+https://github.com/Endava/cats
 
 ❇️ WordPress admin finder 
 🔗 Link : https://github.com/kancotdiq/wpaf
@@ -274,6 +280,7 @@ https://sms-online.co
 4. H8mail (https://github.com/khast3x/h8mail) - инструмент для поиска взломанных адресов электронной почты и используемых на различных сайтах паролей в утекших базах данных.
 5. Proofy (https://proofy.io/) - инструмент, который проверяет существование электронной почты.
 - [vk osint](https://github.com/OSINT-mindset/vk-osint-ru)
+- [telegram-phone-number-checker](https://github.com/bellingcat/telegram-phone-number-checker)
 ### AI
 1. DrLambda (https://drlambda.ai/) — может превратить любой документ, сайт или видео в презентацию;
 2. Suno (https://www.suno.ai/) — создаст для вас песню по вашему тексту;

