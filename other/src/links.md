@@ -41,6 +41,7 @@
 - [telegram osint](https://github.com/drego85/tosint)
 - [email osint](https://epieos.com/)
 - [aquatone](https://github.com/michenriksen/aquatone)(visual inspection of websites)
+- [same domains](https://typosquatting-finder.circl.lu)(сервис для поиска доменов со схожим названием)
 ---
 # tools
 ### burp
