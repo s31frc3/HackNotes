@@ -1,4 +1,4 @@
-# web OSINT
+# WEB OSINT
 ### subds
 - [subchase](https://github.com/tokiakasu/subchase)(subdomains by analyzing search results from google and yandex)
 - [subdominator](https://github.com/Edd13Mora/Subdominator)(One-Stop Solution for Subdomain Enumeration)
@@ -26,7 +26,7 @@
 ### ips
 - [fast port scanner](https://github.com/dievus/threader3000)
 - [httpx(pd)](https://github.com/projectdiscovery/httpx)
-- [httpx ports](./src_for_src/httpx_ports.md)
+- [httpx ports](httpx_ports.md)
 - [naabu(pd)](https://github.com/projectdiscovery/naabu)(scan ports)
 - [cdncheck(pd)](https://github.com/projectdiscovery/cdncheck)(what waf)
 - [uncover](https://github.com/projectdiscovery/uncover)(discover exposed hosts on the internet only with api keys)
@@ -43,7 +43,7 @@
 - [aquatone](https://github.com/michenriksen/aquatone)(visual inspection of websites)
 - [same domains](https://typosquatting-finder.circl.lu)(сервис для поиска доменов со схожим названием)
 ---
-# tools
+# WEB tools
 ### burp
 - authorize (burp extension to scan for idor 1 1 | 2)
 - param miner (burp extension to scan hidden params)
@@ -99,18 +99,19 @@
 - [interactsh-web](https://github.com/projectdiscovery/interactsh-web)[http](https://webhook.site) [отстукивание](https://requestcatcher.com)
 - [back-me-up](https://github.com/Dheerajmadhukar/back-me-up)(Sensitive Data Leakage with waybackdata)
 - [leakix.net](https://leakix.net/)
-- [tor search](./src_for_src/tor_search_en.md)
+- [tor search](tor_search_en.md)
 - [analize pcap file](https://apackets.com/upload)
 - [Детектор обнаружения изменений на веб-сайтах с открытым исходным кодом](https://changedetection.io)
 ---
 # wordlists
 - [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
-- [enum subds with repl](./src_for_src/subds.md)(wordlist generator)
+- [enum subds with repl](subds.md)(wordlist generator)
 - [webapp-wordlists](https://github.com/p0dalirius/webapp-wordlists)
 - [directory wordlist](https://github.com/ricew4ng/Blasting-Dictionary/blob/master/LFI-Interesting-Files%EF%BC%88249%EF%BC%89.txt)
 - [All-in-One](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one.7z.torrent)
 - [All-in-One-P](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one_p.7z.torrent)
 - [All-in-One-Wi-Fi](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one_w.7z.torrent)
+- [NTLM to password](https://ntlm.pw/)
 
 ---
 # cheatsheets
@@ -162,9 +163,8 @@
 - [android app to spam bluetooth](https://xakep.ru/2023/11/01/bluetooth-le-spam/)
 - [wifi hacking](https://github.com/s0lst1c3/eaphammer)
 - [windows useful tool](https://winaerotweaker.com/)
+- [SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
 ## other
-
-[SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
 ### Web Hack Tool Links
 
 https://github.com/microsoft/restler-fuzzer
@@ -296,3 +296,5 @@ https://sms-online.co
 3. Airportwebcams (https://airportwebcams.net/) — агрегатор веб-камер в различных аэропортах мира;
 4. Peakvisor (http://peakvisor.com/) — cодержит данные о более 1 000 000 гор по всему миру, часто используется в расследованиях для опознавания локации по очертанию рельефа на заднем плане;
 5. F4Map (https://demo.f4map.com/#lat=52.5177982&lon=13.4070592&zoom=17&camera.phi=-60.734) — карта мира с 3D-зданиями и тенями от них в различное время суток.
+### WIN
+- [netbios.py](https://github.com/s0i37/defence/blob/main/netbios.py)(как респондер)

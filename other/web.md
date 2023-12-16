@@ -113,7 +113,7 @@ search[$ne]=string #mongodb
 ```
 ---
 #### brute force login
-![png](src/src_for_src/src/login.png)
+![png](login.png)
 ```
 hydra -l admin -P /usr/share/seclists/rockyou.txt $IP http-get /inferno
 ```
@@ -202,5 +202,5 @@ index.php~ - сохнарить sourse code
 $\lstinputlisting{/var/www/dev/.htpasswd}$
 ```
 #### links
-- [steal admin cookie/sqli](./src/src_for_src/marketplace.md) (tryhackme:marketplace)
-- [ohmyweb](./src/src_for_src/omyweb.md)
+- [steal admin cookie/sqli](marketplace.md) (tryhackme:marketplace)
+- [ohmyweb](omyweb.md)
