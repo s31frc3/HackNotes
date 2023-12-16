@@ -110,7 +110,7 @@ for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/
 - [x8](https://github.com/Sh1Yo/x8)(like arjun)
 - [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 - [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
-#### [other links](./other/src/links.md)
+#### [other links](links.md)
 
 ---
 
