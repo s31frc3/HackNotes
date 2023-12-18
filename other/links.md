@@ -130,6 +130,7 @@
 - [wifi pentest](https://habr.com/ru/articles/762232/)
 - [Awesome-Bugbounty-Writeups](https://github.com/m4ll0k/Awesome-Bugbounty-Writeups)
 - [xss pocs](https://xss-payloads.paracyberbellum.io/payloads-list.html?a#category=all)
+- [htb walkthrough](https://vulnerable.sh/)
 ---
 # other
 - [walk](https://github.com/antonmedv/walk)
