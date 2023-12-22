@@ -23,6 +23,7 @@
 - [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
 - [dirsearch](https://github.com/maurosoria/dirsearch)
 - [OpenDoor OWASP](https://github.com/stanislav-web/OpenDoor)
+- [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
 ### ips
 - [fast port scanner](https://github.com/dievus/threader3000)
 - [httpx(pd)](https://github.com/projectdiscovery/httpx)
@@ -34,6 +35,7 @@
 - [web](https://web-check.xyz/)-[check](https://web-check.as93.net/)(online all in one)
 - [intelligence X](https://intelx.io/)
 ### other osint
+- [reconftw](https://github.com/six2dez/reconftw)
 - [jsmon](https://github.com/robre/jsmon)(Скрипт для мониторинга изменений в Javascript файлах)
 - [droopescan](https://github.com/SamJoan/droopescan)(scan for cms versions)
 - [chameleon](https://github.com/iustin24/chameleon)(provides content discovery by using wappalyzer's set of technology fingerprints alongside custom wordlists tailored to each detected technologies)
@@ -42,6 +44,8 @@
 - [email osint](https://epieos.com/)
 - [aquatone](https://github.com/michenriksen/aquatone)(visual inspection of websites)
 - [same domains](https://typosquatting-finder.circl.lu)(сервис для поиска доменов со схожим названием)
+- [google dorks](/HackNotes/other/src/dorks.md)
+- [gowitness](https://github.com/sensepost/gowitness) (screenshots)
 ---
 # WEB tools
 ### burp
@@ -79,6 +83,10 @@
 - [ghauri](https://github.com/r0oth3x49/ghauri)sql
 - [graphql](https://github.com/nikitastupin/clairvoyance) [scanner](https://github.com/graphql/graphql-playground)
 - [crlfsuite](https://github.com/Raghavd3v/CRLFsuite)
+- [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
+- [x8](https://github.com/Sh1Yo/x8)(like arjun)
+- [dalfox](https://github.com/hahwul/dalfox)(find xxs)
+- [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
@@ -102,6 +110,7 @@
 - [tor search](tor_search_en.md)
 - [analize pcap file](https://apackets.com/upload)
 - [Детектор обнаружения изменений на веб-сайтах с открытым исходным кодом](https://changedetection.io)
+- [tmpfiles](https://tmpfiles.org/)
 ---
 # wordlists
 - [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
@@ -131,7 +140,22 @@
 - [Awesome-Bugbounty-Writeups](https://github.com/m4ll0k/Awesome-Bugbounty-Writeups)
 - [xss pocs](https://xss-payloads.paracyberbellum.io/payloads-list.html?a#category=all)
 - [htb walkthrough](https://vulnerable.sh/)
+- [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
 ---
+# Encoding techniques
+- [splitbrain](https://www.splitbrain.org/_static/ook/)
+- [hashes](https://hashes.com/en/tools/hash_identifier)
+- [md5hashing](https://md5hashing.net/hash)
+- [cyberchef](https://gchq.github.io/CyberChef/)
+- [crackstation](https://crackstation.net/)
+- [md5decrypt.net](https://md5decrypt.net/en/)
+- [vigenere brute force](https://www.guballa.de/vigenere-solver)
+- [html enteties](https://www.webatic.com/html-entities-convertor)
+- [list of signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
+- [xxs-encoder](http://evuln.com/tools/xss-encoder/)
+- [10015.io](https://10015.io/tools/md5-encrypt-decrypt)
+- [de4js](https://lelinhtinh.github.io/de4js/)
+- [Cisco Password Cracker](https://www.ifm.net.nz/cookbooks/passwordcracker.html)
 # other
 - [walk](https://github.com/antonmedv/walk)
 - [big no-no](https://cyberarsenal.org/resources/categories/red-team.1/)
@@ -165,6 +189,7 @@
 - [wifi hacking](https://github.com/s0lst1c3/eaphammer)
 - [windows useful tool](https://winaerotweaker.com/)
 - [SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
+
 ## other
 ### Web Hack Tool Links
 
@@ -297,5 +322,8 @@ https://sms-online.co
 3. Airportwebcams (https://airportwebcams.net/) — агрегатор веб-камер в различных аэропортах мира;
 4. Peakvisor (http://peakvisor.com/) — cодержит данные о более 1 000 000 гор по всему миру, часто используется в расследованиях для опознавания локации по очертанию рельефа на заднем плане;
 5. F4Map (https://demo.f4map.com/#lat=52.5177982&lon=13.4070592&zoom=17&camera.phi=-60.734) — карта мира с 3D-зданиями и тенями от них в различное время суток.
+### CVES
+- [cve.mitre.org](https://cve.mitre.org/cve/)
+- [WTFBINS (cve)](https://wtfbins.wtf/)
 ### WIN
 - [netbios.py](https://github.com/s0i37/defence/blob/main/netbios.py)(как респондер)

