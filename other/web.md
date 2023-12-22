@@ -1,13 +1,7 @@
 [back](../README.md)
 #### Discover hidden directories:
 ```linux
-wfuzz -w /usr/share/dirb/wordlists/dirbuster/directory-list-2.3-medium.txt --hc 404 http://$IP/island/2100/FUZZ.ticket
-
-feroxbuster -u http://$IP/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200
-
 ffuf -replay-proxy http://127.0.0.1:8080 #ffuf with proxy
-
-wfuzz -c -z file,numbers.txt -d "number=FUZZ" --hw 81 http://sustah.thm:8085/
 
 subdinder -d target.com -silent | dnsx -silent | gau
 ```
