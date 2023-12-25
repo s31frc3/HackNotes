@@ -13,6 +13,7 @@
 - [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 - [columbus.elmasy](https://columbus.elmasy.com/)(online Advanced subdomain enumeration service)
+- [crt.sh 10 k bypass](https://github.com/MzHmO/articles/blob/main/crtshbypass/script.py)
 ### urls
 - [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
 - [katana(pd)](https://github.com/projectdiscovery/katana)
@@ -69,7 +70,7 @@
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [scanner white box](https://github.com/bearer/bearer)
 - [GraphQLl](https://github.com/nikitastupin/clairvoyance)
-- [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx)
+- [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
 - [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
 - [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
 - [secretFinder](https://github.com/m4ll0k/SecretFinder)(find api keys)
@@ -141,6 +142,9 @@
 - [xss pocs](https://xss-payloads.paracyberbellum.io/payloads-list.html?a#category=all)
 - [htb walkthrough](https://vulnerable.sh/)
 - [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/)
+- [31-days-of-API-Security-Tips](https://github.com/smodnix/31-days-of-API-Security-Tips)
+- [IntruderPayloads](https://github.com/1N3/IntruderPayloads)
+- [Upload Insecure Files](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Upload%20Insecure%20Files)
 ---
 # Encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
