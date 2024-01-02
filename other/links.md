@@ -25,6 +25,7 @@
 - [dirsearch](https://github.com/maurosoria/dirsearch)
 - [OpenDoor OWASP](https://github.com/stanislav-web/OpenDoor)
 - [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
+- [gau](https://github.com/lc/gau)(!!!)
 ### ips
 - [fast port scanner](https://github.com/dievus/threader3000)
 - [httpx(pd)](https://github.com/projectdiscovery/httpx)
