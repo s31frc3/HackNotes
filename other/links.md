@@ -14,6 +14,7 @@
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
 - [columbus.elmasy](https://columbus.elmasy.com/)(online Advanced subdomain enumeration service)
 - [crt.sh 10 k bypass](https://github.com/MzHmO/articles/blob/main/crtshbypass/script.py)
+- [knockpy](https://github.com/guelfoweb/knock)
 ### urls
 - [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
 - [katana(pd)](https://github.com/projectdiscovery/katana)
@@ -71,11 +72,11 @@
 - [SSTImap](https://github.com/vladko312/SSTImap)(code inj scanner)
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
 - [scanner white box](https://github.com/bearer/bearer)
-- [GraphQLl](https://github.com/nikitastupin/clairvoyance)
+- [GraphQLl](https://github.com/nikitastupin/clairvoyance)[graphqlmap](https://github.com/swisskyrepo/GraphQLmap)
 - [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
 - [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
 - [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
-- [secretFinder](https://github.com/m4ll0k/SecretFinder)(find api keys)
+- [secretFinder](https://github.com/m4ll0k/SecretFinder)[trufflehog](https://github.com/trufflesecurity/trufflehog)(find api keys)
 - [mantra](https://github.com/MrEmpy/mantra)(find api keys)
 - [jsleak](https://github.com/channyein1337/jsleak)(js finder, secretfinder)
 - [path traversal tool](https://github.com/jcesarstef/dotdotslash)
@@ -90,6 +91,8 @@
 - [x8](https://github.com/Sh1Yo/x8)(like arjun)
 - [dalfox](https://github.com/hahwul/dalfox)(find xxs)
 - [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
+- [sj](https://github.com/BishopFox/sj/)(Swagger Jacker(api scanner))
+- [Subdomain takeover](https://github.com/PentestPad/subzy)
 ### other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
@@ -163,6 +166,7 @@
 - [10015.io](https://10015.io/tools/md5-encrypt-decrypt)
 - [de4js](https://lelinhtinh.github.io/de4js/)
 - [Cisco Password Cracker](https://www.ifm.net.nz/cookbooks/passwordcracker.html)
+- [unicode escape sequence](https://dencode.com/en/string/unicode-escape)
 # other
 - [walk](https://github.com/antonmedv/walk)
 - [big no-no](https://cyberarsenal.org/resources/categories/red-team.1/)

