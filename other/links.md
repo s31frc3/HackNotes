@@ -1,112 +1,130 @@
 # WEB OSINT
-### subds
-- [subchase](https://github.com/tokiakasu/subchase)(subdomains by analyzing search results from google and yandex)
-- [subdominator](https://github.com/Edd13Mora/Subdominator)(One-Stop Solution for Subdomain Enumeration)
-- [pdlist](https://github.com/gnebbia/pdlist)(passive subds enum)
-- [shuffledns(pd)](https://github.com/projectdiscovery/shuffledns)(enumerate valid subdomains using active bruteforce)
-- [subfinder(pd)](https://github.com/projectdiscovery/dnsx) (using passive online sources)
-- [dnsx(pd)](https://github.com/projectdiscovery/dnsx)(DNS toolkit)
-- [dnscan](https://github.com/rbsec/dnscan)(DNS subdomain scanner)
-- [bbot](https://github.com/blacklanternsecurity/bbot)(python subds scanner)
-- [Garud](https://github.com/R0X4R/Garud)(scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more)
-- [puncia](https://github.com/ARPSyndicate/puncia)(Subdomain & Exploit Hunter powered by AI)
-- [subdomain finder](https://subdomainfinder.c99.nl/)(online subds)
-- [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)(online subds)
-- [columbus.elmasy](https://columbus.elmasy.com/)(online Advanced subdomain enumeration service)
+## subds
+- [analyticsrelationships](https://github.com/Josue87/AnalyticsRelationships)related domains / subdomains
+- [bbot](https://github.com/blacklanternsecurity/bbot)python subds scanner
+- [columbus.elmasy](https://columbus.elmasy.com/)online Advanced subdomain enumeration service
+- [crt](https://github.com/cemulus/crt) crt!!
 - [crt.sh 10 k bypass](https://github.com/MzHmO/articles/blob/main/crtshbypass/script.py)
+- [dnscan](https://github.com/rbsec/dnscan)DNS subdomain scanner
+- [dnsx(pd)](https://github.com/projectdiscovery/dnsx)DNS toolkit
+- [gitlab-subdomains](https://github.com/gwen001/gitlab-subdomains)Find subdomains on GitLab
 - [knockpy](https://github.com/guelfoweb/knock)
-### urls
-- [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
-- [katana(pd)](https://github.com/projectdiscovery/katana)
-- [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
-- [gospider](https://github.com/jaeles-project/gospider)(Fast web spider)
-- [jsluice](https://github.com/BishopFox/jsluice)(for extracting URLs, paths, secrets, and other interesting data from JavaScript source code) [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
-- [photon](https://github.com/s0md3v/Photon)(Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds)
-- [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
+- [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)online subds
+- [online](https://securitytrails.com) [online](https://subdomainfinder.c99.nl)
+- [pdlist](https://github.com/gnebbia/pdlist)passive subds enum
+- [puncia](https://github.com/ARPSyndicate/puncia)Subdomain & Exploit Hunter powered by AI
+- [puredns](https://github.com/d3mondev/puredns)domain resolver and subdomain bruteforcing
+- [shuffledns(pd)](https://github.com/projectdiscovery/shuffledns)enumerate valid subdomains using active bruteforce
+- [subchase](https://github.com/tokiakasu/subchase)subdomains by analyzing search results from google and yandex
+- [subdomain finder](https://subdomainfinder.c99.nl/)online subds
+- [subdominator](https://github.com/Edd13Mora/Subdominator)One-Stop Solution for Subdomain Enumeration
+- [subfinder(pd)](https://github.com/projectdiscovery/dnsx) using passive online sources
+### subds takover
+- [Garud](https://github.com/R0X4R/Garud)scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more
+- [Subdomain takeover](https://github.com/PentestPad/subzy)
+- [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
+- [subzy](https://github.com/PentestPad/subzy)Subdomain takeover
+- [dnstake](https://github.com/pwnesia/dnstake)subdomain takeover
+## urls
 - [dirsearch](https://github.com/maurosoria/dirsearch)
-- [OpenDoor OWASP](https://github.com/stanislav-web/OpenDoor)
+- [gau](https://github.com/lc/gau)getallurls (gau) fetches known URLs from ...
+- [gospider](https://github.com/jaeles-project/gospider)(Fast web spider)
+- [Gxss](https://github.com/KathanP19/Gxss)checking reflecting Parameters in a URL
+- [hakrawler](https://github.com/hakluke/hakrawler)crawler for gathering URLs and JavaScript file locations
+- [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
+- [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
+- [jsluice](https://github.com/BishopFox/jsluice)(for extracting URLs, paths, secrets, and other interesting data from JavaScript source code) [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
+- [katana(pd)](https://github.com/projectdiscovery/katana)
+- [meg](https://github.com/tomnomnom/meg)fetching lots of URLs but still being 'nice' to servers
 - [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
-- [gau](https://github.com/lc/gau)(!!!)
-### ips
+- [OpenDoor OWASP](https://github.com/stanislav-web/OpenDoor)
+- [photon](https://github.com/s0md3v/Photon)(Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds)
+- [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
+- [qsreplace](https://github.com/tomnomnom/qsreplace)URLs on stdin, replace all query string values with a user-supplied value
+- [roboxtractor](https://github.com/Josue87/roboxtractor)extract endpoints marked as disallow in robots.txt
+- [unfurl](https://github.com/tomnomnom/unfurl)cat katana_fix | unfurl --unique domains
+## ips
+- [cdncheck](https://github.com/projectdiscovery/cdncheck)identifying the technology associated with dns / ip
 - [fast port scanner](https://github.com/dievus/threader3000)
-- [httpx(pd)](https://github.com/projectdiscovery/httpx)
+- [hakip2host](https://github.com/hakluke/hakip2host)takes a list of IP addresses via stdin, then does a series of checks to return associated domain names
 - [httpx ports](httpx_ports.md)
-- [naabu(pd)](https://github.com/projectdiscovery/naabu)(scan ports)
-- [cdncheck(pd)](https://github.com/projectdiscovery/cdncheck)(what waf)
-- [uncover](https://github.com/projectdiscovery/uncover)(discover exposed hosts on the internet only with api keys)
-- [hakip2host](https://github.com/hakluke/hakip2host)(takes a list of IP addresses via stdin, then does a series of checks to return associated domain names)
-- [web](https://web-check.xyz/)-[check](https://web-check.as93.net/)(online all in one)
 - [intelligence X](https://intelx.io/)
-### other osint
-- [reconftw](https://github.com/six2dez/reconftw)
-- [jsmon](https://github.com/robre/jsmon)(Скрипт для мониторинга изменений в Javascript файлах)
-- [droopescan](https://github.com/SamJoan/droopescan)(scan for cms versions)
-- [chameleon](https://github.com/iustin24/chameleon)(provides content discovery by using wappalyzer's set of technology fingerprints alongside custom wordlists tailored to each detected technologies)
-- [changedetection.io](https://github.com/dgtlmoon/changedetection.io)(детектор обнаружения изменений на веб-сайтах с открытым исходным кодом)
-- [telegram osint](https://github.com/drego85/tosint)
+- [interactsh-client](https://github.com/projectdiscovery/interactsh) burp colloborator!!!
+- [naabu(pd)](https://github.com/projectdiscovery/naabu)scan ports
+- [s3scanner](https://github.com/sa7mon/S3Scanner)find open S3 buckets
+- [smap](https://github.com/s0md3v/Smap)port scanner built with shodan.io's free API
+- [tlsx](https://github.com/projectdiscovery/tlsx)TLS grabber
+- [uncover](https://github.com/projectdiscovery/uncover)discover exposed hosts on the internet only with api keys
+- [web](https://web-check.xyz/)-[check](https://web-check.as93.net/)online all in one
+## other osint
+- [aquatone](https://github.com/michenriksen/aquatone)visual inspection of websites
+- [chameleon](https://github.com/iustin24/chameleon)provides content discovery by using wappalyzer's set of technology fingerprints alongside custom wordlists tailored to each detected technologies
+- [changedetection.io](https://github.com/dgtlmoon/changedetection.io)детектор обнаружения изменений на веб-сайтах с открытым исходным кодом
+- [droopescan](https://github.com/SamJoan/droopescan)scan for cms versions
 - [email osint](https://epieos.com/)
-- [aquatone](https://github.com/michenriksen/aquatone)(visual inspection of websites)
-- [same domains](https://typosquatting-finder.circl.lu)(сервис для поиска доменов со схожим названием)
 - [google dorks](/HackNotes/other/src/dorks.md)
-- [gowitness](https://github.com/sensepost/gowitness) (screenshots)
-- [отслеживать изменения js файлах](https://github.com/robre/jsmon)
+- [gowitness](https://github.com/sensepost/gowitness) screenshots
+- [reconftw](https://github.com/six2dez/reconftw)
+- [same domains](https://typosquatting-finder.circl.lu)сервис для поиска доменов со схожим названием
+- [telegram osint](https://github.com/drego85/tosint)
+
 ---
 # WEB tools
-### burp
+## burp
 - authorize (burp extension to scan for idor 1 1 | 2)
 - param miner (burp extension to scan hidden params)
-### scanners
-- [JIRA](https://github.com/MayankPandey01/Jira-Lens)(scaner)
-- [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)
-- [wordpress nuclei](https://github.com/topscoder/nuclei-wordfence-cve)
-- [менеджер nuclei](https://github.com/xm1k3/cent)
-- [nuclei templates generator](https://templates.nuclei.sh/)
-- [nuclei templates](https://github.com/emadshanab/Nuclei-Templates-Collection)
-- [ssrf scanner](https://github.com/Th0h0/autossrf)
-- [three](https://github.com/enjoiz/XXEinjector)| [tools](https://github.com/luisfontes19/xxexploiter)| [for xxe](https://github.com/whitel1st/docem)
-- [headerpwn](https://github.com/devanshbatham/headerpwn)(A fuzzer for analyzing how servers respond to different HTTP headers)
-- [xss-vibes](https://github.com/faiyazahmad07/xss_vibes)(automates your xss findings)
-- [sqlifinder](https://github.com/americo/sqlifinder)(detecting GET-based sql injection vulnerabilities in web applications using waybackurls, web crawlers and sql injection payloads)
-- [Logsensor](https://github.com/Mr-Robert0/Logsensor)(discover login panels, and POST Form SQLi Scanning)
-- [ghauri](https://github.com/r0oth3x49/ghauri)(detecting and exploiting SQL injection)
-- [SSTImap](https://github.com/vladko312/SSTImap)(code inj scanner)
-- [JSFScan](https://github.com/KathanP19/JSFScan.sh)(scanner js)
-- [scanner white box](https://github.com/bearer/bearer)
-- [GraphQLl](https://github.com/nikitastupin/clairvoyance)[graphqlmap](https://github.com/swisskyrepo/GraphQLmap)
+## scanners
 - [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
-- [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
-- [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
-- [secretFinder](https://github.com/m4ll0k/SecretFinder)[trufflehog](https://github.com/trufflesecurity/trufflehog)(find api keys)
-- [mantra](https://github.com/MrEmpy/mantra)(find api keys)
-- [jsleak](https://github.com/channyein1337/jsleak)(js finder, secretfinder)
-- [path traversal tool](https://github.com/jcesarstef/dotdotslash)
-- [web cache poisoning](https://github.com/Th0h0/autopoisoner)
-- [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
-- [Host-Header-Injection-Vulnerability-Scanner](https://github.com/hemantsolo/Host-Header-Injection-Vulnerability-Scanner)
-- [scan4shell](https://github.com/hktalent/scan4all)
-- [ghauri](https://github.com/r0oth3x49/ghauri)sql
-- [graphql](https://github.com/nikitastupin/clairvoyance) [scanner](https://github.com/graphql/graphql-playground)
+- [akto](https://github.com/akto-api-security/akto)сканер всего с берпом
+- [arjun](https://github.com/s0md3v/Arjun)http param discovery
+- [x8](https://github.com/Sh1Yo/x8)like arjun
+- [autossrf](https://github.com/Th0h0/autossrf)ssrf scanner
 - [crlfsuite](https://github.com/Raghavd3v/CRLFsuite)
-- [arjun](https://github.com/s0md3v/Arjun)(http param discovery)
-- [x8](https://github.com/Sh1Yo/x8)(like arjun)
-- [dalfox](https://github.com/hahwul/dalfox)(find xxs)
+- [crlfuzz](https://github.com/dwisiswant0/crlfuzz)scan CRLF vulnerability
+- [ghauri](https://github.com/r0oth3x49/ghauri)detecting and exploiting SQL injection
+- [scanner](https://github.com/graphql/graphql-playground) [GraphQLl](https://github.com/nikitastupin/clairvoyance)[graphqlmap](https://github.com/swisskyrepo/GraphQLmap)
+- [headerpwn](https://github.com/devanshbatham/headerpwn)fuzzer for analyzing how servers respond to different HTTP headers
+- [Host-Header-Injection-Vulnerability-Scanner](https://github.com/hemantsolo/Host-Header-Injection-Vulnerability-Scanner)
+- [http-request](https://github.com/defparam/smuggler)[smuggling](https://github.com/anshumanpattnaik/http-request-smuggling#http-request-smuggling-detection-tool)
+- [Logsensor](https://github.com/Mr-Robert0/Logsensor)discover login panels, and POST Form SQLi Scanning
+- [notify](https://github.com/projectdiscovery/notify)https://www.youtube.com/watch?v=wP3n1JnqtMU
+- [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)Nuclei + Paramspider 
+- [path traversal tool](https://github.com/jcesarstef/dotdotslash)
+- [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
+- [scan4shell](https://github.com/hktalent/scan4all)
+- [sj](https://github.com/BishopFox/sj/)Swagger Jacker(api scanner)
+- [SSTImap](https://github.com/vladko312/SSTImap)
+- [tools](https://github.com/enjoiz/XXEinjector)| [for](https://github.com/luisfontes19/xxexploiter)| [xxe](https://github.com/whitel1st/docem)
+- [web cache poisoning](https://github.com/Th0h0/autopoisoner)
+- [Web-Cache-Vulnerability-Scanner](https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner/) 
+- [xss-vibes](https://github.com/faiyazahmad07/xss_vibes)automates your xss findings
 - [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
-- [sj](https://github.com/BishopFox/sj/)(Swagger Jacker(api scanner))
-- [Subdomain takeover](https://github.com/PentestPad/subzy)
-### other
-- [GitTools](https://github.com/internetwache/GitTools)
-- [smap](https://github.com/s0md3v/Smap)(nmap with shodan)
-- [XSSTRON](https://github.com/RenwaX23/XSSTRON)(Electron JS Browser To Find XSS)
+- [dalfox](https://github.com/hahwul/dalfox)find xxs
+### white box
+- [JIRA](https://github.com/MayankPandey01/Jira-Lens)white box scaner
+- [bearer](https://github.com/bearer/bearer)scanner white box
+### api keys
+- [secretFinder](https://github.com/m4ll0k/SecretFinder)[trufflehog](https://github.com/trufflesecurity/trufflehog)find api keys
 - [check](https://api-guesser.netlify.app/) [api](https://github.com/streaak/keyhacks)
+- [Mantra](https://github.com/MrEmpy/mantra)search for API keys in JavaScript files and HTML pages
+### javascript
+- [jsmon](https://github.com/robre/jsmon)Скрипт для мониторинга изменений в Javascript файлах
+- [subjs](https://github.com/lc/subjs)fetches javascript files from a list of URLS or subdomains
+- [jsleak](https://github.com/0xTeles/jsleak)identify sensitive data in JS files through regex patterns
+- [JSFScan](https://github.com/KathanP19/JSFScan.sh)scanner js
+- [js deobfuscator](https://github.com/jehna/humanify/)
+## other
+- [GitTools](https://github.com/internetwache/GitTools)
+- [XSSTRON](https://github.com/RenwaX23/XSSTRON)(Electron JS Browser To Find XSS)
 - [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
 - [php-jpeg-injector](https://github.com/dlegs/php-jpeg-injector)
-- [js deobfuscator](https://github.com/jehna/humanify/)
+- [Open directory search engine](https://www.eyedex.org/)
 #### jwt
 1. jwtXploiter (https://github.com/DontPanicO/jwtXploiter) — это Python-инструмент, предназначенный для автоматизации взлома JWT. Он позволяет проверить соответствие всех известных CVE для JWT и поддерживает различные виды атак на JWT, начиная от простого взлома и до выполнения атак с использованием самозаверяющих токенов!
 2. JSON Web Tokens (https://portswigger.net/bappstore/f923cbf91698420890354c1d8958fee6) - это дополнение для Burpsuite, которое автоматизирует распространенные атаки на JWT. Кроме того, оно позволяет быстро выполнять кодирование / декодирование и проверку токенов.
 3. JWT Tool  (https://github.com/ticarpi/jwt_tool)- это широко используемый инструмент на языке Python, который позволяет производить проверку всех возможных атак, которые могут уязвимо существовать в веб-приложении.
 4. JWT Editor (https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd) - это дополнение для Burpsuite, которое обеспечивает возможность удобно изменять JWT-токены и быстро проверять различные методы обхода.
-### online
+## online
 - [xsshunter](https://xsshunter.trufflesecurity.com/app/#/)
 - [ez.pe](https://ez.pe)for xss(!!!)
 - [xss](https://requestcatcher.com/)| [tools](https://webhook.site)| [request](https://fjksdfds.requestcatcher.com/)| [inspector](https://requestinspector.com/)
@@ -151,6 +169,8 @@
 - [IntruderPayloads](https://github.com/1N3/IntruderPayloads)
 - [Upload Insecure Files](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Upload%20Insecure%20Files)
 - [open redirect payloads](https://github.com/cujanovic/Open-Redirect-Payloads)
+- [tg group](https://t.me/pro_pentest/119)
+- [tib3rius interview questions](https://tib3rius.com/interview-questions)
 ---
 # Encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
@@ -200,7 +220,6 @@
 - [wifi hacking](https://github.com/s0lst1c3/eaphammer)
 - [windows useful tool](https://winaerotweaker.com/)
 - [SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
-
 ## other
 ### Web Hack Tool Links
 
@@ -338,3 +357,30 @@ https://sms-online.co
 - [WTFBINS (cve)](https://wtfbins.wtf/)
 ### WIN
 - [netbios.py](https://github.com/s0i37/defence/blob/main/netbios.py)(как респондер)
+- [check win cves](https://github.com/BC-SECURITY/Moriarty)
+### tg bots for probiv
+```
+getcontact_real_bot - идеально подойдёт для проверки номера(вирт или не вирт)
+@UsersSearchBot - найдет не мало хорошей информации по номеру, так же возможны другие методы поиска
+@detectiva_bot - найдет информации по номеру и другим методам поиска(так же по номеру ищет соц-сети)
+@vk2017robot - найдет информации по странице которая была зарегестрироваться в 17 и ранее году
+@EyeCultist_bot - зеркало оригинального глаза бога
+@n3fm4xw2rwbot - найдет информацию по почте, номеру, авто
+@BotAvinfo_bot - найдет информации по авто
+@helper_inform_bot - найдет чу чуть информации по номеру, так же присутствуют разные методы пробива
+@Quickosintfast_bot - зеркало осинта. находит информации по чему угодно, только придется чу чуть оплачивать поиск
+@vin01bot - найдет информации по ГОС или VIN номеру
+@TgAnalyst_bot - найдет всю возможную информацию по айди телеграмм аккаунта
+@Zernerda_bot - соберёт много информации по номеру телефона
+@ip_score_checker_bot - найдет информации по айпи человека
+@maigret_osint_bot - найдет информации по юзернейму телеграмм аккаунта
+@UniversalSearchRobot - найдет информации по номеру телефона
+@CultustDoxed_bot - зеркало баз ГТА
+@PasswordSearchBot - найдет утерянные пароли в базах
+@usinfobot - находит информации по юзеру/айди
+@clerkinfobot - находит информации разными методами
+@last4mailbot - найдет много полезной инфы по электронной почте
+@HimeraSearchBot - очень много методов поиска, а так же информации
+@eyeofbeholder_bot - найдет информации по айди/юзернейму
+@telesint_bot
+```

