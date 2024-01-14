@@ -19,6 +19,7 @@
 - [subdomain finder](https://subdomainfinder.c99.nl/)online subds
 - [subdominator](https://github.com/Edd13Mora/Subdominator)One-Stop Solution for Subdomain Enumeration
 - [subfinder(pd)](https://github.com/projectdiscovery/dnsx) using passive online sources
+- [webcopilot](https://github.com/h4r5h1t/webcopilot)automation tool designed to enumerate subdomains of the target and detect bugs using different open-source tools
 ### subds takover
 - [Garud](https://github.com/R0X4R/Garud)scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more
 - [Subdomain takeover](https://github.com/PentestPad/subzy)
@@ -28,18 +29,16 @@
 ## urls
 - [dirsearch](https://github.com/maurosoria/dirsearch)
 - [gau](https://github.com/lc/gau)getallurls (gau) fetches known URLs from ...
-- [gospider](https://github.com/jaeles-project/gospider)(Fast web spider)
+- [gospider](https://github.com/jaeles-project/gospider)Fast web spider
 - [Gxss](https://github.com/KathanP19/Gxss)checking reflecting Parameters in a URL
 - [hakrawler](https://github.com/hakluke/hakrawler)crawler for gathering URLs and JavaScript file locations
-- [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
-- [hakrawler](https://github.com/hakluke/hakrawler)(web crawler for gathering URLs and JavaScript file locations)
-- [jsluice](https://github.com/BishopFox/jsluice)(for extracting URLs, paths, secrets, and other interesting data from JavaScript source code) [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
+- [hakrawler](https://github.com/hakluke/hakrawler)web crawler for gathering URLs and JavaScript file locations
+- [hakrawler](https://github.com/hakluke/hakrawler)web crawler for gathering URLs and JavaScript file locations
 - [katana(pd)](https://github.com/projectdiscovery/katana)
 - [meg](https://github.com/tomnomnom/meg)fetching lots of URLs but still being 'nice' to servers
-- [meg](https://github.com/tomnomnom/meg)(fetch many paths for many hosts)
 - [OpenDoor OWASP](https://github.com/stanislav-web/OpenDoor)
-- [photon](https://github.com/s0md3v/Photon)(Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds)
-- [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)(find domain's known URLs from curated passive online sources)
+- [photon](https://github.com/s0md3v/Photon)Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds
+- [pxurlfind3r](https://github.com/hueristiq/xurlfind3r)find domain's known URLs from curated passive online sources
 - [qsreplace](https://github.com/tomnomnom/qsreplace)URLs on stdin, replace all query string values with a user-supplied value
 - [roboxtractor](https://github.com/Josue87/roboxtractor)extract endpoints marked as disallow in robots.txt
 - [unfurl](https://github.com/tomnomnom/unfurl)cat katana_fix | unfurl --unique domains
@@ -89,6 +88,7 @@
 - [Logsensor](https://github.com/Mr-Robert0/Logsensor)discover login panels, and POST Form SQLi Scanning
 - [notify](https://github.com/projectdiscovery/notify)https://www.youtube.com/watch?v=wP3n1JnqtMU
 - [NucleiFuzzer](https://github.com/0xKayala/NucleiFuzzer)Nuclei + Paramspider 
+- [nuclei fuzzing-templates](https://github.com/projectdiscovery/fuzzing-templates)
 - [path traversal tool](https://github.com/jcesarstef/dotdotslash)
 - [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
 - [scan4shell](https://github.com/hktalent/scan4all)
@@ -113,6 +113,7 @@
 - [jsleak](https://github.com/0xTeles/jsleak)identify sensitive data in JS files through regex patterns
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)scanner js
 - [js deobfuscator](https://github.com/jehna/humanify/)
+- [jsluice](https://github.com/BishopFox/jsluice)for extracting URLs, paths, secrets, and other interesting data from JavaScript source code [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
 ## other
 - [GitTools](https://github.com/internetwache/GitTools)
 - [XSSTRON](https://github.com/RenwaX23/XSSTRON)(Electron JS Browser To Find XSS)
@@ -217,6 +218,7 @@
 - [ddoser.go](https://github.com/Quitten/doser.go)
 - [анализ сетевого трафика](https://github.com/odedshimon/BruteShark)
 - [android app to spam bluetooth](https://xakep.ru/2023/11/01/bluetooth-le-spam/)
+- [bluespam](https://github.com/simondankelmann/Bluetooth-LE-Spam)
 - [wifi hacking](https://github.com/s0lst1c3/eaphammer)
 - [windows useful tool](https://winaerotweaker.com/)
 - [SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
@@ -355,9 +357,6 @@ https://sms-online.co
 ### CVES
 - [cve.mitre.org](https://cve.mitre.org/cve/)
 - [WTFBINS (cve)](https://wtfbins.wtf/)
-### WIN
-- [netbios.py](https://github.com/s0i37/defence/blob/main/netbios.py)(как респондер)
-- [check win cves](https://github.com/BC-SECURITY/Moriarty)
 ### tg bots for probiv
 ```
 getcontact_real_bot - идеально подойдёт для проверки номера(вирт или не вирт)

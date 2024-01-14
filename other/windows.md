@@ -244,3 +244,6 @@ run -j (in background)
 ##### windows
 - [bloodhound-docker](https://github.com/belane/docker-bloodhound)
 - [механизмы закрепления в windows](https://persistence-info.github.io/)
+- [netbios.py](https://github.com/s0i37/defence/blob/main/netbios.py)(как респондер)
+- [check win cves](https://github.com/BC-SECURITY/Moriarty)
+- [check-list](https://swisskyrepo.github.io/InternalAllTheThings/)

