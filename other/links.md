@@ -101,7 +101,7 @@
 - [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 - [dalfox](https://github.com/hahwul/dalfox)find xxs
 ### white box
-- [JIRA](https://github.com/MayankPandey01/Jira-Lens)white box scaner
+- [semgrep](https://github.com/semgrep/semgrep)
 - [bearer](https://github.com/bearer/bearer)scanner white box
 ### api keys
 - [secretFinder](https://github.com/m4ll0k/SecretFinder)[trufflehog](https://github.com/trufflesecurity/trufflehog)find api keys
@@ -172,6 +172,7 @@
 - [open redirect payloads](https://github.com/cujanovic/Open-Redirect-Payloads)
 - [tg group](https://t.me/pro_pentest/119)
 - [tib3rius interview questions](https://tib3rius.com/interview-questions)
+- [regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet)
 ---
 # Encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
@@ -222,6 +223,7 @@
 - [wifi hacking](https://github.com/s0lst1c3/eaphammer)
 - [windows useful tool](https://winaerotweaker.com/)
 - [SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
+- [firefox extension](https://addons.mozilla.org/ru/firefox/addon/hacktools/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 ## other
 ### Web Hack Tool Links
 
