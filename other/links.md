@@ -56,6 +56,7 @@
 - [uncover](https://github.com/projectdiscovery/uncover)discover exposed hosts on the internet only with api keys
 - [web](https://web-check.xyz/)-[check](https://web-check.as93.net/)online all in one
 ## other osint
+- [osint](./osint.md)
 - [aquatone](https://github.com/michenriksen/aquatone)visual inspection of websites
 - [chameleon](https://github.com/iustin24/chameleon)provides content discovery by using wappalyzer's set of technology fingerprints alongside custom wordlists tailored to each detected technologies
 - [changedetection.io](https://github.com/dgtlmoon/changedetection.io)детектор обнаружения изменений на веб-сайтах с открытым исходным кодом
