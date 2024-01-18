@@ -9,7 +9,7 @@ Please note that these notes are a work in progress, and I'll be continuously ad
 In this repository, you will find a compilation of various tricks, commands, and techniques that can be useful during penetration testing activities. These notes are intended to assist in the process of hacking and securing systems.
 
 ---
-## [links](./other/links.md)
+## [links (all the things)](./other/links.md)
 ## [notes](./other/notes.md)
 ## [web](./other/web.md)
 ## [windows](./other/windows.md)
