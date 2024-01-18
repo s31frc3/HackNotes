@@ -1,5 +1,5 @@
 # WEB OSINT
-## subds
+## subdomains
 - [analyticsrelationships](https://github.com/Josue87/AnalyticsRelationships)related domains / subdomains
 - [bbot](https://github.com/blacklanternsecurity/bbot)python subds scanner
 - [columbus.elmasy](https://columbus.elmasy.com/)online Advanced subdomain enumeration service
