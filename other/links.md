@@ -99,7 +99,6 @@
 - [web cache poisoning](https://github.com/Th0h0/autopoisoner)
 - [Web-Cache-Vulnerability-Scanner](https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner/) 
 - [xss-vibes](https://github.com/faiyazahmad07/xss_vibes)automates your xss findings
-- [XXSHunter](https://xsshunter.trufflesecurity.com/app/#/)
 - [dalfox](https://github.com/hahwul/dalfox)find xxs
 ### white box
 - [semgrep](https://github.com/semgrep/semgrep)
