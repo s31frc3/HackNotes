@@ -172,15 +172,7 @@ cat > file << EOF
 EOF
 ```
 ---
-# php extensions to run revsell
-```
-.php
-.php3
-.php4
-.php5
-.phtml
-```
----
+
 # broken png image
 ```
 xxd thm.jpg | head
