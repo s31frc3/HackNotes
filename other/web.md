@@ -198,6 +198,7 @@ UNION SELECT username_abcdef, password_abcdef FROM users_abcdef--
 
 
 ${{<%[%'"}}%\.
+${{<%[%'"}}%\
 
 {{7*7}}
 ${7*7}
