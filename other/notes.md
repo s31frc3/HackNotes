@@ -80,13 +80,26 @@ cb :set -g mouse on
 ---
 # curl
 ```sh
--i                                       # show response headers
-curl example.com/json | js               # show json nicely
--L                                       # follow redirects
--o save.html                             # save to output
--v                                       # verbose mode
--H "User-agent:"                         # remove header
--H "User-agent;"                         # set blank header
+-i                                                  # show response headers
+curl a.b/json | js                                  # show json nicely
+-L                                                  # follow redirects
+-o save.html                                        # save to output
+-v                                                  # verbose mode
+--trace-ascii -                                     # MORE verbose
+-H "User-agent:"                                    # remove header
+-H "User-agent;"                                    # set blank header
+-d @file https://a.b/file                           # POST file
+cat file | curl -d @- http://a.b/file               # POST file contents
+ls -l | curl --data-binary @- http://a.b/file       # binary file as is
+-T file                                             # PUT file
+
+curl -c cookie.txt http://a.b/login                 # save cookie
+curl -b cookie.txt -c cookie.txt http://a.b/ -d u=a # send req with cookie
+curl -b cookie.txt -c cookie.txt http://a.b/profile # send req with cookie
+
+curl https://localhost -k                           # ignore ssl cert
+curl https://localhost -k -H "Host: a.b"            # works with cookies
+curl https://localhost --resolve a.b:443:localhost  # works everywhere
 ```
 # File Transfer on `Netcat`
 
