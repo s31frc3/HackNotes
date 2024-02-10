@@ -78,6 +78,16 @@ tmux new -s [name_of_new_window]
 cb :set -g mouse on
 ```
 ---
+# curl
+```sh
+-i                                       # show response headers
+curl example.com/json | js               # show json nicely
+-L                                       # follow redirects
+-o save.html                             # save to output
+-v                                       # verbose mode
+-H "User-agent:"                         # remove header
+-H "User-agent;"                         # set blank header
+```
 # File Transfer on `Netcat`
 
 1. To download a file on the remote shell:
