@@ -44,36 +44,36 @@ gv          # Return to the previous selection after visual mode.
 # grep
 ```sh
 locate seclist | grep <what>
-grep -Rwi "text"             # Recursively search for lines
-grep -n                      # show numbers of lines
-grep -i                      # do not care abuot regex
-grep -c                      # how many times
-grep linux * -r              # recursive  in all files
-# точка - это любой символ, -f чтоб точка не считалась любым символом
--v '^#'                      # begins with
-'^$'                         # пустые строки
--e '^(#|$)'                  # начинается или с # или с $(пустая строка)
-grep -e 'colou?r'            # ? makes preveous character optional (то есть и может стоять и нет)
-grep -w 'root'               # only word root, not asdrootas
-\grep                        # unalias
--A5                          # five line after the math
--B5                          # before
--C5                          # before and after
--e '[0-9]{5,6}/tcp' file.txt # от 5 до 6 цифр от 0 до 9
--E '[0-9]$'                  # number at the end of line
--E '\s*'                     # space or tab 
-+                            # one and more chars
+grep -Rwi "text"               #  Recursively search for lines
+grep -n                        #  show numbers of lines
+grep -i                        #  do not care abuot regex
+grep -c                        #  how many times
+grep linux * -r                #  recursive  in all files
+# точка - это любой символ,   -f чтоб точка не считалась любым символом
+-v '^#'                        #  begins with
+'^$'                           #  пустые строки
+-e '^(#|$)'                    #  начинается или с # или с $(пустая строка)
+grep -e 'colou?r'              #  ? makes preveous character optional (то есть и может стоять и нет)
+grep -w 'root'                 #  only word root, not asdrootas
+\grep                          #  unalias
+-A5                            #  five line after the math
+-B5                            #  before
+-C5                            #  before and after
+-e '[0-9]{5,6}/tcp' file.txt   #  от 5 до 6 цифр от 0 до 9
+-E '[0-9]$'                    #  number at the end of line
+-E '\s*'                       #  space or tab 
++                              #  one and more chars
 ```
 
 ---
 # tmux
 ```
-ctrl b d # сохранить сессию и выйти из нее
-cb p     # previous window
-cb n     # next window
-cb ,     # rename window
-cb c     # create window
-cb w     # list windows
+ctrl b d                                    # сохранить сессию и выйти из нее
+cb p                                        # previous window
+cb n                                        # next window
+cb ,                                        # rename window
+cb c                                        # create window
+cb w                                        # list windows
 tmux new -s [name_of_new_window]
 cb :set -g mouse on
 ```
