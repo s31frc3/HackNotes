@@ -67,39 +67,44 @@ grep -w 'root'                 #  only word root, not asdrootas
 
 ---
 # tmux
-```
-ctrl b d                                    # сохранить сессию и выйти из нее
-cb p                                        # previous window
-cb n                                        # next window
-cb ,                                        # rename window
-cb c                                        # create window
-cb w                                        # list windows
+```sh
+ctrl b d                                       # сохранить сессию и выйти из нее
+cb p                                           # previous window
+cb n                                           # next window
+cb ,                                           # rename window
+cb c                                           # create window
+cb w                                           # list windows
 tmux new -s [name_of_new_window]
 cb :set -g mouse on
 ```
 ---
 # curl
 ```sh
--i                                                  # show response headers
-curl a.b/json | js                                  # show json nicely
--L                                                  # follow redirects
--o save.html                                        # save to output
--v                                                  # verbose mode
---trace-ascii -                                     # MORE verbose
--H "User-agent:"                                    # remove header
--H "User-agent;"                                    # set blank header
--d @file https://a.b/file                           # POST file
-cat file | curl -d @- http://a.b/file               # POST file contents
-ls -l | curl --data-binary @- http://a.b/file       # binary file as is
--T file                                             # PUT file
+-i                                                                              # show response headers
+curl a.b/json | js                                                              # show json nicely
+-L                                                                              # follow redirects
+-o save.html                                                                    # save to output
+-v                                                                              # verbose mode
+--trace-ascii -                                                                 # MORE verbose
+-H "User-agent:"                                                                # remove header
+-H "User-agent;"                                                                # set blank header
+-d @file https://a.b/file                                                       # POST file
+cat file | curl -d @- http://a.b/file                                           # POST file contents
+ls -l | curl --data-binary @- http://a.b/file                                   # binary file as is
+-T file                                                                         # PUT file
 
-curl -c cookie.txt http://a.b/login                 # save cookie
-curl -b cookie.txt -c cookie.txt http://a.b/ -d u=a # send req with cookie
-curl -b cookie.txt -c cookie.txt http://a.b/profile # send req with cookie
+curl -c cookie.txt http://a.b/login                                             # save cookie
+curl -b cookie.txt -c cookie.txt http://a.b/ -d u=a                             # send req with cookie
+curl -b cookie.txt -c cookie.txt http://a.b/profile                             # send req with cookie
+curl https://localhost -k                                                       # ignore ssl cert
 
-curl https://localhost -k                           # ignore ssl cert
-curl https://localhost -k -H "Host: a.b"            # works with cookies
-curl https://localhost --resolve a.b:443:localhost  # works everywhere
+curl https://localhost -k -H "Host: a.b"                                        # works with cookies
+curl https://localhost --resolve a.b:443:localhost                              # works everywhere
+
+# in debug network menu u can copy request as curl
+
+--http1.0 --http2 --http3
+curl -d user=test http://a.b/login --next http://a.b/my-account                 # no limit --next
 ```
 # File Transfer on `Netcat`
 
