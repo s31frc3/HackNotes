@@ -39,6 +39,8 @@ gU U        # Convert to uppercase.
 g~ ~        # Toggle case of all characters in the current line.
 gf          # Open the file whose name is under the cursor, '^' to go back.
 gv          # Return to the previous selection after visual mode.
+:g/remove/d
+%! grep -v a
 ```
 ---
 # grep
@@ -115,6 +117,22 @@ awk '{print $NF}'                  # print last field
 awk '{print $1"\n"$2}'             # \t = tab
 awk 'length($0) < 7' /etc/shells
 awk '{print substr($0, 4)}' file   # print all but no first 4 chars
+```
+# sed
+```sh
+sed 's/find/replace/' file                               # replace finst in line
+sed 's/find/replace/g' file                              # replace all in line
+sed 's/find//' file                                      # replayce to nothing
+sed -i 's/find/replase/' file                            # save to file, no output
+sed '/grep_word/s/find/replase/g'                        # grep word in line and replace other word
+sed '/word_to_remove/d/g'                                # remove
+sed -e 's/find/replase/g' -e 's/find_2/replase_2/g'      # multiple replacement
+sed -n '/find/p'                                         # basically grep command
+sed -i 's/ *$//' file                                    # remove all spaces at the end of lines
+sed -i 's/[[:space:]]*$//' file                          # remove all tabs at the end of lines
+sed -i '/^$/d'                                           # remove all empty lines
+sed 's/[a-z]/\U&/g' file                                 # to upper case
+sed 's/[A-Z]/\L&/g' file                                 # to lower case
 ```
 # File Transfer on `Netcat`
 
