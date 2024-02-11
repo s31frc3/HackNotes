@@ -96,8 +96,8 @@ ls -l | curl --data-binary @- http://a.b/file                                   
 curl -c cookie.txt http://a.b/login                                             # save cookie
 curl -b cookie.txt -c cookie.txt http://a.b/ -d u=a                             # send req with cookie
 curl -b cookie.txt -c cookie.txt http://a.b/profile                             # send req with cookie
-curl https://localhost -k                                                       # ignore ssl cert
 
+curl https://localhost -k                                                       # ignore ssl cert
 curl https://localhost -k -H "Host: a.b"                                        # works with cookies
 curl https://localhost --resolve a.b:443:localhost                              # works everywhere
 
@@ -105,6 +105,16 @@ curl https://localhost --resolve a.b:443:localhost                              
 
 --http1.0 --http2 --http3
 curl -d user=test http://a.b/login --next http://a.b/my-account                 # no limit --next
+```
+# awk
+```sh
+cat test | awk '{print $1}'
+awk '{print $1,$3}'
+awk '{print $NF}'                  # print last field
+-F ':'                             # set separator
+awk '{print $1"\n"$2}'             # \t = tab
+awk 'length($0) < 7' /etc/shells
+awk '{print substr($0, 4)}' file   # print all but no first 4 chars
 ```
 # File Transfer on `Netcat`
 
