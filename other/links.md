@@ -73,6 +73,7 @@
 ## burp
 - authorize (burp extension to scan for idor 1 1 | 2)
 - param miner (burp extension to scan hidden params)
+- [jsluicepp](https://github.com/0x999-x/jsluicepp)(find secrets in js)
 ## scanners
 - [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
 - [akto](https://github.com/akto-api-security/akto)сканер всего с берпом
@@ -385,3 +386,70 @@ getcontact_real_bot - идеально подойдёт для проверки 
 @eyeofbeholder_bot - найдет информации по айди/юзернейму
 @telesint_bot
 ```
+### Стеганография в изображениях
+zsteg (https://github.com/zed-0xff/zsteg) - комбайн по работе с PNG и BMP
+```
+gem install zsteg
+zsteg -a pic.png
+```
+
+png-parser (https://github.com/Hedroed/png-parser) - анализ PNG изображений
+
+```
+pip install --user git+https://github.com/Hedroed/png-parser
+png-parser pic.png
+```
+
+steghide (https://steghide.sourceforge.net/) - извлекает данные из JPG
+
+```
+sudo apt install steghide
+steghide extract -sf pic.jpg
+```
+
+stegseek (https://github.com/RickdeJager/stegseek) - самый быстрый брутер steghide файлов
+
+```
+sudo apt install ./stegseek_0.6-1.deb
+stegseek pic.jpg rockyou.txt
+```
+
+stegoveritas (https://github.com/bannsec/stegoVeritas) - очередной комбайн, разбирает по слоям, применяет кучу фильтров, результат сохраняет в отдельную директорию
+
+```
+pip3 install stegoveritas
+stegoveritas pic.png
+```
+
+stegsolve (https://github.com/Giotino/stegsolve) - Java приложение, работа со слоями, LSB, стереограмы
+
+```
+java -jar StegSolve.jar
+```
+
+exiftool (https://exiftool.org/) - лучший инструмент по работе с метаданными
+
+```
+exiftool pic.png
+```
+
+exiftoolGUI (https://exiftool.org/gui/) - графический интерфейс для exiftool ( 📦 )
+tweakpng (https://entropymine.com/jason/tweakpng/) - редактор метаданных в PNG ( 📦 )
+pngcheck (http://www.libpng.org/pub/png/apps/pngcheck.html) - анализатор PNG изображений
+
+```
+sudo apt install pngcheck
+pngcheck -v pic.png
+```
+
+stegpy (https://github.com/izcoser/stegpy) - LSB
+
+```
+pip3 install stegpy
+stegpy pic.png
+```
+
+OpenStego (https://www.openstego.com/) - очередная стегано утилита ( 📦 )
+Magic Eye Solver (https://magiceye.ecksdee.co.uk/) - решение стереограм
+Aperi Solve (https://www.aperisolve.fr/) - веб сервис все в одном
+Piet Solver (https://piet.bubbler.one/) - веб сервис решение Piet

