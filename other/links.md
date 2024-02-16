@@ -101,6 +101,12 @@
 - [Web-Cache-Vulnerability-Scanner](https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner/) 
 - [xss-vibes](https://github.com/faiyazahmad07/xss_vibes)automates your xss findings
 - [dalfox](https://github.com/hahwul/dalfox)find xxs
+- [Spoofy](https://github.com/MattKeeley/Spoofy) if a list of domains can be spoofed based on SPF and DMARC records
+```
+git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requirements.txt
+./spoofy.py -d [DOMAIN] -o [stdout or xls]
+./spoofy.py -iL [DOMAIN_LIST] -o [stdout or xls]
+```
 ### white box
 - [semgrep](https://github.com/semgrep/semgrep)
 - [bearer](https://github.com/bearer/bearer)scanner white box
@@ -174,6 +180,7 @@
 - [tg group](https://t.me/pro_pentest/119)
 - [tib3rius interview questions](https://tib3rius.com/interview-questions)
 - [regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet)
+- [sql inj](https://websec.ca/kb/sql_injection)[same](https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet/)
 ---
 # Encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
@@ -342,6 +349,7 @@ https://sms-online.co
 5. Proofy (https://proofy.io/) - инструмент, который проверяет существование электронной почты.
 - [vk osint](https://github.com/OSINT-mindset/vk-osint-ru)
 - [telegram-phone-number-checker](https://github.com/bellingcat/telegram-phone-number-checker)
+- [github osint](https://github.com/mxrch/GitFive)
 ### AI
 1. DrLambda (https://drlambda.ai/) — может превратить любой документ, сайт или видео в презентацию;
 2. Suno (https://www.suno.ai/) — создаст для вас песню по вашему тексту;

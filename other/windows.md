@@ -247,3 +247,4 @@ run -j (in background)
 - [check win cves](https://github.com/BC-SECURITY/Moriarty)
 - [check-list](https://swisskyrepo.github.io/InternalAllTheThings/)
 - [находиться невидимым в сети от соков](https://github.com/wearecaster/F31)
+- [SharpADWS](https://github.com/wh0amitz/SharpADWS) Active Directory reconnaissance and exploitation for Red Teams via the Active Directory Web Services (ADWS).

