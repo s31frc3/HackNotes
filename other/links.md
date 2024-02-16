@@ -232,6 +232,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [windows useful tool](https://winaerotweaker.com/)
 - [SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
 - [firefox extension](https://addons.mozilla.org/ru/firefox/addon/hacktools/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
+- [jwt-cracker](https://github.com/lmammino/jwt-cracker)
 ## other
 ### Web Hack Tool Links
 
