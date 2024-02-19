@@ -94,20 +94,17 @@ curl a.b/json | js                                                              
 cat file | curl -d @- http://a.b/file                                           # POST file contents
 ls -l | curl --data-binary @- http://a.b/file                                   # binary file as is
 -T file                                                                         # PUT file
-
 curl -c cookie.txt http://a.b/login                                             # save cookie
 curl -b cookie.txt -c cookie.txt http://a.b/ -d u=a                             # send req with cookie
 curl -b cookie.txt -c cookie.txt http://a.b/profile                             # send req with cookie
-
 curl https://localhost -k                                                       # ignore ssl cert
 curl https://localhost -k -H "Host: a.b"                                        # works with cookies
 curl https://localhost --resolve a.b:443:localhost                              # works everywhere
-
 # in debug network menu u can copy request as curl
-
 --http1.0 --http2 --http3
 curl -d user=test http://a.b/login --next http://a.b/my-account                 # no limit --next
 ```
+---
 # awk
 ```sh
 cat test | awk '{print $1}'
