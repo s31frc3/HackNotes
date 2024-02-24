@@ -107,6 +107,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 ./spoofy.py -d [DOMAIN] -o [stdout or xls]
 ./spoofy.py -iL [DOMAIN_LIST] -o [stdout or xls]
 ```
+- [web-cache-poisoning-scanner](https://github.com/xhzeem/toxicache)
 ### white box
 - [semgrep](https://github.com/semgrep/semgrep)
 - [bearer](https://github.com/bearer/bearer)scanner white box
@@ -181,6 +182,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [tib3rius interview questions](https://tib3rius.com/interview-questions)
 - [regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet)
 - [sql inj](https://websec.ca/kb/sql_injection)[same](https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet/)
+- [blind-ssrf-chains](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)
 ---
 # Encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)

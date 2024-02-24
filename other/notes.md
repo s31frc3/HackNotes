@@ -68,18 +68,6 @@ grep -w 'root'                 #  only word root, not asdrootas
 ```
 
 ---
-# tmux
-```sh
-ctrl b d                                       # сохранить сессию и выйти из нее
-cb p                                           # previous window
-cb n                                           # next window
-cb ,                                           # rename window
-cb c                                           # create window
-cb w                                           # list windows
-tmux new -s [name_of_new_window]
-cb :set -g mouse on
-```
----
 # curl
 ```sh
 -i                                                                              # show response headers
@@ -100,9 +88,21 @@ curl -b cookie.txt -c cookie.txt http://a.b/profile                             
 curl https://localhost -k                                                       # ignore ssl cert
 curl https://localhost -k -H "Host: a.b"                                        # works with cookies
 curl https://localhost --resolve a.b:443:localhost                              # works everywhere
-# in debug network menu u can copy request as curl
+in debug network menu u can copy request as curl
 --http1.0 --http2 --http3
 curl -d user=test http://a.b/login --next http://a.b/my-account                 # no limit --next
+```
+---
+# tmux
+```sh
+ctrl b d                                       # сохранить сессию и выйти из нее
+cb p                                           # previous window
+cb n                                           # next window
+cb ,                                           # rename window
+cb c                                           # create window
+cb w                                           # list windows
+tmux new -s [name_of_new_window]
+cb :set -g mouse on
 ```
 ---
 # awk
@@ -130,6 +130,11 @@ sed -i 's/[[:space:]]*$//' file                          # remove all tabs at th
 sed -i '/^$/d'                                           # remove all empty lines
 sed 's/[a-z]/\U&/g' file                                 # to upper case
 sed 's/[A-Z]/\L&/g' file                                 # to lower case
+```
+# linux troubleshooting
+```sh
+df -h                        # all disks and storage
+du -sh /tmp                  # how much spase
 ```
 # File Transfer on `Netcat`
 
