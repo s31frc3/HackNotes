@@ -7,3 +7,9 @@
 4. Атаки имитации Bluetooth (BIAS) (https://www.linux-magazin.de/blogs/bluetooth-bias-bluetooth-impersonation-attacks/): Этот тип атаки нацелены на «устаревшую процедуру аутентификации безопасного соединения во время безопасного соединения» Хакер может действовать как посредник, чтобы перехватить конфиденциальные данные, совместно используемые двумя подключенными устройствами.
 
 5. BlueBugging (https://en.wikipedia.org/wiki/Bluebugging): BlueBugging использует «Bluetooth для создания бэкдора на телефоне или ноутбуке жертвы» Хакер может не только взломать устройства Bluetooth, но и просмотреть все данные на вашем устройстве.
+
+https://securitytrails.com
+А еще http://dnshistory.org/dns-records/linkedin.com и
+ https://viewdns.info/iphistory/?domain=linkedin.com
+
+Вообще всякого полезного по сбору периметра/истории: https://blog.onsec.io/a-guide-to-resource-discovery-for-penetration-testing/

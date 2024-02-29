@@ -1,28 +1,4 @@
 - [ ] [back](../README.md)
-# Discover hidden directories:
-```linux
-ffuf -replay-proxy http://127.0.0.1:8080 #ffuf with proxy
-
-subdinder -d target.com -silent | dnsx -silent | gau
-```
----
-# Discover subdomains:
-```
-wfuzz -c -w wordlist -u "http://domain.com" -H "Host: FUZZ.domain.com" -fw 125
-
-ffuf -u http://domain.com -w wordlist -H "Host: FUZZ.domain.com"
-```
----
-# Discover files with `wfuzz` :
-```
-wfuzz -c -w /usr/share/dirb/wordlists/LFI-gracefulsecurity-linux.txt -u http://dev.team.thm/script.php\?page\=FUZZ --hw=0
-```
----
-# Brute force wordpress
-```
-wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
-```
----
 # Example of XXE 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -519,6 +495,30 @@ console.log(params);
 req.send(params);
 </script>
 ```
+# Discover hidden directories:
+```linux
+ffuf -replay-proxy http://127.0.0.1:8080 #ffuf with proxy
+
+subdinder -d target.com -silent | dnsx -silent | gau
+```
+---
+# Discover subdomains:
+```
+wfuzz -c -w wordlist -u "http://domain.com" -H "Host: FUZZ.domain.com" -fw 125
+
+ffuf -u http://domain.com -w wordlist -H "Host: FUZZ.domain.com"
+```
+---
+# Discover files with `wfuzz` :
+```
+wfuzz -c -w /usr/share/dirb/wordlists/LFI-gracefulsecurity-linux.txt -u http://dev.team.thm/script.php\?page\=FUZZ --hw=0
+```
+---
+# Brute force wordpress
+```
+wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
+```
+---
 # links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
 - [ohmyweb](./src/omyweb.md)
