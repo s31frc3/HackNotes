@@ -74,6 +74,8 @@
 - authorize (burp extension to scan for idor 1 1 | 2)
 - param miner (burp extension to scan hidden params)
 - [jsluicepp](https://github.com/0x999-x/jsluicepp)(find secrets in js)
+- [backslash scanner](https://github.com/danilmor/All-in-Fuzzer)
+-[Server Side Prototype Pollution Gadgets Scanner](https://github.com/doyensec/Server-Side-Prototype-Pollution-Gadgets-Scanner)
 ## scanners
 - [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
 - [akto](https://github.com/akto-api-security/akto)сканер всего с берпом
@@ -183,6 +185,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [regex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet)
 - [sql inj](https://websec.ca/kb/sql_injection)[same](https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet/)
 - [blind-ssrf-chains](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)
+- [cheat-sheets](https://0xn3va.gitbook.io/cheat-sheets/)
 ---
 # Encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)

