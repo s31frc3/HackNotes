@@ -29,6 +29,8 @@
 ## urls
 - [dirsearch](https://github.com/maurosoria/dirsearch)
 - [gau](https://github.com/lc/gau)getallurls (gau) fetches known URLs from ...
+- [waybackurls](https://github.com/tomnomnom/waybackurls)
+- [waymore](https://github.com/xnl-h4ck3r/waymore) find even more links from the Wayback
 - [gospider](https://github.com/jaeles-project/gospider)Fast web spider
 - [Gxss](https://github.com/KathanP19/Gxss)checking reflecting Parameters in a URL
 - [hakrawler](https://github.com/hakluke/hakrawler)crawler for gathering URLs and JavaScript file locations
@@ -110,6 +112,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 ./spoofy.py -iL [DOMAIN_LIST] -o [stdout or xls]
 ```
 - [web-cache-poisoning-scanner](https://github.com/xhzeem/toxicache)
+- [pphack](https://github.com/edoardottt/pphack) prototype pollution scanner
 ### white box
 - [semgrep](https://github.com/semgrep/semgrep)
 - [bearer](https://github.com/bearer/bearer)scanner white box
