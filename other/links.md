@@ -159,6 +159,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [All-in-One-P](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one_p.7z.torrent)
 - [All-in-One-Wi-Fi](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one_w.7z.torrent)
 - [NTLM to password](https://ntlm.pw/)
+- [samlists](https://github.com/the-xentropy/samlists)
 
 ---
 # cheatsheets
