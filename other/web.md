@@ -477,6 +477,7 @@ Takeaways: Don't hit a dead end with GraphQL apps. Dive deeper, find those conce
 # Crawling parameters with Katana for quick XSS/SQLI
 ```sh
 katana -u http://domain.com -silent -d 15 -rl 500 -jc -c 20 -kf all -ct 2m -sf qurl -o urls.txt
+# You can use katana with query url filter (`-f qurl`) to get list of endpoints
 urless -i urls.txt -o output.txt
 nuclei -l output.txt -t /opt/fuzzing-templates/ -silent
 ```

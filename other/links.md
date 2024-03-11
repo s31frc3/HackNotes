@@ -77,7 +77,7 @@
 - param miner (burp extension to scan hidden params)
 - [jsluicepp](https://github.com/0x999-x/jsluicepp)(find secrets in js)
 - [backslash scanner](https://github.com/danilmor/All-in-Fuzzer)
--[Server Side Prototype Pollution Gadgets Scanner](https://github.com/doyensec/Server-Side-Prototype-Pollution-Gadgets-Scanner)
+- [Server Side Prototype Pollution Gadgets Scanner](https://github.com/doyensec/Server-Side-Prototype-Pollution-Gadgets-Scanner)
 ## scanners
 - [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
 - [akto](https://github.com/akto-api-security/akto)сканер всего с берпом
