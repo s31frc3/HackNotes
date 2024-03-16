@@ -113,6 +113,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 ```
 - [web-cache-poisoning-scanner](https://github.com/xhzeem/toxicache)
 - [pphack](https://github.com/edoardottt/pphack) prototype pollution scanner
+- [droopescan](https://github.com/SamJoan/droopescan) for cms
 ### white box
 - [semgrep](https://github.com/semgrep/semgrep)
 - [bearer](https://github.com/bearer/bearer)scanner white box
@@ -123,7 +124,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 ### javascript
 - [jsmon](https://github.com/robre/jsmon)Скрипт для мониторинга изменений в Javascript файлах
 - [subjs](https://github.com/lc/subjs)fetches javascript files from a list of URLS or subdomains
-- [jsleak](https://github.com/0xTeles/jsleak)identify sensitive data in JS files through regex patterns
+- [jsleak](https://github.com/byt3hx/jsleak)identify sensitive data in JS files through regex patterns
 - [JSFScan](https://github.com/KathanP19/JSFScan.sh)scanner js
 - [js deobfuscator](https://github.com/jehna/humanify/)
 - [jsluice](https://github.com/BishopFox/jsluice)for extracting URLs, paths, secrets, and other interesting data from JavaScript source code [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
