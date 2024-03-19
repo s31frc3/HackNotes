@@ -20,6 +20,7 @@
 - [subdominator](https://github.com/Edd13Mora/Subdominator)One-Stop Solution for Subdomain Enumeration
 - [subfinder(pd)](https://github.com/projectdiscovery/dnsx) using passive online sources
 - [webcopilot](https://github.com/h4r5h1t/webcopilot)automation tool designed to enumerate subdomains of the target and detect bugs using different open-source tools
+- [domain relationships](https://builtwith.com/relationships/miratorg.ru)
 ### subds takover
 - [Garud](https://github.com/R0X4R/Garud)scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more
 - [Subdomain takeover](https://github.com/PentestPad/subzy)
@@ -69,6 +70,7 @@
 - [reconftw](https://github.com/six2dez/reconftw)
 - [same domains](https://typosquatting-finder.circl.lu)сервис для поиска доменов со схожим названием
 - [telegram osint](https://github.com/drego85/tosint)
+- [e](lampyre)[m](https://Snov.io)[ails](https://phonebook.cz)
 
 ---
 # WEB tools
@@ -78,6 +80,8 @@
 - [jsluicepp](https://github.com/0x999-x/jsluicepp)(find secrets in js)
 - [backslash scanner](https://github.com/danilmor/All-in-Fuzzer)
 - [Server Side Prototype Pollution Gadgets Scanner](https://github.com/doyensec/Server-Side-Prototype-Pollution-Gadgets-Scanner)
+- [manual-simulator](https://portswigger.net/burp/documentation/desktop/tools/engagement-tools/manual-simulator)
+- [awesome-burp-extensions](https://github.com/snoopysecurity/awesome-burp-extensions/blob/master/README.md)
 ## scanners
 - [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
 - [akto](https://github.com/akto-api-security/akto)сканер всего с берпом
@@ -150,6 +154,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [analize pcap file](https://apackets.com/upload)
 - [Детектор обнаружения изменений на веб-сайтах с открытым исходным кодом](https://changedetection.io)
 - [tmpfiles](https://tmpfiles.org/)
+- [webhook](https://webhook.site/)
 ---
 # wordlists
 - [Bo0oM/fuzz.txt](https://github.com/Bo0oM/fuzz.txt/blob/master/fuzz.txt)
@@ -243,7 +248,17 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [SharpWeb](https://github.com/StarfireLab/SharpWeb)(Инструмент для экспорта данных браузера (пароль | история | файлы cookie | закладки | записи загрузок), поддерживающий основные браузеры.)
 - [firefox extension](https://addons.mozilla.org/ru/firefox/addon/hacktools/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 - [jwt-cracker](https://github.com/lmammino/jwt-cracker)
+- [Нейросеть для создания таблиц Excel](https://aiexcelbot.com/)
+- [reports](https://github.com/pwndoc-ng/pwndoc-ng)[generators](https://vulnrepo.com)[more](https://securityreporter.app/)
 ## other
+### localhost resolv
+```
+https://lock.cmpxchg8b.com/rebinder.html
+https://sslip.io/
+https://nip.io/
+
+как будто когда-то был спрос на домены, которые резольвятся на локалхост, вот смешной нашёл - localho.st
+```
 ### Web Hack Tool Links
 
 https://github.com/microsoft/restler-fuzzer
@@ -381,6 +396,7 @@ https://sms-online.co
 - [WTFBINS (cve)](https://wtfbins.wtf/)
 ### tg bots for probiv
 ```
+@lolsbotcatcherbot - скамер или нет
 getcontact_real_bot - идеально подойдёт для проверки номера(вирт или не вирт)
 @UsersSearchBot - найдет не мало хорошей информации по номеру, так же возможны другие методы поиска
 @detectiva_bot - найдет информации по номеру и другим методам поиска(так же по номеру ищет соц-сети)

