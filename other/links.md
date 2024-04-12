@@ -7,6 +7,7 @@
 - [crt.sh 10 k bypass](https://github.com/MzHmO/articles/blob/main/crtshbypass/script.py)
 - [dnscan](https://github.com/rbsec/dnscan)DNS subdomain scanner
 - [dnsx(pd)](https://github.com/projectdiscovery/dnsx)DNS toolkit
+- [dnsdumpster.com](https://dnsdumpster.com)
 - [gitlab-subdomains](https://github.com/gwen001/gitlab-subdomains)Find subdomains on GitLab
 - [knockpy](https://github.com/guelfoweb/knock)
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)online subds
