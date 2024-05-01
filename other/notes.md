@@ -94,13 +94,15 @@ curl -d user=test http://a.b/login --next http://a.b/my-account                 
 ```
 ---
 # tmux
-```sh
+```
 ctrl b d                                       # сохранить сессию и выйти из нее
 cb p                                           # previous window
 cb n                                           # next window
 cb ,                                           # rename window
 cb c                                           # create window
 cb w                                           # list windows
+cb "                                           # split
+cb x                                           # close pane
 tmux new -s [name_of_new_window]
 cb :set -g mouse on
 ```
