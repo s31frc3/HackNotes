@@ -84,3 +84,4 @@ setopt HIST_IGNORE_SPACE
 pip install hashid dirsearch
 python3 -m pip install --user pipx
 python3 -m pip install --user --upgrade pipx
+pip3 install updog
