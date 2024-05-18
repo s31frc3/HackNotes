@@ -39,6 +39,7 @@
 - [hakrawler](https://github.com/hakluke/hakrawler)web crawler for gathering URLs and JavaScript file locations
 - [hakrawler](https://github.com/hakluke/hakrawler)web crawler for gathering URLs and JavaScript file locations
 - [katana(pd)](https://github.com/projectdiscovery/katana)
+- [gourlex](https://github.com/trap-bytes/gourlex)like katana but faster
 - [meg](https://github.com/tomnomnom/meg)fetching lots of URLs but still being 'nice' to servers
 - [OpenDoor OWASP](https://github.com/stanislav-web/OpenDoor)
 - [photon](https://github.com/s0md3v/Photon)Data Extraction of urls, emails, social media accounts, files, secret keys, js files,subds
@@ -104,6 +105,7 @@
 - [Prototype Pollution Fuzzer](https://github.com/dwisiswant0/ppfuzz)
 - [scan4shell](https://github.com/hktalent/scan4all)
 - [sj](https://github.com/BishopFox/sj/)Swagger Jacker(api scanner)
+- [OFFAT](https://github.com/OWASP/OFFAT/) input swagger.json test api
 - [SSTImap](https://github.com/vladko312/SSTImap)
 - [tools](https://github.com/enjoiz/XXEinjector)| [for](https://github.com/luisfontes19/xxexploiter)| [xxe](https://github.com/whitel1st/docem)
 - [web cache poisoning](https://github.com/Th0h0/autopoisoner)
@@ -119,6 +121,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [web-cache-poisoning-scanner](https://github.com/xhzeem/toxicache)
 - [pphack](https://github.com/edoardottt/pphack) prototype pollution scanner
 - [droopescan](https://github.com/SamJoan/droopescan) for cms
+- [publicwww.com](https://publicwww.com/) Source Code Search Engine
 ### white box
 - [semgrep](https://github.com/semgrep/semgrep)
 - [bearer](https://github.com/bearer/bearer)scanner white box
@@ -251,6 +254,8 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [jwt-cracker](https://github.com/lmammino/jwt-cracker)
 - [Нейросеть для создания таблиц Excel](https://aiexcelbot.com/)
 - [reports](https://github.com/pwndoc-ng/pwndoc-ng)[generators](https://vulnrepo.com)[more](https://securityreporter.app/)
+- [tartufo](https://github.com/godaddy/tartufo) сканирует репозитории в поисках случайно оставленных токенов и учетных данных. 
+- [buetoolkit](https://github.com/sgxgsx/BlueToolkit)
 ## other
 ### localhost resolv
 ```

