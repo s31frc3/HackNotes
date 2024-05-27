@@ -122,6 +122,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [pphack](https://github.com/edoardottt/pphack) prototype pollution scanner
 - [droopescan](https://github.com/SamJoan/droopescan) for cms
 - [publicwww.com](https://publicwww.com/) Source Code Search Engine
+- [hauditor](https://github.com/trap-bytes/hauditor) check security headers
 ### white box
 - [semgrep](https://github.com/semgrep/semgrep)
 - [bearer](https://github.com/bearer/bearer)scanner white box
@@ -170,6 +171,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [All-in-One-Wi-Fi](https://download.weakpass.com/wordlists/all-in-one/1/all_in_one_w.7z.torrent)
 - [NTLM to password](https://ntlm.pw/)
 - [samlists](https://github.com/the-xentropy/samlists)
+- [brute WordPress XML-RPC](https://github.com/DavidWittman/wpxmlrpcbrute/blob/master/wordlists/1000-most-common-passwords.txt?ysclid=llkyd621j0388687597)
 
 ---
 # cheatsheets

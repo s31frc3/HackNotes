@@ -85,3 +85,7 @@ pip install hashid dirsearch
 python3 -m pip install --user pipx
 python3 -m pip install --user --upgrade pipx
 pip3 install updog
+# docker pull ubuntu
+# docker run -d -t --name myubuntu ubuntu
+# docker start myubuntu && docker exec -it myubuntu bash
+# docker kill myubuntu
