@@ -89,3 +89,4 @@ pip3 install updog
 # docker run -d -t --name myubuntu ubuntu
 # docker start myubuntu && docker exec -it myubuntu bash
 # docker kill myubuntu
+# :g/\;mv\|\;p\n\|\;ww\n\|\;\.\.\|\;h\ \|\;c\n\|\;hi\n\|\;.vpn\|\;jj\|\;mm\n\|\;ls\|\;cb\|\;wc\|\;ps\ \|\;cd\|\;pwd\|\;ifc\|\;kali\|\;source\|\;webup\|\;reboot\|\;update\|\;md\|\;\.\.\|\;htop\|\;vim\|\;la\|\;exit\|\;myip\|\;e\n/d
