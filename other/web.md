@@ -481,7 +481,7 @@ fragment TypeRef on __Type {
 If you can't find more GraphQL Queries and Mutations, don't worry! Stay tuned for upcoming insights on how to brute force and discover hidden ones.
 Takeaways: Don't hit a dead end with GraphQL apps. Dive deeper, find those concealed GraphQL Queries and Mutations, and unlock unimaginable functionalities that can lead to significant bounties!
 # csrf json
-Во время проекта наткнулся на функциональность изменения профиля. Ну и, понятное дело, не проверить CSRF было бы грехом. Однако, общение с бэкендом происходит через Rest с использованием `Content-type: application/json`. Вместо `application/json` ставим `application/x-www-form-urlencoded`, а тело запроса оставляем прежним :).  
+Вместо `application/json` ставим `application/x-www-form-urlencoded`, а тело запроса оставляем прежним :).  
 Сразу хочется отметить, что burp не сгенерирует полезную нагрузку, поэтому вот сниппет, которым можно воспользоваться:
 
 ```js
