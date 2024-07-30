@@ -35,6 +35,7 @@ from table_name—>
 ```sql
 "
 " "
+%21$s
 " "
 " #
 " --
