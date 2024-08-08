@@ -24,10 +24,9 @@
 - [domain relationships](https://builtwith.com/relationships/miratorg.ru)
 ### subds takover
 - [Garud](https://github.com/R0X4R/Garud)scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more
-- [Subdomain takeover](https://github.com/PentestPad/subzy)
-- [subdomain takeover](https://github.com/PentestPad/subzy)[check](https://github.com/ebrandel/takeover/blob/master/takeover.py)
-- [subzy](https://github.com/PentestPad/subzy)Subdomain takeover
+- [subzy](https://github.com/PentestPad/subzy)
 - [dnstake](https://github.com/pwnesia/dnstake)subdomain takeover
+- [Subdomain-Takeover](https://github.com/SaadAhmedx/Subdomain-Takeover)
 ## urls
 - [dirsearch](https://github.com/maurosoria/dirsearch)
 - [gau](https://github.com/lc/gau)getallurls (gau) fetches known URLs from ...
@@ -60,8 +59,11 @@
 - [tlsx](https://github.com/projectdiscovery/tlsx)TLS grabber
 - [uncover](https://github.com/projectdiscovery/uncover)discover exposed hosts on the internet only with api keys
 - [web](https://web-check.xyz/)-[check](https://web-check.as93.net/)online all in one
+- [from ips to domains](https://github.com/kmskrishna/gdn)
 ## other osint
 - [osint](./osint.md)
+- [all osint](https://github.com/The-Osint-Toolbox/Website-OSINT)
+- [web tool for osint](https://github.com/yogeshojha/rengine)
 - [aquatone](https://github.com/michenriksen/aquatone)visual inspection of websites
 - [chameleon](https://github.com/iustin24/chameleon)provides content discovery by using wappalyzer's set of technology fingerprints alongside custom wordlists tailored to each detected technologies
 - [changedetection.io](https://github.com/dgtlmoon/changedetection.io)детектор обнаружения изменений на веб-сайтах с открытым исходным кодом
