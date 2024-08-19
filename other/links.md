@@ -220,7 +220,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [de4js](https://lelinhtinh.github.io/de4js/)
 - [Cisco Password Cracker](https://www.ifm.net.nz/cookbooks/passwordcracker.html)
 - [unicode escape sequence](https://dencode.com/en/string/unicode-escape)
-# other
+# other trash
 - [walk](https://github.com/antonmedv/walk)
 - [big no-no](https://cyberarsenal.org/resources/categories/red-team.1/)
 - [apple blee](https://github.com/hexway/apple_bleee)
