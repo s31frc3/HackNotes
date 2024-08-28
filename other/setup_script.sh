@@ -81,7 +81,7 @@ md /tmp/a
 cd /tmp/a
 git clone https://github.com/danielmiessler/seclists
 sudo mv seclists /usr/share/SecLists
-pdtm -i interactsh-client,katana,nuclei,subfinder,naabu
+pdtm -i interactsh-client,katana,nuclei,subfinder,naabu,tldfinder
 setopt HIST_IGNORE_SPACE
 pip install hashid dirsearch
 python3 -m pip install --user pipx
