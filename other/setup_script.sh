@@ -73,9 +73,12 @@ export PATH=$PATH:/home/toor/.cargo/bin
 EOF
 source ~/.zshrc
 go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
+go install github.com/OJ/gobuster/v3@latest
+go install github.com/hakluke/hakip2host@latest
 go install -v github.com/tomnomnom/anew@lates
 go install github.com/BishopFox/sj@latest
 go install github.com/lc/gau/v2/cmd/gau@latestg
+go install github.com/cemulus/crt@latest
 o install github.com/pwnesia/dnstake/cmd/dnstake@latest
 md /tmp/a
 cd /tmp/a
