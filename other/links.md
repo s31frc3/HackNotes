@@ -223,6 +223,8 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [unicode escape sequence](https://dencode.com/en/string/unicode-escape)
 # other trash
 - [walk](https://github.com/antonmedv/walk)
+- [multiple connections](https://github.com/r3nt0n/multicat)
+- [rev shell manager](https://github.com/WangYihang/Reverse-Shell-Manager)
 - [big no-no](https://cyberarsenal.org/resources/categories/red-team.1/)
 - [apple blee](https://github.com/hexway/apple_bleee)
 - [apple Juice](https://github.com/ECTO-1A/AppleJuice)

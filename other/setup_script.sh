@@ -60,6 +60,7 @@ alias rl='rlwrap nc -nvlp'
 alias shutd='shutdown -h now'
 alias pdtm='pdtm -bp $HOME/go/bin'
 alias trash='echo "/home/toor/.local/share/Trash/files/"'
+alias e='exit'
 
 unalias gau
 #GOROOT=/usr/local/go
