@@ -25,12 +25,14 @@ sudo python2 get-pip.py
 sudo pip2 install --upgrade pip
 sudo pip3 install --upgrade pip
 sudo sqlmap --update
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
 cp ~/.zshrc ~/.zshrc_backup
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cat > ~/.zshrc << EOF
 ZSH_THEME="wedisagree"
+# ZSH_THEME="mgutz"
+# ZSH_THEME="frisk"
 plugins=(git copybuffer vi-mode sudo)
 source $ZSH/oh-my-zsh.sh
 alias mm='md /tmp/a'
@@ -78,9 +80,9 @@ go install github.com/OJ/gobuster/v3@latest
 go install github.com/hakluke/hakip2host@latest
 go install -v github.com/tomnomnom/anew@lates
 go install github.com/BishopFox/sj@latest
-go install github.com/lc/gau/v2/cmd/gau@latestg
+go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/cemulus/crt@latest
-o install github.com/pwnesia/dnstake/cmd/dnstake@latest
+go install github.com/pwnesia/dnstake/cmd/dnstake@latest
 md /tmp/a
 cd /tmp/a
 git clone https://github.com/danielmiessler/seclists

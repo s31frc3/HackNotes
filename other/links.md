@@ -1,10 +1,11 @@
 # WEB OSINT
 ## subdomains
 - [securityTrails](https://securitytrails.com)
+- [https://github.com/bing0o/SubEnum] subenum
 - [analyticsrelationships](https://github.com/Josue87/AnalyticsRelationships)related domains / subdomains
 - [bbot](https://github.com/blacklanternsecurity/bbot)python subds scanner
 - [columbus.elmasy](https://columbus.elmasy.com/)online Advanced subdomain enumeration service
-- [crt](https://github.com/cemulus/crt) crt!!
+- [crt](https://github.com/cemulus/crt) crt
 - [crt.sh 10 k bypass](https://github.com/MzHmO/articles/blob/main/crtshbypass/script.py)
 - [dnscan](https://github.com/rbsec/dnscan)DNS subdomain scanner
 - [dnsx(pd)](https://github.com/projectdiscovery/dnsx)DNS toolkit
