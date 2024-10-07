@@ -19,7 +19,7 @@ echo  "${RED}░▒▓███████▓▒░  ░▒▓█████�
 
 
 sudo apt update && sudo apt upgrade
-sudo apt install git curl wget tilix rlwrap net-tools speedtest-cli ffuf tmux sqlmap 2to3 python2-minimal python2 dh-python python-is-python3 zsh moreutils jq python3-pip python-pip -y
+sudo apt install git curl wget tilix rlwrap net-tools speedtest-cli libpcap-dev ffuf tmux sqlmap 2to3 python2-minimal python2 dh-python python-is-python3 zsh moreutils jq python3-pip python-pip -y
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
 sudo python2 get-pip.py
 sudo pip2 install --upgrade pip
@@ -57,12 +57,14 @@ alias ifc="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | awk '{print 
 alias xx8='x8 -w /usr/share/SecLists/Discovery/Web-Content/large-wordlist-params_62_782.txt -u'
 alias x8='x8 -w /usr/share/SecLists/Discovery/Web-Content/small-wordlist-params_25_987.txt -u'
 alias kali='docker start kali && docker attach kali'
-alias myip='curl 2ip.ru'
+alias myip='curl https://2ip.ru/'
 alias rl='rlwrap nc -nvlp'
 alias shutd='shutdown -h now'
 alias pdtm='pdtm -bp $HOME/go/bin'
 alias trash='echo "/home/toor/.local/share/Trash/files/"'
 alias e='exit'
+alias vzsh='vim ~/.zshrc'
+alias vhis='vim ~/.zsh_history'
 
 unalias gau
 #GOROOT=/usr/local/go

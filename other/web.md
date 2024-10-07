@@ -239,7 +239,7 @@ Go to the "Burp" > "Search" tab.
 ```
 
 ```r
-aws_access_key|aws_secret_key|api key|passwd|pwd|heroku|slack|firebase|swagger|aws_secret_key|aws key|password|ftp password|jdbc|sql|secret jet|config|admin|pwd|gcp|htaccess|.env|ssh key|.git|access key|secret token|oauth_token|oauth_token_secret
+aws_access_key|aws_secret_key|api key|heroku|slack|firebase|swagger|aws_secret_key|aws key|ftp password|jdbc|sql|secret jet|config|admin|gcp|htaccess|.env|ssh key|access key|secret token|oauth_token|oauth_token_secret
 ```
 # steal cookie
 ```

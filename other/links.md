@@ -142,6 +142,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [js deobfuscator](https://github.com/jehna/humanify/)
 - [jsluice](https://github.com/BishopFox/jsluice)for extracting URLs, paths, secrets, and other interesting data from JavaScript source code [same](https://github.com/GerbenJavado/LinkFinder)[same in burp](https://portswigger.net/bappstore/0e61c786db0c4ac787a08c4516d52ccf)
 ## other
+- [gecko-new.php](https://github.com/MadExploits/Gecko/blob/main/gecko-new.php)
 - [GitTools](https://github.com/internetwache/GitTools)
 - [XSSTRON](https://github.com/RenwaX23/XSSTRON)(Electron JS Browser To Find XSS)
 - [bypass disable_functions and open_basedir php](https://github.com/TarlogicSecurity/Chankro)
@@ -224,7 +225,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [unicode escape sequence](https://dencode.com/en/string/unicode-escape)
 # other trash
 - [walk](https://github.com/antonmedv/walk)
-- [multiple connections](https://github.com/r3nt0n/multicat)
+- [multiple connections](https://github.com/redcode-labs/GodSpeed)
 - [rev shell manager](https://github.com/WangYihang/Reverse-Shell-Manager)
 - [big no-no](https://cyberarsenal.org/resources/categories/red-team.1/)
 - [apple blee](https://github.com/hexway/apple_bleee)
