@@ -37,6 +37,8 @@ plugins=(git copybuffer vi-mode sudo)
 source $ZSH/oh-my-zsh.sh
 alias mm='md /tmp/a'
 alias jj='cd /tmp/a'
+alias nn='md /tmp/b'
+alias kk='cd /tmp/b'
 alias c='clear'
 alias x='exit'
 alias ww='cd ~/docs/work && ls'
