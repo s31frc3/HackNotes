@@ -43,7 +43,8 @@ alias c='clear'
 alias x='exit'
 alias ww='cd ~/docs/work && ls'
 alias p='gaa && git commit -m "updated" && gp'
-alias update='sudo snap refresh && sudo apt update && sudo apt upgrade -y && pdtm -ua'
+# alias update='sudo snap refresh && sudo apt update && sudo apt upgrade -y && pdtm -ua'
+alias update='sudo snap refresh && sudo apt update && sudo apt upgrade -y'
 alias bat='batcat'
 alias webup='python3 -m http.server'
 alias h='history | grep'
@@ -53,7 +54,7 @@ alias cb='xclip -selection clipboard'
 alias vpn='sudo openvpn ~/docs/vpns/vpn.ovpn'
 alias wvpn='cat ~/docs/work/.key && sudo openvpn ~/docs/vpns/work_bst.ovpn'
 alias hvpn='sudo openvpn ~/docs/vpns/my_vps_vpn.ovpn'
-alias ff='ffuf -H "User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0" -c -v -w /usr/share/SecLists/Fuzzing/bst.txt -u'
+alias ff='ffuf -H "User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0" -c -v -w /opt/my_lists/bst.txt -u'
 alias fff='ffuf -c -v -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-big.txt -u'
 alias ifc="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | awk '{print $2}' | sed 's/inet //'"
 alias xx8='x8 -w /usr/share/SecLists/Discovery/Web-Content/large-wordlist-params_62_782.txt -u'
@@ -62,7 +63,7 @@ alias kali='docker start kali && docker attach kali'
 alias myip='curl https://2ip.ru/'
 alias rl='rlwrap nc -nvlp'
 alias shutd='shutdown -h now'
-alias pdtm='pdtm -bp $HOME/go/bin'
+# alias pdtm='pdtm -bp $HOME/go/bin'
 alias trash='echo "/home/toor/.local/share/Trash/files/"'
 alias e='exit'
 alias vzsh='vim ~/.zshrc'
@@ -79,7 +80,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/home/toor/.cargo/bin
 EOF
 source ~/.zshrc
-go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
+# go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
 go install github.com/OJ/gobuster/v3@latest
 go install github.com/hakluke/hakip2host@latest
 go install -v github.com/tomnomnom/anew@lates
@@ -91,7 +92,7 @@ md /tmp/a
 cd /tmp/a
 git clone https://github.com/danielmiessler/seclists
 sudo mv seclists /usr/share/SecLists
-pdtm -i interactsh-client,katana,nuclei,subfinder,naabu,tldfinder
+# pdtm -i interactsh-client,katana,nuclei,subfinder,naabu,tldfinder
 setopt HIST_IGNORE_SPACE
 pip install hashid dirsearch
 python3 -m pip install --user pipx
