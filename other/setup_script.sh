@@ -88,6 +88,9 @@ go install github.com/BishopFox/sj@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/cemulus/crt@latest
 go install github.com/pwnesia/dnstake/cmd/dnstake@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install github.com/projectdiscovery/katana/cmd/katana@latest
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 md /tmp/a
 cd /tmp/a
 git clone https://github.com/danielmiessler/seclists
