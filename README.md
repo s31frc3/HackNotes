@@ -12,7 +12,6 @@ In this repository, you will find a compilation of various tricks, commands, and
 ## [links (all the things)](./other/links.md)
 ## [notes](./other/notes.md)
 ## [web](./other/web.md)
-## [windows](./other/windows.md)
-## [Linux](./other/src/linux_priv_esc.md)
+## [linux](./other/src/linux_priv_esc.md)
 ---
 Happy hacking!

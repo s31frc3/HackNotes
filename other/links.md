@@ -226,6 +226,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [unicode escape sequence](https://dencode.com/en/string/unicode-escape)
 # other trash
 - [walk](https://github.com/antonmedv/walk)
+- [brute ssh](https://github.com/r4stl1n/SSH-Brute-Forcer)
 - [multiple connections](https://github.com/redcode-labs/GodSpeed)
 - [rev shell manager](https://github.com/WangYihang/Reverse-Shell-Manager)
 - [big no-no](https://cyberarsenal.org/resources/categories/red-team.1/)
