@@ -29,7 +29,7 @@ cat /etc/exports
 ## quik one-line bash script with colorful output to enumerate linux machine
 
 ```bash
-for cmd in "history" "id" "echo $PATH" "cat /etc/crontab" "sudo -V " "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "cat /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo  "\n\033[1;34mCommand: $cmd\033[0m"; echo "\033[1;32m$(eval $cmd)\033[0m"; echo  "\033[1;33m\n===================================================================================================\n==================================================================================================="; done
+for cmd in "history" "id" "echo \$PATH" "cat /etc/crontab" "sudo -V" "sudo -l" "cat /proc/version" "cat /etc/issue" "cat /etc/sudoers" "ls /etc/sudoers.d" "env" "ip route" "uname -a" "netstat -tupln | grep LISTEN" "find / -type f -perm /4000 2>/dev/null" "getcap -r / 2>/dev/null" "cat /etc/exports" "cat /proc/1/cgroup"; do echo -e "\n\033[1;34mCommand: $cmd\033[0m"; eval $cmd 2>/dev/null | while IFS= read -r line; do echo -e "\033[1;32m$line\033[0m"; done; echo -e "\033[1;33m\n===================================================================================================\n===================================================================================================\033[0m"; done
 ```
 ---
 # LXD container exploitation

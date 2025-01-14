@@ -29,6 +29,8 @@ wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
 cp ~/.zshrc ~/.zshrc_backup
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install python3.9
+python3.9 -m pip install pwncat-cs
 cat > ~/.zshrc << EOF
 ZSH_THEME="wedisagree"
 # ZSH_THEME="mgutz"
@@ -87,10 +89,13 @@ go install -v github.com/tomnomnom/anew@lates
 go install github.com/BishopFox/sj@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
 go install github.com/cemulus/crt@latest
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/pwnesia/dnstake/cmd/dnstake@latest
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+go install -v github.com/projectdiscovery/urlfinder/cmd/urlfinder@latest
+go install github.com/tomnomnom/waybackurls@latest
 md /tmp/a
 cd /tmp/a
 git clone https://github.com/danielmiessler/seclists

