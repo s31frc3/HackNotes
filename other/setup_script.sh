@@ -58,6 +58,7 @@ alias wvpn='cat ~/docs/work/.key && sudo openvpn ~/docs/vpns/work_bst.ovpn'
 alias hvpn='sudo openvpn ~/docs/vpns/my_vps_vpn.ovpn'
 alias ff='ffuf -H "User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0" -c -v -w /opt/my_lists/bst.txt -u'
 alias fff='ffuf -c -v -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-big.txt -u'
+alias ferox='feroxbuster -w /opt/my_lists/bst.txt --no-state -u'
 alias ifc="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | awk '{print $2}' | sed 's/inet //'"
 alias xx8='x8 -w /usr/share/SecLists/Discovery/Web-Content/large-wordlist-params_62_782.txt -u'
 alias x8='x8 -w /usr/share/SecLists/Discovery/Web-Content/small-wordlist-params_25_987.txt -u'

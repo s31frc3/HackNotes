@@ -665,6 +665,10 @@ Content-Type: application/json;charset=UTF-8
     "isAdmin":"true"
 }}
 ```
+# NextJS get all urls
+```js
+console.log(__BUILD_MANIFEST.sortedPages.join('\n'));
+```
 # links
 - [steal admin cookie/sqli](./src/marketplace.md) (tryhackme:marketplace)
 - [ohmyweb](./src/omyweb.md)
