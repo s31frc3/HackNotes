@@ -2,11 +2,10 @@
 ## subdomains
 - [securityTrails](https://securitytrails.com)
 - [recon](https://bgp.he.net/)
-- [https://github.com/bing0o/SubEnum] subenum
 - [analyticsrelationships](https://github.com/Josue87/AnalyticsRelationships)related domains / subdomains
 - [bbot](https://github.com/blacklanternsecurity/bbot)python subds scanner
-- [columbus.elmasy](https://columbus.elmasy.com/)online Advanced subdomain enumeration service
 - [crt](https://github.com/cemulus/crt) crt
+- [viewdns.info](https://viewdns.info/)
 - [crt.sh 10 k bypass](https://github.com/MzHmO/articles/blob/main/crtshbypass/script.py)
 - [dnscan](https://github.com/rbsec/dnscan)DNS subdomain scanner
 - [dnsx(pd)](https://github.com/projectdiscovery/dnsx)DNS toolkit
@@ -15,8 +14,6 @@
 - [knockpy](https://github.com/guelfoweb/knock)
 - [nmmapper.com](https://www.nmmapper.com/sys/tools/subdomainfinder/)online subds
 - [online](https://securitytrails.com) [online](https://subdomainfinder.c99.nl)
-- [pdlist](https://github.com/gnebbia/pdlist)passive subds enum
-- [puncia](https://github.com/ARPSyndicate/puncia)Subdomain & Exploit Hunter powered by AI
 - [puredns](https://github.com/d3mondev/puredns)domain resolver and subdomain bruteforcing
 - [shuffledns(pd)](https://github.com/projectdiscovery/shuffledns)enumerate valid subdomains using active bruteforce
 - [subchase](https://github.com/tokiakasu/subchase)subdomains by analyzing search results from google and yandex
@@ -24,21 +21,26 @@
 - [subdominator](https://github.com/Edd13Mora/Subdominator)One-Stop Solution for Subdomain Enumeration
 - [subfinder(pd)](https://github.com/projectdiscovery/dnsx) using passive online sources
 - [webcopilot](https://github.com/h4r5h1t/webcopilot)automation tool designed to enumerate subdomains of the target and detect bugs using different open-source tools
-- [domain relationships](https://builtwith.com/relationships/miratorg.ru)
+- [domain relationships](https://builtwith.com/relationships/example.com)
 ### subds takover
 - [Garud](https://github.com/R0X4R/Garud)scans sub-domains, sub-domain takeover and then filters out xss, ssti, ssrf and more
-- [subzy](https://github.com/PentestPad/subzy)
 - [dnstake](https://github.com/pwnesia/dnstake)subdomain takeover
 - [Subdomain-Takeover](https://github.com/SaadAhmedx/Subdomain-Takeover)
+- [subzy](https://github.com/PentestPad/subzy) - поиск subdomain takeover, задаешь список доменов и пошел.
+```sh
+./subzy run —targets domains.txt
+```
+- [spoofy](https://github.com/MattKeeley/Spoofy) - проверяет домены на спуфинг SPF / DMARC записей.
+```sh
+./spoofy.py -d bugcrowd.com -o spoof.txt
+```
 ## urls
+- [urlfinder(pd)](https://github.com/projectdiscovery/urlfinder)
 - [dirsearch](https://github.com/maurosoria/dirsearch)
 - [gau](https://github.com/lc/gau)getallurls (gau) fetches known URLs from ...
 - [waybackurls](https://github.com/tomnomnom/waybackurls)
 - [waymore](https://github.com/xnl-h4ck3r/waymore) find even more links from the Wayback
 - [gospider](https://github.com/jaeles-project/gospider)Fast web spider
-- [Gxss](https://github.com/KathanP19/Gxss)checking reflecting Parameters in a URL
-- [hakrawler](https://github.com/hakluke/hakrawler)crawler for gathering URLs and JavaScript file locations
-- [hakrawler](https://github.com/hakluke/hakrawler)web crawler for gathering URLs and JavaScript file locations
 - [hakrawler](https://github.com/hakluke/hakrawler)web crawler for gathering URLs and JavaScript file locations
 - [katana(pd)](https://github.com/projectdiscovery/katana)
 - [gourlex](https://github.com/trap-bytes/gourlex)like katana but faster
@@ -75,9 +77,7 @@
 - [email osint](https://epieos.com/)
 - [google dorks](/HackNotes/other/src/dorks.md)
 - [gowitness](https://github.com/sensepost/gowitness) screenshots
-- [reconftw](https://github.com/six2dez/reconftw)
 - [same domains](https://typosquatting-finder.circl.lu)сервис для поиска доменов со схожим названием
-- [telegram osint](https://github.com/drego85/tosint)
 - [e](lampyre)[m](https://Snov.io)[ails](https://phonebook.cz)
 
 ---
@@ -211,7 +211,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [blind-ssrf-chains](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)
 - [cheat-sheets](https://0xn3va.gitbook.io/cheat-sheets/)
 ---
-# Encoding techniques
+# encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
 - [hashes](https://hashes.com/en/tools/hash_identifier)
 - [md5hashing](https://md5hashing.net/hash)
