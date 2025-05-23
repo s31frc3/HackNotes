@@ -270,6 +270,18 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [tartufo](https://github.com/godaddy/tartufo) сканирует репозитории в поисках случайно оставленных токенов и учетных данных. 
 - [buetoolkit](https://github.com/sgxgsx/BlueToolkit)
 ## other
+### Source code / configs / git
+- [trufflehog](https://github.com/trufflesecurity/trufflehog)
+- [dumper](https://github.com/arthaud/git-dumper)
+- [Photon](https://github.com/s0md3v/Photon)
+- [katana](https://github.com/projectdiscovery/katana)
+
+### Emails / passwords
+- [bbot](https://github.com/blacklanternsecurity/bbot)
+- [NTLMRecon](https://github.com/pwnfoo/NTLMRecon)
+- [Валидация УЗ Exchange](https://swarm.ptsecurity.com/attacking-ms-exchange-web-interfaces/)
+- [smtp](https://mailtrap.io/blog/verify-email-address-without-sending/)
+
 ### localhost resolv
 ```
 https://lock.cmpxchg8b.com/rebinder.html
