@@ -7,7 +7,7 @@
 ]>
 <product>
   <id>123</id>
-  <name>Product XYZ</name>
+  <name>XYZ</name>
   <quantity>&xxe;</quantity>
 </product>
 ```
@@ -89,8 +89,8 @@ SELECT * FROM customers			#output all info
 
 show databases;
 use DATABASE;
-show tables
-SELECT * FROM users
+show tables;
+SELECT * FROM users;
 ```
 ## mongodb
 ```sql
