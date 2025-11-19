@@ -210,6 +210,7 @@ git clone https://github.com/MattKeeley/Spoofy; cd Spoofy; pip3 install -r requi
 - [sql inj](https://websec.ca/kb/sql_injection)[same](https://github.com/kleiton0x00/Advanced-SQL-Injection-Cheatsheet/)
 - [blind-ssrf-chains](https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/)
 - [cheat-sheets](https://0xn3va.gitbook.io/cheat-sheets/)
+- [owa_pentest_guide/](https://pentestnotes.ru/notes/owa_pentest_guide/)
 ---
 # encoding techniques
 - [splitbrain](https://www.splitbrain.org/_static/ook/)
