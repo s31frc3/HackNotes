@@ -368,9 +368,6 @@ https://github.com/Endava/cats
 ❇️ Pish web tool
 🔗 Link : https://github.com/Cabdulahi/pish
 
-❇️ MITM attack tool 
-🔗 Link : https://github.com/websploit/websploit
-
 ❇️ kill shot pentesting framework
 🔗 Link :https://github.com/bahaabdelwahed/killshot
 
