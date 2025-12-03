@@ -298,7 +298,7 @@ f2a33211-e46a-4c92-b84d-aff06c2cd13f
 ```
 ### Step 2: Authenticate with Azure
 ```sh
-az login --service-principal -u 76e1a895-1f05-4165-83ab-98eed07bed86 -p 6LU8Q~OjXfR3z8ZTOHqd0MpE8r1bGs0qStavaacZ --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
+az login --service-principal -u 76e1a895-1f05-4165-83ab-<redacted> -p 6LU8Q~<redacted> --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
 ```
 ### Step 3: Enumerate Role Assignments
 ```sh
@@ -389,7 +389,7 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" \
 https://login.microsoftonline.com/f2a33211-e46a-4c92-b84d-aff06c2cd13f/oauth2/v2.0/token
 
 #or like this
-az login --service-principal -u e8086d7e-9304-4597-a447-e68721ea45a8 -p RvL8Q~8Y3U1x14FNVNzn3hJC~M119m~9Rp3K-aFx --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
+az login --service-principal -u e8086d7e-9304-4597-a447-<redacted> -p RvL8Q~<redacted>~M119m~9Rp3K-aFx --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
 ```
 ### Step 2: Enumerate Users, Groups & Applications
 ```sh
